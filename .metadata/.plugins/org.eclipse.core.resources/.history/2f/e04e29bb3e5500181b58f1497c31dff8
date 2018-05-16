@@ -1,0 +1,20 @@
+Feature: Verify user able to order, view order, sort order, filter, clear edit order 
+
+Scenario Outline: The user is able to edit orders
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the order icon
+  Then user able to see the Orders page displayed successful
+  When select an active order and click continue
+  Then Verify orders details are successfully displays
+  When add an item or make a change
+  Then verify item successfully added and changed 
+  When click on the x next to proccess order 
+  Then confirm box will be pops up
+  When click on okay button
+  Then user are successfully brought back to the main order page
+	
+   Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+ 

@@ -1,0 +1,52 @@
+Feature: Verify user able to view Access dash board
+ Scenario Outline: The user is able to view and search orders when clicking on the order icon from dashboard
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the order icon
+  And Click in the search field and conduct a search order no "<orderNo>"
+  Then user able to see Searched order detail successful
+ 
+  Examples:
+    | UserId	| pwd	|orderNo  |
+    | 1008     	| test	| 1000450 |
+	
+
+ Scenario Outline: The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon
+  Given user on the application 
+  And user enter valid user id "<UserId>" password "<pwd>"
+  When user click on the Messages icon 
+  Then user able to see the Messages page displayed successful
+  When user click on the Orders icon 
+  Then user able to see the Orders page displayed successful
+  When user click on the Invoices icon 
+  Then user able to see the Invoices page displayed successful
+  When user click on the Products icon 
+  Then user able to see the Products page displayed successful
+  When user click on the Customers icon 
+  Then user able to see the Customers page displayed successful
+  When user click on the Inventory icon 
+  Then user able to see the Inventory page displayed successful
+  When user click on the Settings icon 
+  Then user able to see the Settings page displayed successful
+  
+   Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+	| 10092		| test	|STUFFING MIX CHICKEN FLVR TFF STOVETOP|
+ 	| 6431		|test	|CHICKEN 8 PC WOG INJECTED KFC  |
+ 	
+ Scenario Outline: Validate that the user is able to view and search orders
+     Given user on the application 
+     When user enter valid user id "<UserId>" password "<pwd>"
+     Then user should be landed on the home page 
+     When user click on the order icon 
+     Then Order status screen successfully displays 
+     When user Click in the search field and conduct a search "<product>"
+     Then verify user Search successful 
+
+ 
+ 	Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+	| 10092		| test	|STUFFING MIX CHICKEN FLVR TFF STOVETOP|
+ 	| 6431		|test	|CHICKEN 8 PC WOG INJECTED KFC  |	

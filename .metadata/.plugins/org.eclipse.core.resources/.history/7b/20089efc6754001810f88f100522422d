@@ -1,0 +1,15 @@
+ Feature: The user is able to view, navigate on the proiduct details 
+ 
+ Scenario Outline: The user is able to view, expand and minimize product details, product card and description when clicking on specific item
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Orders icon
+  Then Verify orders details are successfully displays
+  When click on the item
+  Then item detail screen successfully populated
+  When enter quantity and validate that the $'s, Qty,Cu. ft and lb field's populated and update as items are added 
+  Then All field's successfully populated
+  
+  Examples:
+    | UserId	| pwd	| 
+    | 1008     	| test	| 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FeatureRunner" project="PFG.PMobile" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.pmobile.runner.FeatureRunner" time="37.936">
+    <testsuite name="Feature: Verify user able to view Access dash board" time="37.936">
+      <testcase name="The user is able to view and search orders when clicking on the order icon from dashboard" classname="Verify user able to view Access dash board" time="37.936"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,53 @@
+package com.pmobile.pages;
+
+import com.pmobile.confirmation.pages.DashBoardConfirmationPage;
+import com.pmobile.elements.pages.DashBoardElementPage;
+import com.pmobile.elements.pages.LoginElementsPage;
+import com.pmobile.elements.pages.OrderDetailElementPage;
+import com.pmobile.elements.pages.ProductDetailElementPage;
+import com.pmobile.utilities.HomePage;
+
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.steps.ScenarioSteps;
+
+public class ProductDetailActionPages extends ScenarioSteps{
+	HomePage home ;
+	LoginElementsPage loginElemnt;
+	DashBoardElementPage dashbrdelemnt;	
+	OrderDetailElementPage orderDetails;
+	DashBoardConfirmationPage dashConfirm;
+	ProductDetailElementPage productDetail;
+	
+	@Step
+	public void openHomePage(){
+		home.open();
+	}
+	
+	@Step
+	public void setUserName(String userName){
+		loginElemnt.userid.sendKeys(userName);
+	}
+	
+	@Step
+	public void setPassword(String pwd){
+		loginElemnt.password.sendKeys(pwd);
+	}
+	
+	@Step
+	public void clickLogin() throws InterruptedException{
+		loginElemnt.clicklogin.click();
+		Thread.sleep(5000);		
+	}
+	
+	@Step
+	public void clickOnOrder() throws InterruptedException{
+	dashbrdelemnt.orderButton.click();
+	String text = orderDetails.ordertextheader.getText();
+	System.out.println("  HeaderText :" + text);
+	Thread.sleep(3000);
+	//String orderNumber = orderDetails.orderNumber.getText();
+	//System.out.println("  Order Number : " + orderNumber);
+	//dashbrdelemnt.homeButton.click();
+	Thread.sleep(5000);
+	}
+}

@@ -1,0 +1,549 @@
+package com.pmobile.steps;
+
+import com.pmobile.confirmation.pages.DashBoardConfirmationPage;
+import com.pmobile.confirmation.pages.OrderConfirmationPages;
+import com.pmobile.pages.DashBoardActionPage;
+import com.pmobile.pages.LoginActionPage;
+import com.pmobile.pages.OrderDetailActionPage;
+
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Steps;
+
+public class OrderPagesSteps {
+
+	@Steps
+	OrderDetailActionPage orderDetail;
+	OrderConfirmationPages orderConDetail;
+
+	@When("^user click on the Order icon$")
+	public void user_click_on_the_Order_icon() throws Exception {
+		orderDetail.clickonOrderButton();
+	}
+
+	@When("^Pull down the refresh arrow$")
+	public void pull_down_the_refresh_arrow() throws Exception {
+		orderDetail.clickonRefreshArrow();
+	}
+
+	@Then("^Verify orders are successfully refreshed$")
+	public void verify_orders_are_successfully_refreshed() throws Exception {
+		//orderConDetail.verifyScreenRefreshed();
+	}
+
+	@When("^Click on the Order /# sort box$")
+	public void click_on_the_Order_sort_box() throws Exception {
+		orderDetail.clickOnOrderNumberSortBox();
+	}
+
+	@Then("^user able to see the Orders successfully sorted by order /#$")
+	public void user_able_to_see_the_Orders_successfully_sorted_by_order() throws Exception {
+
+	}
+
+	@When("^user Click on the order date sort box$")
+	public void user_Click_on_the_order_date_sort_box() throws Exception {
+		orderDetail.clickOnOrderDateSortBox();
+	}
+
+	@Then("^user able to see the orders successfully sorted by order date$")
+	public void user_able_to_see_the_orders_successfully_sorted_by_order_date() throws Exception {
+
+	}
+
+	@When("^user Click on ship date sort box$")
+	public void user_Click_on_ship_date_sort_box() throws Exception {
+		orderDetail.clickOnshipDateSortBox();
+	}
+
+	@Then("^user able to see the order sorted by ship date successful$")
+	public void user_able_to_see_the_order_sorted_by_ship_date_successful() throws Exception {
+
+	}
+
+	@When("^user Click on the customer name sort box$")
+	public void user_Click_on_the_customer_name_sort_box() throws Exception {
+		orderDetail.clickOnCustomerNameSortBox();
+	}
+
+	@Then("^user able to see the orders successfully sorted by customer name$")
+	public void user_able_to_see_the_orders_successfully_sorted_by_customer_name() throws Exception {
+
+	}
+
+	@When("^user Click on clear all$")
+	public void user_Click_on_clear_all() throws Exception {
+		orderDetail.clickonClearAllButton();
+	}
+
+	@Then("^user able to see the Previous sorts successfully cleared$")
+	public void user_able_to_see_the_Previous_sorts_successfully_cleared() throws Exception {
+
+	}
+
+	@When("^Click on the customrer filter box$")
+	public void click_on_the_customrer_filter_box() throws Exception {
+		System.out.println("______________________________");
+		System.out.println("Filter By Customer Name-------");
+		orderDetail.clickonFilterClear();
+		orderDetail.clickonCustomerFilter();
+	}
+
+	@Then("^user able to see customer list populates on righthand side$")
+	public void user_able_to_see_customer_list_populates_on_righthand_side() throws Exception {
+
+	}
+
+	@When("^Select a customer and click on the apply$")
+	public void select_a_customer_and_click_on_the_apply() throws Exception {
+		orderDetail.clickonSelectCustomer();
+		orderDetail.clickonApply();
+		System.out.println("Filter completed--------------");
+	}
+
+	@Then("^user able to see the Orders are successfully displayed for only that customer$")
+	public void user_able_to_see_the_Orders_are_successfully_displayed_for_only_that_customer() throws Exception {
+
+	}
+
+	@When("^user Click on the order date filter box$")
+	public void user_Click_on_the_order_date_filter_box() throws Exception {
+		System.out.println("______________________________");
+		System.out.println("Filter By Order date----------");
+		orderDetail.clickonFilterClear();
+		orderDetail.clickonOrderDateFilter();
+	}
+
+	@Then("^user able to see the orders date filter options successfully populated on righthand side$")
+	public void user_able_to_see_the_orders_date_filter_options_successfully_populated_on_righthand_side()
+			throws Exception {
+
+	}
+
+	@When("^user choose a date range and click on apply$")
+	public void user_choose_a_date_range_and_click_on_apply() throws Exception {
+		orderDetail.setOrderdateFrom();
+		orderDetail.setOrderdateTo();
+		orderDetail.clickonApply();
+		System.out.println("Filter completed--------------");
+	}
+
+	@Then("^user able to see order for date range successfully populated$")
+	public void user_able_to_see_order_for_date_range_successfully_populated() throws Exception {
+
+	}
+
+	@When("^user clear all on order date filter$")
+	public void user_clear_all_on_order_date_filter() throws Exception {
+		orderDetail.clickonFilterClear();
+	}
+
+	@Then("^user able to see page navigatte to all order$")
+	public void user_able_to_see_page_navigatte_to_all_order() throws Exception {
+
+	}
+
+	@When("^user click on the ship date filter box$")
+	public void user_click_on_the_ship_date_filter_box() throws Exception {
+		System.out.println("______________________________");
+		System.out.println("Filter By Ship date-----------");
+		orderDetail.clickonFilterClear();
+		orderDetail.clickonShipDate();
+	}
+
+	@Then("^user able to see the ship date filter box displayed successful$")
+	public void user_able_to_see_the_ship_date_filter_box_displayed_successful() throws Exception {
+
+	}
+
+	@Then("^user able to see all of the order for date range$")
+	public void user_able_to_see_all_of_the_order_for_date_range() throws Exception {
+		orderDetail.clickonFilterClear();
+		orderDetail.clickonShipDate();
+		orderDetail.setOrderdateFrom();
+		orderDetail.setOrderdateTo();
+		orderDetail.clickonApply();
+		System.out.println("Filter completed--------------");
+	}
+
+	@When("^Clear all on ship date filter$")
+	public void clear_all_on_ship_date_filter() throws Exception {
+		orderDetail.clickonFilterClear();
+	}
+
+	@When("^user choose a filter option \\(ex last week\\) and click on the box click on apply$")
+	public void user_choose_a_filter_option_ex_last_week_and_click_on_the_box_click_on_apply() throws Exception {
+		System.out.println("______________________________");
+		System.out.println("Filter By Ship Option---------");
+		orderDetail.clickonFilterClear();
+		orderDetail.clickonShipDate();
+		orderDetail.clickOnShipDateFilterOption();
+		orderDetail.clickonApply();
+		System.out.println("Filter completed--------------");
+	}
+
+	@Then("^user able to see order for that time frame successfully display$")
+	public void user_able_to_see_order_for_that_time_frame_successfully_display() throws Exception {
+
+	}
+
+	@Then("^user able to see all order$")
+	public void user_able_to_see_all_order() throws Exception {
+		orderDetail.clickonFilterClear();
+	}
+
+	@When("^user click opn the status filter$")
+	public void user_click_opn_the_status_filter() throws Exception {
+		System.out.println("______________________________");
+		System.out.println("Filter By Status--------------");
+		orderDetail.clickonFilterClear();
+		orderDetail.clickonStatudsFilter();
+	}
+
+	@Then("^user able to see all status option successfully on screen$")
+	public void user_able_to_see_all_status_option_successfully_on_screen() throws Exception {
+
+	}
+
+	@When("^user choose a filter option box and click on apply$")
+	public void user_choose_a_filter_option_box_and_click_on_apply() throws Exception {
+		orderDetail.clickonStatusValue();
+		orderDetail.clickonApply();
+		System.out.println("Filter completed--------------");
+	}
+
+	@Then("^user able to see status filter option successfully display on the screen$")
+	public void user_able_to_see_status_filter_option_successfully_display_on_the_screen() throws Exception {
+
+	}
+
+	@When("^select an order and click continue$")
+	public void select_an_order_and_click_continue() throws Exception {
+		orderDetail.assertProductNameOnORderDetail();
+	}
+
+	@Then("^Verify orders details are successfully displays$")
+	public void verify_orders_details_are_successfully_displays() throws Exception {
+
+	}
+
+	@When("^select an item and click on it$")
+	public void select_an_item_and_click_on_it() throws Exception {
+
+	}
+
+	@Then("^verify item details successfully displayed$")
+	public void verify_item_details_successfully_displayed() throws Exception {
+
+	}
+
+	@When("^click on the back arrow$")
+	public void click_on_the_back_arrow() throws Exception {
+
+	}
+
+	@Then("^Screen successfully navigate back to the order detail$")
+	public void screen_successfully_navigate_back_to_the_order_detail() throws Exception {
+
+	}
+
+	@When("^add an item or make a change$")
+	public void add_an_item_or_make_a_change() throws Exception {
+
+	}
+
+	@Then("^verify item successfully added and changed$")
+	public void verify_item_successfully_added_and_changed() throws Exception {
+
+	}
+
+	@When("^click on the x next to proccess order$")
+	public void click_on_the_x_next_to_proccess_order() throws Exception {
+
+	}
+
+	@Then("^confirm box will be pops up$")
+	public void confirm_box_will_be_pops_up() throws Exception {
+
+	}
+
+	@When("^click on okay button$")
+	public void click_on_okay_button() throws Exception {
+
+	}
+
+	@Then("^user are successfully brought back to the main order page$")
+	public void user_are_successfully_brought_back_to_the_main_order_page() throws Exception {
+
+	}
+
+	@When("^click on the proccess order button$")
+	public void click_on_the_proccess_order_button() throws Exception {
+
+	}
+
+	@Then("^order details successfully populated on screen$")
+	public void order_details_successfully_populated_on_screen() throws Exception {
+
+	}
+
+	@When("^click on submit order button$")
+	public void click_on_submit_order_button() throws Exception {
+
+	}
+
+	@Then("^user are able to successfully submitted the order$")
+	public void user_are_able_to_successfully_submitted_the_order() throws Exception {
+
+	}
+
+	@When("^click on the new button$")
+	public void click_on_the_new_button() throws Exception {
+
+	}
+
+	@Then("^order entry screen successfully populated on screen$")
+	public void order_entry_screen_successfully_populated_on_screen() throws Exception {
+
+	}
+
+	@Then("^your list by is set to history$")
+	public void your_list_by_is_set_to_history() throws Exception {
+
+	}
+
+	@When("^add items and quanties to the order$")
+	public void add_items_and_quanties_to_the_order() throws Exception {
+
+	}
+
+	@Then("^items and quanties successfully added$")
+	public void items_and_quanties_successfully_added() throws Exception {
+
+	}
+
+	@When("^search within the order by using the search bar$")
+	public void search_within_the_order_by_using_the_search_bar() throws Exception {
+
+	}
+
+	@Then("^user successfully able to search$")
+	public void user_successfully_able_to_search() throws Exception {
+
+	}
+
+	@When("^clear search by claring the field and clicking on the go button$")
+	public void clear_search_by_claring_the_field_and_clicking_on_the_go_button() throws Exception {
+
+	}
+
+	@Then("^screen reverts back to history guide$")
+	public void screen_reverts_back_to_history_guide() throws Exception {
+
+	}
+
+	@When("^confirmed, validate order dateil in corresponding ERP$")
+	public void confirmed_validate_order_dateil_in_corresponding_ERP() throws Exception {
+
+	}
+
+	@Then("^order detail in ERP successfully matches Pmobile datail$")
+	public void order_detail_in_ERP_successfully_matches_Pmobile_datail() throws Exception {
+
+	}
+
+	@When("^click on the bid guide, choose a guide and click apply$")
+	public void click_on_the_bid_guide_choose_a_guide_and_click_apply() throws Exception {
+
+	}
+
+	@Then("^order entry screen successfully populated with bid guide$")
+	public void order_entry_screen_successfully_populated_with_bid_guide() throws Exception {
+
+	}
+
+	@Then("^screen reverts back to bid guide$")
+	public void screen_reverts_back_to_bid_guide() throws Exception {
+
+	}
+
+	@When("^click on the standard guide, choose a guide and click apply$")
+	public void click_on_the_standard_guide_choose_a_guide_and_click_apply() throws Exception {
+
+	}
+
+	@Then("^order entry screen successfully populated with par list$")
+	public void order_entry_screen_successfully_populated_with_par_list() throws Exception {
+
+	}
+
+	@Then("^screen reverts back to standard guide$")
+	public void screen_reverts_back_to_standard_guide() throws Exception {
+
+	}
+
+	@When("^click on the par lists, choose a par list and click apply$")
+	public void click_on_the_par_lists_choose_a_par_list_and_click_apply() throws Exception {
+
+	}
+
+	@Then("^order entry screen successfully populated with standard guide$")
+	public void order_entry_screen_successfully_populated_with_standard_guide() throws Exception {
+
+	}
+
+	@Then("^screen reverts back to par list$")
+	public void screen_reverts_back_to_par_list() throws Exception {
+
+	}
+
+	@When("^click on the critical item list$")
+	public void click_on_the_critical_item_list() throws Exception {
+
+	}
+
+	@Then("^order entry screen successfully populated with the critical item list$")
+	public void order_entry_screen_successfully_populated_with_the_critical_item_list() throws Exception {
+
+	}
+
+	@Then("^screen reverts back to custom guide$")
+	public void screen_reverts_back_to_custom_guide() throws Exception {
+
+	}
+
+	@When("^click on sort by price$")
+	public void click_on_sort_by_price() throws Exception {
+
+	}
+
+	@Then("^order entry screen successfully sorted by price$")
+	public void order_entry_screen_successfully_sorted_by_price() throws Exception {
+
+	}
+
+	@When("^click on clear all sortby$")
+	public void click_on_clear_all_sortby() throws Exception {
+
+	}
+
+	@Then("^sort by successfully cleared$")
+	public void sort_by_successfully_cleared() throws Exception {
+
+	}
+
+	@When("^click on the filter by brands$")
+	public void click_on_the_filter_by_brands() throws Exception {
+
+	}
+
+	@Then("^filter by brands options screen populated on right hand side$")
+	public void filter_by_brands_options_screen_populated_on_right_hand_side() throws Exception {
+
+	}
+
+	@When("^select a brand to filter by and click apply$")
+	public void select_a_brand_to_filter_by_and_click_apply() throws Exception {
+
+	}
+
+	@Then("^order successfully filtered by specific brand$")
+	public void order_successfully_filtered_by_specific_brand() throws Exception {
+
+	}
+
+	@When("^click on clear all brands filter$")
+	public void click_on_clear_all_brands_filter() throws Exception {
+
+	}
+
+	@Then("^filter successfully cleared$")
+	public void filter_successfully_cleared() throws Exception {
+
+	}
+
+	@When("^click on the filter by catagory$")
+	public void click_on_the_filter_by_catagory() throws Exception {
+
+	}
+
+	@Then("^filter by catagory options screen populated on right hand side$")
+	public void filter_by_catagory_options_screen_populated_on_right_hand_side() throws Exception {
+	}
+
+	@When("^select a catagory to filter by and click apply$")
+	public void select_a_catagory_to_filter_by_and_click_apply() throws Exception {
+
+	}
+
+	@Then("^order successfully filtered by specific catagory$")
+	public void order_successfully_filtered_by_specific_catagory() throws Exception {
+
+	}
+
+	@When("^click on clear all catagory filter$")
+	public void click_on_clear_all_catagory_filter() throws Exception {
+	}
+
+	@When("^click on the filter by new items$")
+	public void click_on_the_filter_by_new_items() throws Exception {
+
+	}
+
+	@Then("^order successfully filter by new items$")
+	public void order_successfully_filter_by_new_items() throws Exception {
+
+	}
+
+	@When("^click on filter by previous order$")
+	public void click_on_filter_by_previous_order() throws Exception {
+
+	}
+
+	@Then("^filter by previous options screen populated on right hand side$")
+	public void filter_by_previous_options_screen_populated_on_right_hand_side() throws Exception {
+
+	}
+
+	@When("^select a previous order and click apply$")
+	public void select_a_previous_order_and_click_apply() throws Exception {
+
+	}
+
+	@Then("^previous order details successfully displayed$")
+	public void previous_order_details_successfully_displayed() throws Exception {
+
+	}
+
+	@When("^click on clear all previous order filter$")
+	public void click_on_clear_all_previous_order_filter() throws Exception {
+
+	}
+
+	@When("^click on filter by classes$")
+	public void click_on_filter_by_classes() throws Exception {
+
+	}
+
+	@Then("^filter by classes options screen populated on right hand side$")
+	public void filter_by_classes_options_screen_populated_on_right_hand_side() throws Exception {
+
+	}
+
+	@When("^select a class to filter by and click apply$")
+	public void select_a_class_to_filter_by_and_click_apply() throws Exception {
+
+	}
+
+	@Then("^order successfully filtered by specific class$")
+	public void order_successfully_filtered_by_specific_class() throws Exception {
+
+	}
+
+	@When("^click on clear all class filter$")
+	public void click_on_clear_all_class_filter() throws Exception {
+
+	}
+
+}

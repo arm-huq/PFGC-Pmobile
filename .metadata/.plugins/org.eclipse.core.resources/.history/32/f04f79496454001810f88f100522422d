@@ -1,0 +1,186 @@
+Feature: The user is able to create and process order
+
+ Scenario Outline: The user is able to create and process orders from history from main order dashboard
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Orders icon
+  Then Verify orders details are successfully displays
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  And your list by is set to history
+  When add items and quanties to the order 
+  Then items and quanties successfully added
+  When search within the order by using the search bar
+  Then user successfully able to search
+  When clear search by claring the field and clicking on the go button
+  Then screen reverts back to history guide
+  When click on the proccess order button
+  Then order details successfully populated on screen
+  When click on submit order button
+  Then user are able to successfully submitted the order
+  When confirmed, validate order dateil in corresponding ERP
+  Then order detail in ERP successfully matches Pmobile datail
+ 
+  Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+
+ Scenario Outline: The user is able to create and process orders from bid gudes from main order dashboard
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Orders icon
+  Then Verify orders details are successfully displays
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  When click on the bid guide, choose a guide and click apply
+  Then order entry screen successfully populated with bid guide
+  When add items and quanties to the order 
+  Then items and quanties successfully added
+  When search within the order by using the search bar
+  Then user successfully able to search
+  When clear search by claring the field and clicking on the go button
+  Then screen reverts back to bid guide
+  When click on the proccess order button
+  Then order details successfully populated on screen
+  When click on submit order button
+  Then user are able to successfully submitted the order
+  When confirmed, validate order dateil in corresponding ERP
+  Then order detail in ERP successfully matches Pmobile datail
+ 
+  Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+
+ Scenario Outline: The user is able to create and process orders from standard gudes from main order
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Orders icon
+  Then Verify orders details are successfully displays
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  When click on the standard guide, choose a guide and click apply
+  Then order entry screen successfully populated with par list
+  When add items and quanties to the order 
+  Then items and quanties successfully added
+  When search within the order by using the search bar
+  Then user successfully able to search
+  When clear search by claring the field and clicking on the go button
+  Then screen reverts back to standard guide
+  When click on the proccess order button
+  Then order details successfully populated on screen
+  When click on submit order button
+  Then user are able to successfully submitted the order
+  When confirmed, validate order dateil in corresponding ERP
+  Then order detail in ERP successfully matches Pmobile datail
+ 
+  Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+    
+ Scenario Outline: The user is able to create and process orders from par lists from main order
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Orders icon
+  Then Verify orders details are successfully displays
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  When click on the par lists, choose a par list and click apply
+  Then order entry screen successfully populated with standard guide
+  When add items and quanties to the order 
+  Then items and quanties successfully added
+  When search within the order by using the search bar
+  Then user successfully able to search
+  When clear search by claring the field and clicking on the go button
+  Then screen reverts back to par list
+  When click on the proccess order button
+  Then order details successfully populated on screen
+  When click on submit order button
+  Then user are able to successfully submitted the order
+  When confirmed, validate order dateil in corresponding ERP
+  Then order detail in ERP successfully matches Pmobile datail
+ 
+  Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+    
+
+ Scenario Outline: The user is able to create and process orders from critical item list from main order
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the order icon
+  Then user able to see the Orders page displayed successful
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  When click on the critical item list
+  Then order entry screen successfully populated with the critical item list
+  When add items and quanties to the order 
+  Then items and quanties successfully added
+  When search within the order by using the search bar
+  Then user successfully able to search
+  When clear search by claring the field and clicking on the go button
+  Then screen reverts back to custom guide
+  When click on the proccess order button
+  Then order details successfully populated on screen
+  When click on submit order button
+  Then user are able to successfully submitted the order
+  When confirmed, validate order dateil in corresponding ERP
+  Then order detail in ERP successfully matches Pmobile datail
+ 
+  Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+    
+    
+ Scenario Outline: The user is able to sort by price and item number within an order
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Orders icon
+  Then Verify orders details are successfully displays
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  When click on sort by price
+  Then order entry screen successfully sorted by price
+  When click on clear all sortby 
+  Then sort by successfully cleared
+  
+  Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+
+ Scenario Outline: The user is able to filter by Brands, Catagory, New Items, Previous Orders and Classes within an order
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Orders icon
+  Then Verify orders details are successfully displays
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  When click on the filter by brands
+  Then filter by brands options screen populated on right hand side
+  When select a brand to filter by and click apply
+  Then order successfully filtered by specific brand 
+  When click on clear all brands filter
+  Then filter successfully cleared
+  When click on the filter by catagory
+  Then filter by catagory options screen populated on right hand side
+  When select a catagory to filter by and click apply
+  Then order successfully filtered by specific catagory
+  When click on clear all catagory filter
+  Then filter successfully cleared
+  When click on the filter by new items 
+  Then order successfully filter by new items
+  When click on filter by previous order
+  Then filter by previous options screen populated on right hand side
+  When select a previous order and click apply
+  Then previous order details successfully displayed 
+  When click on clear all previous order filter
+  Then filter successfully cleared
+  When click on filter by classes
+  Then filter by classes options screen populated on right hand side
+  When select a class to filter by and click apply
+  Then order successfully filtered by specific class
+  When click on clear all class filter
+  Then filter successfully cleared
+  Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| CHEESE CREAM CUP|
+ 

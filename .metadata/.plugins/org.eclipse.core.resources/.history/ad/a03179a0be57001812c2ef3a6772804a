@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Verify user able to order, view order, sort order, filter, clear edit order" skipped="0" tests="2" time="87.55" timestamp="2018-05-14 04:20:39"><testcase name="The user is able to refresh orders"/><testcase name="The user is able to submit orders"/></testsuite>

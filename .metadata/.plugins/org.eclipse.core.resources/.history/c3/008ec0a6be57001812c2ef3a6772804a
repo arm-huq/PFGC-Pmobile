@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Verify user able to order, view order, sort order, filter, clear edit order","The user is able to edit orders","FAILURE","2018-05-09T18:22:41.12-04:00[America/New_York]","0.0","27.89"
+"Verify user able to order, view order, sort order, filter, clear edit order","The user is able to submit orders","FAILURE","2018-05-09T18:23:09.01-04:00[America/New_York]","0.0","29.06"

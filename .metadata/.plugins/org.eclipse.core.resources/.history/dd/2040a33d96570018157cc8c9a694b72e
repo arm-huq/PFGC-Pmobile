@@ -1,0 +1,345 @@
+package com.pmobile.pages;
+
+import java.util.List;
+
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebElement;
+
+import com.pmobile.confirmation.pages.DashBoardConfirmationPage;
+import com.pmobile.elements.pages.DashBoardElementPage;
+import com.pmobile.elements.pages.LoginElementsPage;
+import com.pmobile.elements.pages.OrderDetailElementPage;
+import com.pmobile.utilities.HomePage;
+
+import net.serenitybdd.core.annotations.findby.By;
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.steps.ScenarioSteps;
+
+public class OrderDetailActionPage extends ScenarioSteps{
+	LoginElementsPage loginElemnt;
+	DashBoardElementPage dashbrdelemnt;
+	HomePage home ;
+	OrderDetailElementPage orderDetails;
+	DashBoardConfirmationPage dashConfirm;
+	String orderNumberFirst = null;
+	
+	
+	@Step
+	public void openHomePage(){
+		home.open();
+	}
+	
+	@Step
+	public void setUserName(String userName){
+		loginElemnt.userid.sendKeys(userName);
+	}
+	
+	@Step
+	public void setPassword(String pwd){
+		loginElemnt.password.sendKeys(pwd);
+	}
+	
+	@Step
+	public void clickLogin() throws InterruptedException{
+		loginElemnt.clicklogin.click();
+		Thread.sleep(3000);
+	}
+	
+	@Step
+	public void clickonOrderButton() throws InterruptedException{
+		dashbrdelemnt.orderButton.click();
+	}
+	@Step
+	public void clickonClearAllButton() throws InterruptedException{
+		orderDetails.sortClearAll.click();
+	}
+	@Step
+	public void clickonRefreshArrow() throws InterruptedException{
+		//to do 
+	}
+	@Step
+	public void clickOnOrderNumberSortBox() throws InterruptedException{
+		Thread.sleep(1000);
+		orderDetails.sortClearAll.click();
+		System.out.println("__________________________________________________________________________");
+		System.out.println("Sort by Order numbeer :");
+		Thread.sleep(1000);
+		String fOrderNumber = orderDetails.orderNumber.getText();
+		System.out.println("First Order numbeer :" + fOrderNumber);
+		Thread.sleep(2000);
+		orderDetails.sortOrderNum.click();
+		Thread.sleep(1000);
+		orderDetails.sortOrderNumArrow.click();
+		Thread.sleep(1000);
+		String sOrderNumber = orderDetails.orderNumber.getText();
+		System.out.println("Second order :" + sOrderNumber);
+		if (fOrderNumber.equalsIgnoreCase(sOrderNumber)){
+			System.out.println("Order Number not changed - Order Number :" + fOrderNumber);
+		}else{
+			System.out.println("Order Number changed from - Order Number :" + fOrderNumber +" To " + sOrderNumber);
+		}
+		Thread.sleep(1000);
+		orderDetails.sortOrderNumArrow.click();
+		Thread.sleep(2000);
+		String fOrderNumberS = orderDetails.orderNumber.getText();
+		System.out.println("Order Number Disc  :" + fOrderNumber);
+		if (fOrderNumberS.equalsIgnoreCase(sOrderNumber)){
+			System.out.println("Order Number not changed - Order Number :" + fOrderNumberS);
+		}else{
+			System.out.println("Order Number changed from - Order Number :" + sOrderNumber +" To " + fOrderNumberS);
+		}
+	}
+	
+	@Step
+	public void clickOnOrderDateSortBox() throws InterruptedException{
+		orderDetails.sortClearAll.click();
+		Thread.sleep(1000);
+		System.out.println("__________________________________________________________________________");
+		System.out.println("Sort by Order Date :");
+		String fOrderNumber = orderDetails.orderNumber.getText();
+		System.out.println("First Order numbeer :" + fOrderNumber);
+		Thread.sleep(2000);
+		orderDetails.sortOrderDate.click();
+		Thread.sleep(1000);
+		orderDetails.sortOrderDateArrow.click();
+		Thread.sleep(1000);
+		String sOrderNumber = orderDetails.orderNumber.getText();
+		System.out.println("Second order :" + sOrderNumber);
+		if (fOrderNumber.equalsIgnoreCase(sOrderNumber)){
+			System.out.println("Order Number not changed - Order Date :" + fOrderNumber);
+		}else{
+			System.out.println("Order Number changed from - Order Date :" + fOrderNumber +" To " + sOrderNumber);
+		}
+		Thread.sleep(1000);
+		orderDetails.sortOrderDateArrow.click();
+		Thread.sleep(2000);
+		String fOrderNumberS = orderDetails.orderNumber.getText();
+		System.out.println("Order Number Disc  :" + fOrderNumber);
+		if (fOrderNumberS.equalsIgnoreCase(sOrderNumber)){
+			System.out.println("Order Number not changed - Order Date :" + fOrderNumberS);
+		}else{
+			System.out.println("Order Number changed from - Order Date :" + sOrderNumber +" To " + fOrderNumberS);
+		}
+	}
+	
+	@Step
+	public void clickOnshipDateSortBox() throws InterruptedException{
+		orderDetails.sortClearAll.click();
+		Thread.sleep(1000);
+		System.out.println("__________________________________________________________________________");
+		System.out.println("Sort by Ship Date :");
+		String fOrderNumber = orderDetails.orderNumber.getText();
+		System.out.println("First Order numbeer :" + fOrderNumber);
+		Thread.sleep(2000);
+		orderDetails.sortShipDate.click();
+		Thread.sleep(1000);
+		orderDetails.sortShipDateArrow.click();
+		Thread.sleep(1000);
+		String sOrderNumber = orderDetails.orderNumber.getText();
+		System.out.println("Second order :" + sOrderNumber);
+		if (fOrderNumber.equalsIgnoreCase(sOrderNumber)){
+			System.out.println("Order Number not changed - Ship :" + fOrderNumber);
+		}else{
+			System.out.println("Order Number changed from - Ship :" + fOrderNumber +" To " + sOrderNumber);
+		}
+		Thread.sleep(1000);
+		orderDetails.sortShipDateArrow.click();
+		Thread.sleep(2000);
+		String fOrderNumberS = orderDetails.orderNumber.getText();
+		System.out.println("Order Number Disc  :" + fOrderNumber);
+		if (fOrderNumberS.equalsIgnoreCase(sOrderNumber)){
+			System.out.println("Order Number not changed - Ship :" + fOrderNumberS);
+		}else{
+			System.out.println("Order Number changed from - Ship :" + sOrderNumber +" To " + fOrderNumberS);
+		}
+	}
+	@Step
+	public void clickOnCustomerNameSortBox() throws InterruptedException{
+		orderDetails.sortClearAll.click();
+		Thread.sleep(1000);
+		System.out.println("__________________________________________________________________________");
+		System.out.println("Sort by Customer Name :");
+		String fOrderNumber = orderDetails.orderNumber.getText();
+		System.out.println("First Order numbeer :" + fOrderNumber);
+		orderDetails.sortCustomerName.click();
+		Thread.sleep(2000);
+		orderDetails.sortCustomerNameArrow.click();
+		Thread.sleep(1000);
+		String sOrderNumber = orderDetails.orderNumber.getText();
+		
+		if (fOrderNumber.equalsIgnoreCase(sOrderNumber)){
+			System.out.println("Order Number not changed - Customer name :" + sOrderNumber);
+		}else{
+			System.out.println("Order Number changed - Customer name :" + fOrderNumber);
+		}
+		orderDetails.sortCustomerNameArrow.click();
+		Thread.sleep(2000);
+		String fOrderNumberS = orderDetails.orderNumber.getText();
+		
+		if (fOrderNumberS.equalsIgnoreCase(sOrderNumber)){
+			System.out.println("Order Number not changed - Customer name :" + fOrderNumberS);
+		}else{
+			System.out.println("Order Number changed - Customer name :" + sOrderNumber);
+		}
+	}
+	@Step
+	public void clickonCustomerFilter() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.filterCustomer.click();
+	}
+	@Step
+	public void clickonSelectCustomer() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.selectFfilterCustomer.click();
+	}
+	@Step
+	public void clickonapply() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.clickFilterByApply.click();
+	}
+	@Step
+	public void clickonOrderDateFilter() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.filterOrderDate.click();
+		System.out.println("Clicked");
+	}
+	@Step
+	public void setOrderdateFrom() throws InterruptedException{
+		Thread.sleep(3000);
+		orderDetails.clickFfromdate.sendKeys("05/01/2018");
+	}
+	@Step
+	public void setOrderdateTo() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.clickFtoDate.sendKeys("05/10/2018");
+	}
+	@Step
+	public void clickonFilterClear() throws InterruptedException{
+		Thread.sleep(4000);
+		orderDetails.filterClearAll.click();
+	}
+	@Step
+	public void clickonShipDate() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.filterShipDate.click();
+	}
+	@Step
+	public void clickonClearAll() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.sortClearAll.click();
+	}
+	@Step
+	public void clickonStatusValue() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.filterStatusValue.click();
+	}
+	
+	@Step
+	public void clickonStatudsFilter() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.filterStatus.click();
+	}
+	@Step
+	public void clickonApply() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.clickFilterByApply.click();
+		Thread.sleep(9000);
+	}
+
+	public void clickOnShipDateFilterOption(){
+		orderDetails.selectShipOption.click();
+	}
+	public void clickOnOrderToContinue(){
+		orderDetails.orderNumber.click();
+	}
+	public void assertProductNameOnORderDetail() throws InterruptedException{
+		Thread.sleep(2000);
+		orderDetails.filterClearAll.click();
+		Thread.sleep(2000);
+		orderDetails.orderNumber.click();
+		Thread.sleep(3000);
+		orderNumberFirst = orderDetails.orderDetailOrderNumber.getText();
+		Thread.sleep(2000);
+		System.out.println(" Order Number in details  : "+ orderNumberFirst);
+		
+	}
+
+	public void clickOnBackArrowButton() throws InterruptedException {
+		Thread.sleep(4000);
+		orderDetails.backArrowButton.click();
+		Thread.sleep(4000);
+		String orderNumberBack= orderDetails.orderDetailOrderNumber.getText();
+		System.out.println("1st Order Number : " + orderNumberFirst);
+		System.out.println("2nd Order Number : " + orderNumberBack);
+		if(orderNumberBack.equalsIgnoreCase(orderNumberFirst)){
+			System.out.println("Successfully navigate back to the order detail page");
+		}else{
+			System.out.println("Navigate back to the wrong order detail page");
+		}
+	}
+
+	public void clickOnNewToCreateOrder() throws InterruptedException {
+		Thread.sleep(2000);
+		orderDetails.newButton.click();
+		Thread.sleep(2000);
+		orderDetails.processButton.click();
+		Thread.sleep(2000);
+		dashbrdelemnt.homeButton.click();
+		Thread.sleep(2000);
+		dashbrdelemnt.orderButton.click();
+		Thread.sleep(2000);
+		//orderDetails.sortOrderDate.click();
+		//Thread.sleep(2000);
+		orderDetails.clearListByButton.click();
+		Thread.sleep(2000);
+		orderDetails.orderNumber.click();
+		Thread.sleep(2000);
+		orderDetails.continueOrderButton.click();
+		Thread.sleep(2000);
+		orderDetails.clearListByButton.click();	
+	}
+
+	public void clickOnAddItemInOrder() throws InterruptedException {
+		Thread.sleep(2000);		
+		orderDetails.newProductSearchInput.sendKeys("Chicken");
+		orderDetails.newProductSearchbutton.click();
+		orderDetails.newProduct.click();
+		Thread.sleep(2000);	
+		orderDetails.productQuentity.click();
+		System.out.println("		Clicked on qty -------------");
+		orderDetails.productQuentityClick.click();
+		Thread.sleep(2000);
+		orderDetails.processButton.click();
+	}
+
+	public void clickOnExitOrder() throws InterruptedException {
+		Thread.sleep(2000);
+		orderDetails.closeButtonProDetail.click();
+		orderDetails.okButtonToConfCls.click();
+	}
+
+	public void verifyOrderDetails() throws InterruptedException {
+		String prodName = orderDetails.productNameInOrder.getText();
+		//System.out.println(" Product Name : "+ prodName);
+		orderDetails.productNameInOrder.click();
+		Thread.sleep(2000);
+		String prodConfName = orderDetails.productNameConfim.getText();
+		System.out.println(" Product detail page Name : "+ prodConfName);
+		if(prodName.equalsIgnoreCase(prodConfName)){
+			System.out.println("Product Confirmation - "+ prodConfName + " :  passed");
+		}else{
+			System.out.println("Product Confirmation - "+ prodConfName + " : failed");
+		}
+	}
+
+	public void clickOnSubmitOrder() {
+		orderDetails.submitOrderButton.click();
+	}
+
+	public void clickonConfirmOrder() {
+		dashbrdelemnt.orderButton.click();
+		orderDetails.filterClearAll.click();
+		orderDetails.filterStatusValue.click();
+		
+	}
+}

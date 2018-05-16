@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="527fdc993c57dc0a1cc747b44788846a9e6a4b316fa562794dc37fd480f05ea1.html">Verify User Able To View Access Dash Board</a></span>
+                > <span class="truncate-60"><a
+                    href="1ec44470e0deb7effded9c0c4474378d5979e183d922a98d96c432c53adce4a1.html">Validate that the user is able to view and search orders </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 15-05-2018 10:26</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Verify User Able To View Access Dash Board </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Validate that the user is able to view and search orders
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>Then user should be landed on the home page<br>When user click on the order icon<br>Then Order status screen successfully displays<br>When user Click in the search field and conduct a search "&lt;product&gt;"<br>Then verify user Search successful</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="adc36e5fe38ce070047c7ac5387b7eba0a4bd154a2d3c82237b0e8af65f74b84.png" title="Validate that the user is able to view and search orders #1: {UserId=1008, pwd=test, product=CHEESE CREAM CUP}" width="1034"/>
+                <img src="c91e3b7e1f5d11cfe65fe6a93687c42ad7bb2df0b689339b78cbdb2903b97247.png" title="Given user on the application" width="1034"/>
+                <img src="e6de8435f533df6447ad53865b29dca467bc8397e27d833db1c0bab672b07868.png" title="Open home page" width="1034"/>
+                <img src="28cc5bb349fbfba5e0bf0b7bd7a493944dd33ca2f5f1f3ae012ca4714595ed78.png" title="When user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1034"/>
+                <img src="e93f92cbab40ad415056f26cb4c5f3e54fa55d826d5fc70d760cbc6b6d9b1cb4.png" title="Set user name: 1008" width="1034"/>
+                <img src="3d563d33740b9cd1555ffc1df8f4a027d9cfcf8bb15b12ed57af6ad90d9f7568.png" title="Set password: test" width="1034"/>
+                <img src="28cc5bb349fbfba5e0bf0b7bd7a493944dd33ca2f5f1f3ae012ca4714595ed78.png" title="Click login" width="1034"/>
+                <img src="28cc5bb349fbfba5e0bf0b7bd7a493944dd33ca2f5f1f3ae012ca4714595ed78.png" title="Then user should be landed on the home page" width="1034"/>
+                <img src="38d4fb5138449d970eb4cab4b863a411e45f325dc08e142493729f381bada95b.png" title="When user click on the order icon" width="1034"/>
+                <img src="38d4fb5138449d970eb4cab4b863a411e45f325dc08e142493729f381bada95b.png" title="Click on order" width="1034"/>
+                <img src="38d4fb5138449d970eb4cab4b863a411e45f325dc08e142493729f381bada95b.png" title="Then Order status screen successfully displays" width="1034"/>
+                <img src="fe158b188b12c5ce858ff937f451421e7f3886114893f4459870e36b0a80c982.png" title="When user Click in the search field and conduct a search &quot;CHEESE CREAM CUP&quot;" width="1034"/>
+                <img src="328905ccb99c5618d7f357c16d13deba4ea0962047788f8429e5f91b7f9c6138.png" title="Click on new order" width="1034"/>
+                <img src="0d5c5ec71e9a8f06c9a3664b91cf2fcce36aa71bb71862d6c06cc84f001488cf.png" title="Click on clear filter" width="1034"/>
+                <img src="adc36e5fe38ce070047c7ac5387b7eba0a4bd154a2d3c82237b0e8af65f74b84.png" title="Set prod name: CHEESE CREAM CUP" width="1034"/>
+                <img src="adc36e5fe38ce070047c7ac5387b7eba0a4bd154a2d3c82237b0e8af65f74b84.png" title="Then verify user Search successful" width="1034"/>
+                <img src="2c49d943f709437e7603f0e299a97bf7c462a6975c1cc736bc139c2ff9eeb49f.png" title="Validate that the user is able to view and search orders #2: {UserId=10092, pwd=test, product=STUFFING MIX CHICKEN FLVR TFF STOVETOP}" width="1034"/>
+                <img src="dfc40878b3e4b2a2c74d9d623655b408b02533ae9e5bef6931a2dee953b257f4.png" title="Given user on the application" width="1034"/>
+                <img src="0c25ecf03613c7192e765ccfbd7f1c890ef532b266f97da2a654ef47c01f44e5.png" title="Open home page" width="1034"/>
+                <img src="81d4000e20523501339c7d7f21f7c674685647e7e18cd835f19285fa6b90a383.png" title="When user enter valid user id &quot;10092&quot; password &quot;test&quot;" width="1034"/>
+                <img src="1c1680bc7d9d41a5315caadb61dd0e376527df359297acc06adc8fd07093b1df.png" title="Set user name: 10092" width="1034"/>
+                <img src="b622991657daa12f0128cd99ad09dd3e3a55a41d3d00fa1b778cad7de4ef399b.png" title="Set password: test" width="1034"/>
+                <img src="81d4000e20523501339c7d7f21f7c674685647e7e18cd835f19285fa6b90a383.png" title="Click login" width="1034"/>
+                <img src="81d4000e20523501339c7d7f21f7c674685647e7e18cd835f19285fa6b90a383.png" title="Then user should be landed on the home page" width="1034"/>
+                <img src="7eb14a0d5b3eb6cad3b50763b844eefc7d8a1f7e53e22ead0f73714134ec426e.png" title="When user click on the order icon" width="1034"/>
+                <img src="7eb14a0d5b3eb6cad3b50763b844eefc7d8a1f7e53e22ead0f73714134ec426e.png" title="Click on order" width="1034"/>
+                <img src="7eb14a0d5b3eb6cad3b50763b844eefc7d8a1f7e53e22ead0f73714134ec426e.png" title="Then Order status screen successfully displays" width="1034"/>
+                <img src="18913c50d5650d54697b83694a51a0a148f75daf8f9006beaf8bcca13d21b891.png" title="When user Click in the search field and conduct a search &quot;STUFFING MIX CHICKEN FLVR TFF STOVETOP&quot;" width="1034"/>
+                <img src="8bd8a08186fb0f3deebe06612729e0b6f48f89b723b4feca38efca71249a2a66.png" title="Click on new order" width="1034"/>
+                <img src="3ca576e7c4d4e913fb679ee16aef23fcdc5d8dfa739786bde67806b4c1dce96d.png" title="Click on clear filter" width="1034"/>
+                <img src="18913c50d5650d54697b83694a51a0a148f75daf8f9006beaf8bcca13d21b891.png" title="Set prod name: STUFFING MIX CHICKEN FLVR TFF STOVETOP" width="1034"/>
+                <img src="18913c50d5650d54697b83694a51a0a148f75daf8f9006beaf8bcca13d21b891.png" title="Then verify user Search successful" width="1034"/>
+                <img src="36d6d22627be6c2eaef9435b0c025dee1f26694ba4796ea3c42397a271063df7.png" title="Validate that the user is able to view and search orders #3: {UserId=6431, pwd=test, product=CHICKEN 8 PC WOG INJECTED KFC}" width="1034"/>
+                <img src="3e6d6bb9735ef1638624957721d62da5de08492d276be19f7ba11b2d52bf0c8a.png" title="Given user on the application" width="1034"/>
+                <img src="2b661c068eb3aa73963cdc97d9f56036406df542cdead2e4047555648144bd29.png" title="Open home page" width="1034"/>
+                <img src="b22d859f3e4ed44dd7e9b17c75bbd5cb6d65c9a6e9613c239f16f7fe93ba4bf6.png" title="When user enter valid user id &quot;6431&quot; password &quot;test&quot;" width="1034"/>
+                <img src="418b51a028bf9fb88f957bb524970892071b740760b669a33c402b0c679b2136.png" title="Set user name: 6431" width="1034"/>
+                <img src="8774200fff3af519ddc645830b3f2fd431a479c512c10fedae2e01c6794a3f1f.png" title="Set password: test" width="1034"/>
+                <img src="b22d859f3e4ed44dd7e9b17c75bbd5cb6d65c9a6e9613c239f16f7fe93ba4bf6.png" title="Click login" width="1034"/>
+                <img src="b22d859f3e4ed44dd7e9b17c75bbd5cb6d65c9a6e9613c239f16f7fe93ba4bf6.png" title="Then user should be landed on the home page" width="1034"/>
+                <img src="baea3ade3cf2de64cbc97321200e154b8ae887ac9ad7b080a13bb370c89b4bcf.png" title="When user click on the order icon" width="1034"/>
+                <img src="baea3ade3cf2de64cbc97321200e154b8ae887ac9ad7b080a13bb370c89b4bcf.png" title="Click on order" width="1034"/>
+                <img src="baea3ade3cf2de64cbc97321200e154b8ae887ac9ad7b080a13bb370c89b4bcf.png" title="Then Order status screen successfully displays" width="1034"/>
+                <img src="c6e66777057ddcb9d7b976c1edbff0dc54feadbdef7fb8cd81ab2b55ec0311d0.png" title="When user Click in the search field and conduct a search &quot;CHICKEN 8 PC WOG INJECTED KFC&quot;" width="1034"/>
+                <img src="1ea1045c76d4eb48bfb9fd2ae212f0840fea189efeeb88b25b3d73f7785faf65.png" title="Click on new order" width="1034"/>
+                <img src="200e81706d7effc23c47d1e0e9aa44964a42825825f3ad0c98bd580a7bd52a91.png" title="Click on clear filter" width="1034"/>
+                <img src="36d6d22627be6c2eaef9435b0c025dee1f26694ba4796ea3c42397a271063df7.png" title="Set prod name: CHICKEN 8 PC WOG INJECTED KFC" width="1034"/>
+                <img src="36d6d22627be6c2eaef9435b0c025dee1f26694ba4796ea3c42397a271063df7.png" title="Then verify user Search successful: <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

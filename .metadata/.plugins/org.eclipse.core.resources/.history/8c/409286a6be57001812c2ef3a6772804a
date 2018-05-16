@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="e279fc9a0c3490cde6556de3a181c4031a883a4c7931df14392cce9b5f291ae1.html">Verify User Able To View Access Dash Board</a></span>
+                > <span class="truncate-60"><a
+                    href="d7ae18bcf57c2a7570333ccb299003ba27b00f24204933ff6fcf732cf7f1517d.html">The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-05-2018 18:13</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Verify User Able To View Access Dash Board</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>And user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>When user click on the Messages icon<br>Then user able to see the Messages page displayed successful<br>When user click on the Orders icon<br>Then user able to see the Orders page displayed successful<br>When user click on the Invoices icon<br>Then user able to see the Invoices page displayed successful<br>When user click on the Products icon<br>Then user able to see the Products page displayed successful<br>When user click on the Customers icon<br>Then user able to see the Customers page displayed successful<br>When user click on the Inventory icon<br>Then user able to see the Inventory page displayed successful<br>When user click on the Settings icon<br>Then user able to see the Settings page displayed successful</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="647a70999899b48f15458d79931af71b644a47b71ab22029288d00ab8e932b5f.png" title="The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon #1: {UserId=1008, pwd=test, product=CHEESE CREAM CUP}" width="1034"/>
+                <img src="71aa5ef9628b5d8df7ba2c08928e2248d8314736791f63ea0f15382bc4a56fd1.png" title="Given user on the application" width="1034"/>
+                <img src="1b42aab4c6f47e74ea7f14e617aa0a686ecc80b49888858404c380a6edfbb8e6.png" title="Open home page" width="1034"/>
+                <img src="28cc5bb349fbfba5e0bf0b7bd7a493944dd33ca2f5f1f3ae012ca4714595ed78.png" title="And user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1034"/>
+                <img src="56109402056e1bb7bba3e4a28bbec65d2bd5e4e4cb837fbd2ce4a829d2b453a6.png" title="Set user name: 1008" width="1034"/>
+                <img src="3d563d33740b9cd1555ffc1df8f4a027d9cfcf8bb15b12ed57af6ad90d9f7568.png" title="Set password: test" width="1034"/>
+                <img src="28cc5bb349fbfba5e0bf0b7bd7a493944dd33ca2f5f1f3ae012ca4714595ed78.png" title="Click login" width="1034"/>
+                <img src="7aeb62c0131f6432a1999a409f154c1d37a33433369db1941789624594131239.png" title="When user click on the Messages icon" width="1034"/>
+                <img src="49d49c0e643c74691b738c3288163a62c7e04f7f51b497ef9ea985fdc95aa857.png" title="Then user able to see the Messages page displayed successful" width="1034"/>
+                <img src="f42fcc337c0614a27fd33573ba8f9e24abd49bbc3e5d635359f97e7b19e86a77.png" title="When user click on the Orders icon" width="1034"/>
+                <img src="49d49c0e643c74691b738c3288163a62c7e04f7f51b497ef9ea985fdc95aa857.png" title="Then user able to see the Orders page displayed successful" width="1034"/>
+                <img src="1669b2753288520ee07f8eae409e53b4990dc9990523a4e91485ea5aa31ed732.png" title="When user click on the Invoices icon" width="1034"/>
+                <img src="49d49c0e643c74691b738c3288163a62c7e04f7f51b497ef9ea985fdc95aa857.png" title="Then user able to see the Invoices page displayed successful" width="1034"/>
+                <img src="745a72f68544b0fdb22c75addd07052c3a7721911c1775db443e726511f0c7a7.png" title="When user click on the Products icon" width="1034"/>
+                <img src="49d49c0e643c74691b738c3288163a62c7e04f7f51b497ef9ea985fdc95aa857.png" title="Then user able to see the Products page displayed successful" width="1034"/>
+                <img src="69f2faafb3cb1272b10b1a0750c1e834e2d637497f9c827b4664699e0158fd5e.png" title="When user click on the Customers icon" width="1034"/>
+                <img src="49d49c0e643c74691b738c3288163a62c7e04f7f51b497ef9ea985fdc95aa857.png" title="Then user able to see the Customers page displayed successful" width="1034"/>
+                <img src="21225120c646ab42407fc7c321d089aa14d0fbf34a30fc78e494d27a17a993fd.png" title="When user click on the Inventory icon" width="1034"/>
+                <img src="49d49c0e643c74691b738c3288163a62c7e04f7f51b497ef9ea985fdc95aa857.png" title="Then user able to see the Inventory page displayed successful" width="1034"/>
+                <img src="ed60e6f5334effe53dd143408041165a321248203f0caa5f9ef2dff7a1122b6d.png" title="When user click on the Settings icon" width="1034"/>
+                <img src="647a70999899b48f15458d79931af71b644a47b71ab22029288d00ab8e932b5f.png" title="Then user able to see the Settings page displayed successful" width="1034"/>
+                <img src="daebc74183a4947e727c9962ea031a5bd0b67379144000e62eb4d9263fa33016.png" title="The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon #2: {UserId=10092, pwd=test, product=STUFFING MIX CHICKEN FLVR TFF STOVETOP}" width="1034"/>
+                <img src="70796b0dea38dfb91835d7ce104b41e66ec4de9493d4ea7e258856e28b508560.png" title="Given user on the application" width="1034"/>
+                <img src="dffce4145bbb81dd5d5a65a5d4fe68a032c0cd75c538beddb4b87b2a51868a6d.png" title="Open home page" width="1034"/>
+                <img src="8c4c48f911b8cb51e1928063d1d4a9e0ffaeb0640ac4e10c53cf3429f4acbdbf.png" title="And user enter valid user id &quot;10092&quot; password &quot;test&quot;" width="1034"/>
+                <img src="97fc5448880ead9e1156ba6ece8b2141d8ca394fe57fdf5cea498e38ecc8d97c.png" title="Set user name: 10092" width="1034"/>
+                <img src="b622991657daa12f0128cd99ad09dd3e3a55a41d3d00fa1b778cad7de4ef399b.png" title="Set password: test" width="1034"/>
+                <img src="8c4c48f911b8cb51e1928063d1d4a9e0ffaeb0640ac4e10c53cf3429f4acbdbf.png" title="Click login" width="1034"/>
+                <img src="72682197625d8b8b664c16a8ec66592e3581c518b7a017f3806d076cbfb21f03.png" title="When user click on the Messages icon" width="1034"/>
+                <img src="45e9bc5e78c200b3f184b43741eaab367b97bdd3fbf2216ffe29951a73fb2140.png" title="Then user able to see the Messages page displayed successful" width="1034"/>
+                <img src="f59e3a928c62c6759c2d885b954384ba28715327b62e3f206ed05dac0ccbc621.png" title="When user click on the Orders icon" width="1034"/>
+                <img src="45e9bc5e78c200b3f184b43741eaab367b97bdd3fbf2216ffe29951a73fb2140.png" title="Then user able to see the Orders page displayed successful" width="1034"/>
+                <img src="bc27a6a80d7bd7be68dc11344a6a0a47e7f6a8d147b42af07aad9aebdced528c.png" title="When user click on the Invoices icon" width="1034"/>
+                <img src="45e9bc5e78c200b3f184b43741eaab367b97bdd3fbf2216ffe29951a73fb2140.png" title="Then user able to see the Invoices page displayed successful" width="1034"/>
+                <img src="a83b458b76b8ef18a75864b6d893631298558255b10fbf332fab4413ad211235.png" title="When user click on the Products icon" width="1034"/>
+                <img src="45e9bc5e78c200b3f184b43741eaab367b97bdd3fbf2216ffe29951a73fb2140.png" title="Then user able to see the Products page displayed successful" width="1034"/>
+                <img src="873f86e10fb635451725d22ccd6df74d096a5cbde442fb37215023c87d837a05.png" title="When user click on the Customers icon" width="1034"/>
+                <img src="45e9bc5e78c200b3f184b43741eaab367b97bdd3fbf2216ffe29951a73fb2140.png" title="Then user able to see the Customers page displayed successful" width="1034"/>
+                <img src="7b4cb9b1b29cd32ffbe0f0b0ce356947858ff68db49c7539dc5b6cda040040d2.png" title="When user click on the Inventory icon" width="1034"/>
+                <img src="45e9bc5e78c200b3f184b43741eaab367b97bdd3fbf2216ffe29951a73fb2140.png" title="Then user able to see the Inventory page displayed successful" width="1034"/>
+                <img src="602300325acabd00ea8f1def2b0c873ab34bcf350aebd12b59d335a7f1c4ddee.png" title="When user click on the Settings icon" width="1034"/>
+                <img src="daebc74183a4947e727c9962ea031a5bd0b67379144000e62eb4d9263fa33016.png" title="Then user able to see the Settings page displayed successful" width="1034"/>
+                <img src="7c91ddaa3ce254e19acc02debc31b28cfa450db058827320305cd728b92e4014.png" title="The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon #3: {UserId=6431, pwd=test, product=CHICKEN 8 PC WOG INJECTED KFC}" width="1034"/>
+                <img src="3b94fec89a13387c4a71a09216201f0b4a29f384508d6515983573fce43cf653.png" title="Given user on the application" width="1034"/>
+                <img src="047bc15c9d65517a0d7af8ab24b1fd67d8670913d4a24f551ebc9cc8e9ff0efb.png" title="Open home page" width="1034"/>
+                <img src="0c443b208717e605b01445597d474f15c2e345f0a864585e91eb956c3d3caed1.png" title="And user enter valid user id &quot;6431&quot; password &quot;test&quot;" width="1034"/>
+                <img src="b92811078aa4066a7465ce02aa12462f02e710949064367f2b84c87df6867466.png" title="Set user name: 6431" width="1034"/>
+                <img src="8774200fff3af519ddc645830b3f2fd431a479c512c10fedae2e01c6794a3f1f.png" title="Set password: test" width="1034"/>
+                <img src="0c443b208717e605b01445597d474f15c2e345f0a864585e91eb956c3d3caed1.png" title="Click login" width="1034"/>
+                <img src="186ae773c714b90e2183f571e240da09ec4e78a1d37f01cd4cd0bb22cfdad886.png" title="When user click on the Messages icon" width="1034"/>
+                <img src="a0a2cd6cc5b7f69e0937aa55e9a3fb38f3e47cab0bf1e262078b2a04dc1c8c33.png" title="Then user able to see the Messages page displayed successful" width="1034"/>
+                <img src="e248c3fb78f1b599b839917c5a875e136a96030b4c4b609a3b94680a02bd5ab6.png" title="When user click on the Orders icon" width="1034"/>
+                <img src="a0a2cd6cc5b7f69e0937aa55e9a3fb38f3e47cab0bf1e262078b2a04dc1c8c33.png" title="Then user able to see the Orders page displayed successful" width="1034"/>
+                <img src="cf5bd9ff1ad6a5c985ceeefa9ea0d1e4f4ab2c4379845ccf7300d8dcda4e8915.png" title="When user click on the Invoices icon" width="1034"/>
+                <img src="a0a2cd6cc5b7f69e0937aa55e9a3fb38f3e47cab0bf1e262078b2a04dc1c8c33.png" title="Then user able to see the Invoices page displayed successful" width="1034"/>
+                <img src="7d8767c17b6317ff0e1198986aad03ee187dafbb4222fce10feb8ee0dd0ef22c.png" title="When user click on the Products icon" width="1034"/>
+                <img src="a0a2cd6cc5b7f69e0937aa55e9a3fb38f3e47cab0bf1e262078b2a04dc1c8c33.png" title="Then user able to see the Products page displayed successful" width="1034"/>
+                <img src="8d00fe5ed23dc497e89b438ef3528e7520c669c9282cb421511012c4d58ed528.png" title="When user click on the Customers icon" width="1034"/>
+                <img src="a0a2cd6cc5b7f69e0937aa55e9a3fb38f3e47cab0bf1e262078b2a04dc1c8c33.png" title="Then user able to see the Customers page displayed successful" width="1034"/>
+                <img src="daa2d1847d486efccfd4d76460f3514cab1c0f758fa527bf9edb789db281b8a3.png" title="When user click on the Inventory icon" width="1034"/>
+                <img src="a0a2cd6cc5b7f69e0937aa55e9a3fb38f3e47cab0bf1e262078b2a04dc1c8c33.png" title="Then user able to see the Inventory page displayed successful" width="1034"/>
+                <img src="0247ef3400e90fd25edf9a7c4b48ceee8ec16e68df2df9651688ae3f6b7a0ac3.png" title="When user click on the Settings icon" width="1034"/>
+                <img src="7c91ddaa3ce254e19acc02debc31b28cfa450db058827320305cd728b92e4014.png" title="Then user able to see the Settings page displayed successful: <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

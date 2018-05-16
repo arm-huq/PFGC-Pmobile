@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cucumber.api.java.en.Given"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.pages.PageObject"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.annotations.findby.FindBy"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.annotations.findby.How"/>
+<fullyQualifiedTypeName name="net.thucydides.core.steps.ScenarioSteps"/>
+<fullyQualifiedTypeName name="net.thucydides.core.annotations.Step"/>
+<fullyQualifiedTypeName name="net.thucydides.core.annotations.DefaultUrl"/>
+<fullyQualifiedTypeName name="com.pmobile.pages.LoginElementsPage"/>
+<fullyQualifiedTypeName name="net.thucydides.core.annotations.Steps"/>
+<fullyQualifiedTypeName name="com.pmobile.pages.HomePage"/>
+<fullyQualifiedTypeName name="com.pmobile.utilities.HomePage"/>
+<fullyQualifiedTypeName name="com.pmobile.pages.DashBoardActionPage"/>
+<fullyQualifiedTypeName name="com.pmobile.elements.pages.OrderDetailElementPage"/>
+<fullyQualifiedTypeName name="com.pmobile.confirmation.pages.DashBoardConfirmationPage"/>
+<fullyQualifiedTypeName name="org.apache.tools.ant.taskdefs.WaitFor"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.pages.WebElementFacade"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="com.pmobile.elements.pages.ProductDetailElementPage"/>
+<fullyQualifiedTypeName name="org.jruby.runtime.load.LoadService19"/>
+<fullyQualifiedTypeName name="com.pmobile.pages.LoginActionPage"/>
+<fullyQualifiedTypeName name="com.pmobile.confirmation.pages.OrderConfirmationPages"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.When"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.annotations.findby.By"/>
+<fullyQualifiedTypeName name="com.pmobile.pages.OrderDetailActionPage"/>
+<fullyQualifiedTypeName name="com.pmobile.pages.NewOrderActionPage"/>
+</qualifiedTypeNameHistroy>

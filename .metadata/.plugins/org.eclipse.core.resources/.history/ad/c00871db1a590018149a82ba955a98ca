@@ -1,0 +1,16 @@
+Feature: Verify user able to view Access dash board
+ 
+ 	
+ Scenario Outline: Validate that the user is able to view and search orders
+     Given user on the application 
+     When user enter valid user id "<UserId>" password "<pwd>"
+     Then user should be landed on the home page 
+     When user click on the order icon 
+     Then Order status screen successfully displays 
+     When user Click in the search field and conduct a search "<product>"
+     Then verify user Search successful 
+
+ 
+ 	Examples:
+    | UserId	| pwd	| product	      |
+    | 1008     	| test	| BUTTER SOLIDS UNSLTD AA TFF|
