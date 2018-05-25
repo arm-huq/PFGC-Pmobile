@@ -1,0 +1,69 @@
+package com.pmobile.pages;
+
+import org.junit.Assert;
+
+import com.pmobile.confirmation.pages.DashBoardConfirmationPage;
+import com.pmobile.elements.pages.DashBoardElementPage;
+import com.pmobile.elements.pages.LoginElementsPage;
+import com.pmobile.elements.pages.OrderDetailElementPage;
+import com.pmobile.elements.pages.ProductDetailElementPage;
+import com.pmobile.utilities.HomePage;
+
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.steps.ScenarioSteps;
+
+public class InvoicesActionPages extends ScenarioSteps{
+	
+	HomePage home ;
+	LoginElementsPage loginElemnt;
+	DashBoardElementPage dashbrdelemnt;	
+	OrderDetailElementPage orderDetails;
+	DashBoardConfirmationPage dashConfirm;
+	ProductDetailElementPage productDetail;
+	
+	String iconText;
+	
+	@Step
+	public void openHomePage(){
+		home.open();
+	}
+	
+	@Step
+	public void setUserName(String userName){
+		loginElemnt.userid.sendKeys(userName);
+	}
+	
+	@Step
+	public void setPassword(String pwd){
+		loginElemnt.password.sendKeys(pwd);
+	}
+	
+	@Step
+	public void clickLogin() throws InterruptedException{
+		loginElemnt.clicklogin.click();
+		Thread.sleep(5000);		
+	}
+	
+	@Step
+	public void clickOnOrder() throws InterruptedException{
+		Thread.sleep(3000);
+		dashbrdelemnt.orderButton.click();
+	}
+
+	public void clickOnInvoicesButton() throws InterruptedException {
+		Thread.sleep(2000);
+		dashbrdelemnt.invoicestextButton.waitUntilVisible();
+		iconText = dashbrdelemnt.invoicestextButton.getText();
+		dashbrdelemnt.invoicesButton.click();
+	}
+	
+	public void verifyInvoicesLandingPage() {
+		String text = orderDetails.invoicesTtextheader.getText();
+		Assert.assertEquals(iconText, text);
+		if(iconText.equalsIgnoreCase(text)){
+			System.out.println(" Invoices dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" Invoices dashboard " + "Failed " + " -- ");
+		}
+	}
+}

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Valid user able to access, view, search, refresh,short order, filter, view invoice detail" skipped="0" tests="1" time="28.05" timestamp="2018-05-24 11:39:48"><testcase name="The user is able to refresh invoices when pulling downthe refresh arrow"/></testsuite>

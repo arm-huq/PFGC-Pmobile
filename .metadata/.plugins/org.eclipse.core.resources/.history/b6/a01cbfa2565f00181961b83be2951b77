@@ -1,0 +1,13 @@
+Feature: Valid user able to access, view, search, refresh,short order, filter, view invoice detail
+
+ Scenario Outline: The user is able to  view and search invoices when clicking on the invoices from dashboard
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the invoices icon
+  Then invoice screen successfully displayed
+  When click in the search field and conduct a search "<invoiceNo>"
+  Then search reasult will be successfull "<invoiceNo>"
+
+ Examples:
+    | UserId	| pwd	|invoiceNo|
+    | 1008     	| test	|         |

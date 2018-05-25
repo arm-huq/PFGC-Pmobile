@@ -1,0 +1,521 @@
+package com.pmobile.pages;
+
+import org.junit.Assert;
+
+import com.pmobile.confirmation.pages.DashBoardConfirmationPage;
+import com.pmobile.elements.pages.DashBoardElementPage;
+import com.pmobile.elements.pages.LoginElementsPage;
+import com.pmobile.elements.pages.OrderDetailElementPage;
+import com.pmobile.elements.pages.ProductDetailElementPage;
+import com.pmobile.utilities.HomePage;
+
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.steps.ScenarioSteps;
+
+public class NewOrderActionPage  extends ScenarioSteps{
+	
+
+	HomePage home ;
+	LoginElementsPage loginElemnt;
+	DashBoardElementPage dashbrdelemnt;
+	OrderDetailElementPage orderDetails;
+	ProductDetailElementPage productDetail;
+	String fProdName;
+	String fProdNameSort;
+	String sProdNameSort;
+	String prodBrands;
+	String searchResultBeFil;
+	String filterCatName;
+	@Step
+	public void openHomePage(){
+		home.open();
+	}
+	
+	@Step
+	public void setUserName(String userName){
+		loginElemnt.userid.sendKeys(userName);
+	}
+	
+	@Step
+	public void setPassword(String pwd){
+		loginElemnt.password.sendKeys(pwd);
+	}
+	
+	@Step
+	public void clickLogin() throws InterruptedException{
+		loginElemnt.clicklogin.click();
+		Thread.sleep(3000);
+	}
+	
+	@Step
+	public void clickonOrderButton() throws InterruptedException{
+		dashbrdelemnt.orderButton.click();
+	}
+	@Step
+	public void clickonClearAllButton() throws InterruptedException{
+		orderDetails.sortClearAll.click();
+	}
+
+	public void clickOnNewbutton() throws InterruptedException {
+		Thread.sleep(4000);
+		orderDetails.clearListByButton.click();
+		Thread.sleep(2000);
+		orderDetails.newButton.click();
+		Thread.sleep(3000);
+		//orderDetails.clearListByButton.click();
+	}
+	
+	public void verifyProcessOrderButton() throws InterruptedException {
+		Thread.sleep(2000);
+		String text = orderDetails.processButton.getText();		
+		Assert.assertTrue("Process button not displayed", orderDetails.processButton.isDisplayed());
+		if(orderDetails.processButton.isDisplayed()){
+			System.out.println("Proces: "+ text );
+		}
+	}
+	public void clickOnAddItemAndQuentity() throws InterruptedException {
+		Thread.sleep(2000);
+		orderDetails.newButton.click();
+	}
+
+	public void addNewProduct() throws InterruptedException {
+		Thread.sleep(2000);	
+		orderDetails.clearFilter.click();
+		Thread.sleep(2000);	
+		orderDetails.sortClearAll.click();
+		Thread.sleep(2000);
+		orderDetails.clearListByButton.click();
+		Thread.sleep(2000);	
+		orderDetails.searchProductsDetailPage.sendKeys("Chicken");
+		orderDetails.newProductSearchbutton.click();
+		orderDetails.newProduct.click();
+		Thread.sleep(2000);	
+		orderDetails.productQuentity.click();
+		orderDetails.productQuentityClick.click();
+		
+	}
+	
+	public void addNewProductandQuentity() throws InterruptedException {
+		Thread.sleep(2000);	
+		orderDetails.clearFilter.click();
+		Thread.sleep(2000);	
+		orderDetails.sortClearAll.click();
+		orderDetails.clearListByButton.click();
+		Thread.sleep(2000);	
+		orderDetails.searchProductsDetailPage.sendKeys("Chicken");
+		orderDetails.newProductSearchbutton.click();
+		orderDetails.newProduct.click();
+		Thread.sleep(2000);	
+		orderDetails.productQuentity.click();
+		System.out.println("	Clicked on qty -------------");
+		orderDetails.productQuentityClick.click();
+		Thread.sleep(2000);
+		productDetail.topLeftArrowPdetail.click();
+		
+	}
+	
+	public void verifyProductDetailPage() throws InterruptedException {
+		Thread.sleep(3000);
+		
+		String text = orderDetails.productName.getText();
+		if(orderDetails.processButton.isDisplayed()){
+			System.out.println("Displayed : "+ text);
+		}
+		Assert.assertEquals("Update Order",orderDetails.productName.getText());
+		//Assert.assertEquals("Update Order ",orderDetails.processButton.getText());
+	}
+
+	public void clickOnMinMaxSection() throws InterruptedException {
+		
+		productDetail.prodDetailMinMaxSpan.click();
+		
+		if(productDetail.prodDetailconfirmation.isDisplayed()){
+			System.out.println("Element is Present");
+		}else{
+			System.out.println("Element is Absent");
+		}
+		Thread.sleep(3000);
+		productDetail.prodDetailMinMaxSpan.click();
+		
+		if(productDetail.prodDetailconfirmation.isDisplayed()){
+			System.out.println("Element is Present");
+		}else{
+			System.out.println("Element is Absent");
+		}
+	}
+
+	public void clickOnProductCard() throws InterruptedException {
+		Thread.sleep(2000);
+		productDetail.productCard.waitUntilEnabled();
+		productDetail.productCard.click();
+	}
+
+	public void navigateToPeviousNext() throws InterruptedException {
+		Thread.sleep(2000);
+		fProdName =  productDetail.productDetailName.getText();
+		System.out.println("1ST Prod Name : "+ fProdName);
+		productDetail.rightArrowProdDetail.click();
+		Thread.sleep(2000);
+		String sProdName =  productDetail.productDetailName.getText();
+		System.out.println("2nd Prod Name : "+ sProdName);
+		Assert.assertNotEquals(fProdName, sProdName);
+		Thread.sleep(2000);
+		productDetail.leftArrowProdDetail.click();
+	}
+
+	public void verifyNavigateToPevious() throws InterruptedException {
+		Thread.sleep(2000);
+		String tProdName =  productDetail.productDetailName.getText();
+		Assert.assertEquals(tProdName, fProdName);
+	}
+
+	public void clickOnTopLeftArrow() {
+		productDetail.topLeftArrowPdetail.click();
+	}
+
+	public void verifyMainOrderEntryScreen() throws InterruptedException {
+		Thread.sleep(2000);
+		String headerText = productDetail.headerTextProdDetail.getText();
+		Assert.assertEquals("Products",headerText);
+	}
+
+	public void clickProcessButton() {
+		orderDetails.processButton.click();
+	}
+
+	public void getProductCardConfirmation() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void verifyOrderQuantityInDetail() throws InterruptedException {
+		Thread.sleep(2000);
+		productDetail.topLeftArrowPdetail.click();
+		orderDetails.processButton.click();
+		Thread.sleep(2000);
+		Assert.assertEquals("5", productDetail.prodQtyVerify.getText());
+	}
+
+	public void clickNewProductQuentity() throws InterruptedException {
+		Thread.sleep(2000);	
+		orderDetails.clearFilter.click();
+		Thread.sleep(2000);	
+		orderDetails.sortClearAll.click();
+		orderDetails.clearListByButton.click();
+		Thread.sleep(2000);	
+		orderDetails.searchProductsDetailPage.sendKeys("Chicken");
+		orderDetails.newProductSearchbutton.click();
+		orderDetails.newProduct.click();
+		Thread.sleep(2000);	
+		orderDetails.productQuentity.click();
+		
+	}
+
+	public void verifyQuickaddtoolDisplayed() throws InterruptedException {
+		Thread.sleep(2000);
+		Assert.assertTrue(productDetail.quickAddTool.isDisplayed());
+	}
+
+	public void setOrderQuentity() {
+		orderDetails.productQuentityClick.click();
+	}
+
+	public void searchProduct() {
+		orderDetails.clearListByButton.click();
+		orderDetails.searchProductsDetailPage.clear();
+		orderDetails.searchProductsDetailPage.sendKeys("Milk");
+		orderDetails.newProductSearchbutton.click();
+	}
+	
+	public void searchProductWithListBy() {
+		orderDetails.searchProductsDetailPage.clear();
+		orderDetails.searchProductsDetailPage.sendKeys("Milk");
+		orderDetails.newProductSearchbutton.click();
+	}
+	/*public void searchProductWithStandardGuide() {
+		orderDetails.searchProductsDetailPage.clear();
+		orderDetails.searchProductsDetailPage.sendKeys("TOMATO PUREE FCY CALIF");
+		orderDetails.newProductSearchbutton.click();
+	}*/
+	
+	public void verifySearchResult() throws InterruptedException {
+		Thread.sleep(2000);
+		productDetail.searchResult.waitUntilVisible();
+		Assert.assertTrue(productDetail.searchResult.isDisplayed());
+		System.out.println("Search result not Displayed : "+productDetail.searchResult.getText());
+	}
+
+	public void verifylistBySelectedButon() throws InterruptedException {
+		Thread.sleep(2000);
+		dashbrdelemnt.homeButton.click();
+		Thread.sleep(2000);
+		dashbrdelemnt.productsButton.click();
+		Thread.sleep(2000);
+		System.out.println("History selected: "+orderDetails.historyButtonOnListBy.getCssValue("background-color"));
+		Assert.assertTrue("History is not selected ", productDetail.historyButtonOndisplayedListBy.isDisplayed());
+		//Assert.assertTrue(orderDetails.historyButtonOnListBySelected.isdisplayed());
+		
+	}
+
+	public void verifyOrderdetailPage() throws InterruptedException {
+		Thread.sleep(2000);
+		orderDetails.confOrderNumberOderDe.waitUntilVisible();
+		String orderNUmber =  orderDetails.confOrderNumberOderDe.getText();
+		Assert.assertTrue(orderDetails.confOrderNumberOderDe.isDisplayed());
+		System.out.println("Confirm Order Number  :: "+ orderNUmber);
+	}
+
+	public void clickAndChooseBidGuide() {
+		productDetail.clearHistory.click();
+		productDetail.bidGuides.click();
+		productDetail.selectBidGuide.click();
+		productDetail.clickApply.click();
+		
+	}
+
+	public void addItemAndQtyOfProduct() throws InterruptedException {
+		//orderDetails.newProductSearchbutton.click();
+		Thread.sleep(2000);
+		orderDetails.newProduct.click();
+		Thread.sleep(2000);	
+		orderDetails.productQuentity.click();
+		orderDetails.productQuentityClick.click();
+	}
+
+	public void clickONProcessOrder() {
+		orderDetails.processButton.click();
+	}
+
+	public void clearSearchByGoButton() {
+		orderDetails.clearSearch.click();
+		
+	}
+
+	public void verifyScreenBackToBidGuide() throws InterruptedException {
+		Thread.sleep(2000);
+		dashbrdelemnt.homeButton.click();
+		Thread.sleep(2000);
+		dashbrdelemnt.productsButton.click();
+		Assert.assertTrue(orderDetails.BidGuidesInList.isDisplayed());
+	}
+
+	public void clickAndChooseStandardGuide() {
+		productDetail.clearHistory.click();
+		productDetail.standaedGuide.click();
+		productDetail.selectBidGuide.click();
+		productDetail.clickApply.click();
+	}
+
+	public void verifyScreenPopulatedWStandardGuide() throws InterruptedException {
+		boolean mm = productDetail.selectStandardGuide.isDisplayed();
+		System.out.println("1 Check Displayed : " + mm);
+		Assert.assertTrue(productDetail.selectStandardGuide.isDisplayed());
+		System.out.println("2 Checked Displayed !!!! " + mm);
+		
+	}
+
+	public void verifyScreenRevertsBackStandardGuide() throws InterruptedException {
+		Thread.sleep(2000);
+		dashbrdelemnt.homeButton.click();
+		Thread.sleep(2000);
+		dashbrdelemnt.productsButton.click();
+		boolean mm = productDetail.selectStandardGuide.isDisplayed();
+		System.out.println("Check Displayed : " + mm);
+		Assert.assertTrue(productDetail.selectStandardGuide.isDisplayed());
+			}
+	public void clickAndChooseParListGuide() throws InterruptedException {
+		Thread.sleep(2000);
+		productDetail.clearHistory.click();
+		productDetail.parList.click();
+		productDetail.selectBidGuide.click();
+		productDetail.clickApply.click();
+	}
+
+	public void verifyScreenPopulatedWParList() {
+		boolean mm = productDetail.selectParList.isDisplayed();
+		System.out.println("1 Check Displayed : " + mm);
+		Assert.assertTrue(productDetail.selectParList.isDisplayed());
+		System.out.println("2 Checked Displayed !!!! " + mm);
+	}
+
+	public void searchProductWithinOrder(String ProdName) {
+		orderDetails.searchProductsDetailPage.clear();
+		orderDetails.searchProductsDetailPage.sendKeys(ProdName);
+		orderDetails.newProductSearchbutton.click();
+	}
+
+	public void verifyOrderQuantityInParListDetail() throws InterruptedException {
+		Thread.sleep(2000);
+		productDetail.topLeftArrowPdetail.click();
+		Thread.sleep(2000);
+		orderDetails.processButtonForParList.click();
+		Thread.sleep(2000);
+		Assert.assertEquals("5", productDetail.prodQtyVerify.getText());
+	}
+
+	public void clickCriticalItemList() {
+		productDetail.criticalItemList.click();
+	}
+
+	public void verifylistBySelectCriticalItemList() throws InterruptedException {
+		Thread.sleep(2000);
+		dashbrdelemnt.homeButton.click();
+		Thread.sleep(2000);
+		dashbrdelemnt.productsButton.click();
+		boolean mm =  productDetail.defaultCriticalList.isDisplayed();
+		System.out.println("Test print : "+ mm);
+		System.out.println("Critical Item list selected : "+productDetail.defaultCriticalList.getCssValue("background-color"));
+		Assert.assertTrue("History selected ", productDetail.defaultCriticalList.isDisplayed());
+	}
+
+	public void clickOnSortByPrice() throws InterruptedException {
+		productDetail.clearHistory.click();
+		Thread.sleep(1000);
+		orderDetails.sortClearAll.click();
+		Thread.sleep(1000);
+		System.out.println("Sort by Price :");
+		System.out.println("______________________________________");
+		fProdNameSort = productDetail.prodName.getText();
+		System.out.println("First Product Name :" + fProdNameSort);
+		Thread.sleep(2000);
+		productDetail.sortByPrice.click();
+		Thread.sleep(1000);
+		productDetail.sortByPriceArrow.click();
+	}
+
+	public void verifyProductsSortByPrice() {
+		sProdNameSort = productDetail.prodName.getText();
+		System.out.println("First Product Name ::: " + fProdNameSort);
+		System.out.println("Second Product Name : " + sProdNameSort);
+		Assert.assertNotSame("Sort Success ", fProdNameSort, sProdNameSort);		
+	}
+
+	public void clickClearAllSort() throws InterruptedException {
+		orderDetails.sortClearAll.click();
+		Thread.sleep(1000);
+	}
+
+	public void verifySortByCleared() {
+		String cProdNameSort = productDetail.prodName.getText();
+		System.out.println("Previous product Name ::: " + fProdNameSort);
+		System.out.println("Current Product Name : " + cProdNameSort);
+		Assert.assertEquals(fProdNameSort, cProdNameSort);
+		Assert.assertNotSame("Sort not Success ", sProdNameSort,cProdNameSort);
+	}
+
+	public void clickOnFilterByBrand() throws InterruptedException {
+		orderDetails.clearListByButton.click();
+		Thread.sleep(3000);
+		productDetail.filterByBrands.click();
+	}
+
+	public void verifyFilterByBrandDisplayed() {
+		String cProdNameSort = productDetail.displayBrandOption.getText();
+		System.out.println("Elements :: " + cProdNameSort);
+		Assert.assertTrue("Page Not Loaded", productDetail.displayBrandOption.isDisplayed());
+	}
+
+	public void selectBrandToFilter() {
+		filterCatName = productDetail.selectBidGuide.getText();
+		productDetail.selectBidGuide.click();
+		prodBrands = productDetail.selectBidGuide.getText();
+		productDetail.clickApply.click();
+	}
+
+	public void verifyFilteredByBrand() {
+		String cProdNameSort = productDetail.prodName.getText();
+		String array1[]= cProdNameSort.split(" ");
+		int i = array1.length;
+		String prod1= prodBrands.trim();
+		Assert.assertEquals(array1[i],prod1);
+	}
+
+	public void clearAllBrandsFilter() {
+		searchResultBeFil = productDetail.searchResult.getText();
+		productDetail.clearAllFilter.click();
+	}
+
+	public void verifyClearAllBrandsFilter() {
+		String cProdNameSort = productDetail.prodName.getText();
+		String array1[]= cProdNameSort.split(" ");
+		for (int i=0; i < array1.length; i++){
+			String prod1= prodBrands.trim();
+			String prod2= array1[i].trim();
+			System.out.println(prod2);
+			Assert.assertNotSame("Filter not clear",prod1,prod2);
+		}
+	}
+	
+	public void verifyClearAllFilter() {
+		String cProdNameSort = productDetail.searchResult.getText();
+		System.out.println("!!!!"+cProdNameSort);
+		Assert.assertNotSame("Filter not clear", searchResultBeFil, cProdNameSort);
+	}
+	
+	public void clickOnFilterBycatagory() {
+		productDetail.filterBycatagory.click();
+	}
+
+	public void clickOnFilterByNewItems() {
+		productDetail.filterByNewItems.click();
+	}
+
+	public void clickOnFilterByPreviousItems() {
+		productDetail.filterByPreviousItems.click();
+	}
+
+	public void clickOnFilterByclasses() {
+		productDetail.filterByClasses.click();
+	}
+
+	public void verifyFilterByClassesDisplayed() {
+		String cProdNameSort = productDetail.displayBrandOption.getText();
+		System.out.println("Elements :: " + cProdNameSort);
+		Assert.assertTrue("Page Not Loaded", productDetail.displayBrandOption.isDisplayed());
+	}
+
+	public void verifyNewOrderID() {
+		String orderIDNumber = productDetail.newOrderID.getText();
+		System.out.println("Elements :: " + orderIDNumber);
+		Assert.assertTrue("Page Not Loaded", productDetail.newOrderID.isDisplayed());
+	}
+
+	public void verifyScreenBacktoPerList() throws InterruptedException {
+		Thread.sleep(2000);
+		dashbrdelemnt.homeButton.click();
+		Thread.sleep(2000);
+		dashbrdelemnt.productsButton.click();
+		Thread.sleep(2000);
+		Assert.assertTrue(orderDetails.selectedParList.isDisplayed());
+	}
+
+	public void verifyScreenBacktoCustomGuide() throws InterruptedException {
+		Thread.sleep(2000);
+		dashbrdelemnt.homeButton.click();
+		Thread.sleep(2000);
+		dashbrdelemnt.productsButton.click();
+		Thread.sleep(2000);
+		Assert.assertTrue(orderDetails.selectedCustomGuide.isDisplayed());
+	}
+
+	public void verifyFilteredByCategory() {
+		String cname = productDetail.displayCategory.getText();
+		System.out.println("Elements :: " + cname);
+		Assert.assertTrue("Page Not Loaded", productDetail.displayCategory.isDisplayed());
+		Assert.assertEquals(filterCatName, cname);
+	}
+
+	public void verifyFilteredByPreviousItems() {
+		String cname = productDetail.displayPreviiousItem.getText();
+		System.out.println("Elements :: " + cname);
+		Assert.assertTrue("Page Not Loaded", productDetail.displayPreviiousItem.isDisplayed());
+		Assert.assertEquals(filterCatName, cname);
+	}
+
+	public void verifyFilteredByClasses() {
+		String cname = productDetail.displayClasses.getText();
+		System.out.println("Elements :: " + cname);
+		Assert.assertTrue("Page Not Loaded", productDetail.displayClasses.isDisplayed());
+		Assert.assertEquals(filterCatName, cname);
+	}
+}

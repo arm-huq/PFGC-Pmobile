@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="5" name="The user is able to view, navigate on the proiduct details" skipped="0" tests="5" time="225.63" timestamp="2018-05-24 05:45:13"><testcase name="The user is able to view, expand and minimize product details, product card and description when clicking on specific item"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.LoginActionPage.clickOnOrder(LoginActionPage.java:58)&#13;
+com.pmobile.steps.DashBoardPageSteps.user_click_on_the_order_icon(DashBoardPageSteps.java:56)&#13;
+✽.user click on the order icon(src/main/resources/Features/productDetail.feature:6)&#13;
+</system-err></testcase><testcase name="The user is able to navigate through product details when clicking on the arrow to go to next item"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.LoginActionPage.clickOnOrder(LoginActionPage.java:58)&#13;
+com.pmobile.steps.DashBoardPageSteps.user_click_on_the_order_icon(DashBoardPageSteps.java:56)&#13;
+✽.user click on the order icon(src/main/resources/Features/productDetail.feature:24)&#13;
+</system-err></testcase><testcase name="The user is able to navigate back to order from product details when clicking on the back arrow"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.LoginActionPage.clickOnOrder(LoginActionPage.java:58)&#13;
+com.pmobile.steps.DashBoardPageSteps.user_click_on_the_order_icon(DashBoardPageSteps.java:56)&#13;
+✽.user click on the order icon(src/main/resources/Features/productDetail.feature:39)&#13;
+</system-err></testcase><testcase name="The user is able see and use the quick add tool when clicking on an item quantity box"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.LoginActionPage.clickOnOrder(LoginActionPage.java:58)&#13;
+com.pmobile.steps.DashBoardPageSteps.user_click_on_the_order_icon(DashBoardPageSteps.java:56)&#13;
+✽.user click on the order icon(src/main/resources/Features/productDetail.feature:55)&#13;
+</system-err></testcase><testcase name="validate The user is able to use search funtion in the submit order screens when using the search bar"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.LoginActionPage.clickOnOrder(LoginActionPage.java:58)&#13;
+com.pmobile.steps.DashBoardPageSteps.user_click_on_the_order_icon(DashBoardPageSteps.java:56)&#13;
+✽.user click on the order icon(src/main/resources/Features/productDetail.feature:70)&#13;
+</system-err></testcase></testsuite>

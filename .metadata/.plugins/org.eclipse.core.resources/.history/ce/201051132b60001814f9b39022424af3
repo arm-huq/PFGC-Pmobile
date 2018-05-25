@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="6ea887dfe9421a4eeb311f5c43b4091f4959c1714d0135b5ac2761e9a62e251a.html">Valid User Able To Access, View, Search, Refresh,Short Order, Filter, View Invoice Detail</a></span>
+                > <span class="truncate-60"><a
+                    href="5809cc8fdc2e18218eeaeea2679f544f77c6bb59f9351a0f956982f6495200e3.html">The user is able to filter invoices by invoices date,Customer and status when clicking on the filter buttons and clicking on clear all </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-05-2018 17:29</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Valid User Able To Access, View, Search, Refresh,Short Order, Filter, View Invoice Detail</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">The user is able to filter invoices by invoices date,Customer and status when clicking on the filter buttons and clicking on clear all
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the invoices icon<br>Then invoice screen successfully displayed<br>When Click on the Customer filter by box<br>Then user able to see customer list populates on righthand side<br>When Select a customer and click on the apply<br>Then user able to see the invoices are successfully displayed for only that customer<br>When user Click on the clear all on customer filter<br>Then user able to see the invoice successfully goes back to all invoices<br>When user Click on the invoice date filter box<br>Then user able to see the orders date filter options successfully populated on righthand side<br>When user choose a date range and click on apply<br>Then user able to see order for date range successfully populated<br>When clear all on invoice date filter<br>Then user able to see the invoice successfully goes back to all invoices<br>When user Click on the invoice date filter box<br>Then user able to see the orders date filter options successfully populated on righthand side<br>When choose a filter option(ex. last week) and click on the box then click on apply<br>Then Invoices for that time frame successfully populated<br>When clear all on invoice date filter<br>Then user able to see the invoice successfully goes back to all invoices<br>When user click on the invoice status filter<br>Then user able to see all status option successfully on screen<br>When user choose a filter option box and click on apply<br>Then user able to see status filter option successfully display on the screen<br>When Clear all on status filter<br>Then user able to see the invoice successfully goes back to all invoices</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4dfb89aeee20fe3b6f2933f91bbbd69fc435ec496e0d6faa3b3cbef20e68f7b4.png" title="The user is able to filter invoices by invoices date,Customer and status when clicking on the filter buttons and clicking on clear all #1: {UserId=1008, pwd=test}" width="1034"/>
+                <img src="e817e9e3d488744f6011018cbb202fddbcb3a80cc7fc08a31116decab7b09a36.png" title="Given user on the application" width="1034"/>
+                <img src="a099e42811c2396deffa54e0d0f2f717bc33c462a7d443435bffeed2ac04b79f.png" title="Open home page" width="1034"/>
+                <img src="5814d03d02557d6191b4cd2f6fc1f712cef80b7c6f4c165a0bd777bef685bb07.png" title="When user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1034"/>
+                <img src="f952683b31e08bfda18d52c52f140c3589d42caef1201bfda5e3c17634d86185.png" title="Set user name: 1008" width="1034"/>
+                <img src="3d563d33740b9cd1555ffc1df8f4a027d9cfcf8bb15b12ed57af6ad90d9f7568.png" title="Set password: test" width="1034"/>
+                <img src="5814d03d02557d6191b4cd2f6fc1f712cef80b7c6f4c165a0bd777bef685bb07.png" title="Click login" width="1034"/>
+                <img src="ab620f534c8721a4112334c1c1adebb3072a71f818f168be43c910272c1b8683.png" title="And user click on the invoices icon" width="1034"/>
+                <img src="bd524cef970ad00bd84ac2ff58471319a59f018dd982d24e27d1557958eac8a6.png" title="Click on invoices button" width="1034"/>
+                <img src="72d3ee4261a5e3dc1d40d715abd6e9fa525797c6c204bac7736fcca5cbccb97a.png" title="Then invoice screen successfully displayed" width="1034"/>
+                <img src="eb560f0ed0bc6e8dc271fda5c533668a3176b442b8ccff6c55a53547100aedd7.png" title="Verify invoices landed page" width="1034"/>
+                <img src="8274ffff0524018db8460d78be89e63476de55779d79ae379863819d23979dd0.png" title="When Click on the Customer filter by box" width="1034"/>
+                <img src="f5043f151d85605a012655353f37c45066b3db1cea4b1874ef0fa611de37f942.png" title="Then user able to see customer list populates on righthand side" width="1034"/>
+                <img src="7a0528da7ef03f58821275e22b45821942c6df366cae17692ee76cdac9d9c931.png" title="When Select a customer and click on the apply" width="1034"/>
+                <img src="52680e3f8eafb1d4dc9389eb285f368646307919b060eee90c5e0b8de8727214.png" title="Clickon select customer" width="1034"/>
+                <img src="7a0528da7ef03f58821275e22b45821942c6df366cae17692ee76cdac9d9c931.png" title="Clickon apply" width="1034"/>
+                <img src="7a0528da7ef03f58821275e22b45821942c6df366cae17692ee76cdac9d9c931.png" title="Then user able to see the invoices are successfully displayed for only that customer" width="1034"/>
+                <img src="6e685de1148d7bbd5d9c52d81f656d6092091f5ac53c3d0ceb14965defc959da.png" title="When user Click on the clear all on customer filter" width="1034"/>
+                <img src="4dfb89aeee20fe3b6f2933f91bbbd69fc435ec496e0d6faa3b3cbef20e68f7b4.png" title="Then user able to see the invoice successfully goes back to all invoices" width="1034"/>
+                <img src="93d15c5661b91c8f2a52efc8131e8d567c75719a7ab650416d5b0edc0d31c31f.png" title="When user Click on the invoice date filter box" width="1034"/>
+                <img src="ddc2761a7f83d1acba74240c9fc3edd28f294e978ee82cd6318d259e528fc390.png" title="Then user able to see the orders date filter options successfully populated on righthand side" width="1034"/>
+                <img src="549a3d4df28133bbc7b3abb42ef4bb576bf3243fc105fc9ef347fb826c25bf37.png" title="When user choose a date range and click on apply" width="1034"/>
+                <img src="33d2dbe505ef367c81d49178f17cba169e3eddb2ebaa6f7bd2ab017d4c044956.png" title="Set orderdate from" width="1034"/>
+                <img src="848959fe3e16f1b27d73aa857544732d6f87a9f797d647da91ec0fd2f898199a.png" title="Set orderdate to" width="1034"/>
+                <img src="549a3d4df28133bbc7b3abb42ef4bb576bf3243fc105fc9ef347fb826c25bf37.png" title="Clickon apply" width="1034"/>
+                <img src="549a3d4df28133bbc7b3abb42ef4bb576bf3243fc105fc9ef347fb826c25bf37.png" title="Then user able to see order for date range successfully populated" width="1034"/>
+                <img src="b2aff0f4c7195b05f1f9a7ba0d0d9e7cfc6c536ff70e852303cc92e10d41cb3c.png" title="When clear all on invoice date filter" width="1034"/>
+                <img src="4dfb89aeee20fe3b6f2933f91bbbd69fc435ec496e0d6faa3b3cbef20e68f7b4.png" title="Then user able to see the invoice successfully goes back to all invoices" width="1034"/>
+                <img src="7d331ff3d452c17ea09be5532076640c2db26c73403f02dd47e40a4991bc6673.png" title="When user Click on the invoice date filter box" width="1034"/>
+                <img src="ddc2761a7f83d1acba74240c9fc3edd28f294e978ee82cd6318d259e528fc390.png" title="Then user able to see the orders date filter options successfully populated on righthand side" width="1034"/>
+                <img src="03a5ba9d8ce4534bec75bfb53f24871dbb35b80a03c2782aae0f9076915a5fed.png" title="When choose a filter option(ex. last week) and click on the box then click on apply" width="1034"/>
+                <img src="f158db3377fac19a862fd8fc5552a3ac8c4dc60c0f911ed2f01350d208c40ae5.png" title="Then Invoices for that time frame successfully populated" width="1034"/>
+                <img src="128f4b129f8274da06d599b555c933d689328fcb2070303a2474690c1425d751.png" title="When clear all on invoice date filter" width="1034"/>
+                <img src="4dfb89aeee20fe3b6f2933f91bbbd69fc435ec496e0d6faa3b3cbef20e68f7b4.png" title="Then user able to see the invoice successfully goes back to all invoices" width="1034"/>
+                <img src="fc6f8a8636e261a583a7a4d7a5ab76789fbfb54f691cbd47550e49ac2443d2a1.png" title="When user click on the invoice status filter" width="1034"/>
+                <img src="98cd8c871d097df339af58e7b65c7c224946600b9b755bb1067860613566af28.png" title="Then user able to see all status option successfully on screen" width="1034"/>
+                <img src="df8fd5eb7700ceb2bb754df96aff438f83ff5de71664b93a7967d8f26600fb69.png" title="When user choose a filter option box and click on apply" width="1034"/>
+                <img src="018554971de0c3df7c40356f7c716847ca5d9d22b8ccf4695fc21f5eed952453.png" title="Clickon status value" width="1034"/>
+                <img src="df8fd5eb7700ceb2bb754df96aff438f83ff5de71664b93a7967d8f26600fb69.png" title="Clickon apply" width="1034"/>
+                <img src="df8fd5eb7700ceb2bb754df96aff438f83ff5de71664b93a7967d8f26600fb69.png" title="Then user able to see status filter option successfully display on the screen" width="1034"/>
+                <img src="f2de497fe64b5cb6a67bb3e6ee0c83e6a673d31b2358f6a5fc8f8a68998def89.png" title="When Clear all on status filter" width="1034"/>
+                <img src="4dfb89aeee20fe3b6f2933f91bbbd69fc435ec496e0d6faa3b3cbef20e68f7b4.png" title="Then user able to see the invoice successfully goes back to all invoices: <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="The user is able to create and process order" skipped="0" tests="3" time="192.8" timestamp="2018-05-22 11:21:42"><testcase name="The user is able to create and process orders from bid gudes from main order dashboard"/><testcase name="The user is able to create and process orders from standard gudes from main order"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.NewOrderActionPage.clickAndChooseStandardGuide(NewOrderActionPage.java:295)&#13;
+com.pmobile.steps.NewOrderPageSteps.click_on_the_standard_guide_choose_a_guide_and_click_apply(NewOrderPageSteps.java:108)&#13;
+✽.click on the standard guide, choose a guide and click apply(src/main/resources/Features/newOrder.feature:34)&#13;
+</system-err></testcase><testcase name="The user is able to create and process orders from par lists from main order"/></testsuite>

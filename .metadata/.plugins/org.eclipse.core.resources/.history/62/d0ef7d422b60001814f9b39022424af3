@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"The user is able to create and process order","The user is able to filter by Brands, Catagory, New Items, Previous Orders and Classes within an order","FAILURE","2018-05-25T10:44:45.9-04:00[America/New_York]","0.0","40.37"
+"Verify user able to order, view order, sort order, filter, clear edit order","The user is able to view orders detail","FAILURE","2018-05-25T09:18:50.699-04:00[America/New_York]","0.0","46.61"
+"The user is able to view, navigate on the proiduct details","The user is able to view, expand and minimize product details, product card and description when clicking on specific item","FAILURE","2018-05-24T17:45:13.417-04:00[America/New_York]","0.0","44.37"
+"The user is able to view, navigate on the proiduct details","The user is able to navigate through product details when clicking on the arrow to go to next item","FAILURE","2018-05-24T17:45:57.792-04:00[America/New_York]","0.0","45.17"
+"The user is able to view, navigate on the proiduct details","The user is able to navigate back to order from product details when clicking on the back arrow","FAILURE","2018-05-24T17:46:42.969-04:00[America/New_York]","0.0","45.74"
+"The user is able to view, navigate on the proiduct details","The user is able see and use the quick add tool when clicking on an item quantity box","FAILURE","2018-05-24T17:47:28.716-04:00[America/New_York]","0.0","46.18"
+"The user is able to view, navigate on the proiduct details","validate The user is able to use search funtion in the submit order screens when using the search bar","FAILURE","2018-05-24T17:48:14.899-04:00[America/New_York]","0.0","44.16"

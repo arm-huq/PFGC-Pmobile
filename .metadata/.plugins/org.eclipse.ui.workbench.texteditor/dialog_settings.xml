@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="313" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
 		<item value="" key="selection"/>
@@ -8,14 +12,14 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="assertOrderLandingPage"/>
-			<item value="order dashboard Passed -- "/>
-			<item value="an item and click on "/>
-			<item value="{&quot;IsDistinguishedFolder&quot;:true,&quot;FolderId&quot;:{&quot;__type&quot;:&quot;FolderId:#Exchange&quot;,&quot;Id&quot;:&quot;AQMkADcwZGZhM2EwLTlhOWEtNDZhYi1hYzk4LTIwNjYANDc5NmU3OGMALgAAA1qLqi/ARPBFnihkQ0BLYLkBAMimXDuO7SpOmXSGIQs8LisAAAIBDAAAAA==&quot;,&quot;ChangeKey&quot;:&quot;AQAAABYAAADIplw7ju0qTpl0hiELPC4rAAAIHdAU&quot;},&quot;DragItemType&quot;:"/>
-			<item value="user click on the order icon"/>
-			<item value="order dashboard Passed"/>
-			<item value="package com.pmobile.steps;"/>
-			<item value="base"/>
+			<item value="Filter completed-"/>
+			<item value="Filter completed"/>
+			<item value="//*[@id=&quot;filters_wrapper&quot;]/div/div[4]/div[1]/a"/>
+			<item value="user Click on the customer name sort box "/>
+			<item value="ser able to see the Orders page displayed successful from the left tool"/>
+			<item value="setSearchProducts"/>
+			<item value="Order status screen successfully displays"/>
+			<item value="screen reverts back to bid guide"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -24,7 +28,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="950" key="DIALOG_X_ORIGIN"/>
-		<item value="132" key="DIALOG_Y_ORIGIN"/>
+		<item value="1147" key="DIALOG_X_ORIGIN"/>
+		<item value="121" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

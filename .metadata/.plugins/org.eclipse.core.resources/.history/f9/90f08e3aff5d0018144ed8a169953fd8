@@ -1,0 +1,107 @@
+package com.pmobile.elements.pages;
+
+import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.annotations.findby.How;
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.WebElementFacade;
+
+public class ProductDetailElementPage extends PageObject{
+
+	
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[2]/div[2]/div/form/div[1]/div/input")	
+	public WebElementFacade searchForOrder;
+	
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[3]/div[3]/div[1]/div/div/a/label")
+	public WebElementFacade newButton;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id='details_wrapper']/div/ul/form/div[2]/h2")
+	public WebElementFacade productName;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='details_wrapper']/div/ul/form/div[4]/h2/span/span")
+	public WebElementFacade prodDetailMinMaxSpan;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id='details_wrapper']/div/ul/form/div[4]/h2")
+	public WebElementFacade prodDetailconfirmation;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='details_wrapper']/div/ul/form/div[6]/div/div/ul/div/a")
+	public WebElementFacade productCard;
+	
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[11]/div[2]/div/h2")
+	public WebElementFacade productDetailName;
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[11]/div[2]/div/div[2]/div/span")
+	public WebElementFacade leftArrowProdDetail;
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[11]/div[2]/div/div[1]/div/span")
+	public WebElementFacade rightArrowProdDetail;
+	
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[11]/div[1]/div[1]")
+	public WebElementFacade topLeftArrowPdetail;
+
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[2]/div[1]/h1")
+	public WebElementFacade headerTextProdDetail;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='details_wrapper']/div/ul/div[1]/div/div[1]/div[2]/span[2]/h4")
+	public WebElementFacade prodQtyVerify;
+
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[14]")
+	public WebElementFacade quickAddTool;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='products_wrapper']/div[1]/div[2]/div/div/span")
+	public WebElementFacade searchResult;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[1]/a/span/span")
+	public WebElementFacade clearHistory;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[2]/a")
+	public WebElementFacade bidGuides;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='sub_filters_wrapper']/div/ul/li[1]")
+	public WebElementFacade selectBidGuide;
+
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div[1]/div/div[3]/a")
+	public WebElementFacade clickApply;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[3]/a")
+	public WebElementFacade standaedGuide;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[4]/a")
+	public WebElementFacade selectStandardGuide;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[4]/a")
+	public WebElementFacade parList;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[4]/a")
+	public WebElementFacade selectParList;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[1]/a/span/span")
+	public WebElementFacade defaultHistorySet;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[4]/a")
+	public WebElementFacade criticalItemList;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[6]/div[4]/a/span/span")
+	public WebElementFacade defaultCriticalList;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[4]/div[2]/a")
+	public WebElementFacade sortByPrice;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[4]/div[2]/a/span[1]/span")
+	public WebElementFacade sortByPriceArrow;
+
+	@FindBy(how = How.XPATH, using = "//*[contains(@id,'product_row')]/div/div[2]/h3")
+	public WebElementFacade prodName;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[8]/div[1]/a")
+	public WebElementFacade filterByBrands;
+
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div[1]/div/div[2]/a")
+	public WebElementFacade displayBrandOption;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/h3[3]/span")
+	public WebElementFacade clearAllFilter;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[8]/div[2]/a")
+	public WebElementFacade filterBycatagory;
+
+	@FindBy(how = How.XPATH, using = "//*[@id='filters_wrapper']/div/div[8]/div[4]/a")
+	public WebElementFacade filterByNewItems;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="53ad327d0b5f54b4338d5e0f13be3be591a235848395c43258a4a00cd180dddf.html">The User Is Able To Create And Process Order</a></span>
+                > <span class="truncate-60"><a
+                    href="79ca03d2492b92c09dd57142ecff42d69f8600f6845c926b0fdd2394c630804b.html">The user is able to create and process orders from par lists from main order </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-05-2018 11:11</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Is Able To Create And Process Order</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">The user is able to create and process orders from par lists from main order
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the Order icon<br>Then Verify orders details are successfully displays<br>When click on the new button<br>Then order entry screen successfully populated on screen<br>When click on the par lists, choose a par list and click apply<br>Then order entry screen successfully populated with par list<br>When add items and quanties to the order<br>Then items and quanties successfully added in Par List<br>When search within the order by using the search bar for "&lt;product&gt;"<br>Then user successfully able to search<br>When clear search by claring the field and clicking on the go button<br>Then screen reverts back to par list<br>When click on the proccess order<br>Then order details screen successfully populated<br>When click on submit order buttons<br>Then user are able to successfully submitted the order</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2453b0b354fcdbf0fbba52e27f7a440525fc94341c59fc8890369dbca8e6d5c7.png" title="The user is able to create and process orders from par lists from main order #1: {UserId=6431, pwd=test, product=SODA}" width="1600"/>
+                <img src="9e61e315be5bc0d33033f2004c9f9771e199ff018e443f7f06ed9ac4b064870f.png" title="Given user on the application" width="1034"/>
+                <img src="c6224757b3a0f6c95dabf0c1135de28e4228f3ded73cefbd5cf6dc0bcd9e15de.png" title="Open home page" width="1034"/>
+                <img src="ef7529f34e60ee77d8a2c28c97a9f84c8ebf1e42c2427afab0be78db0b9fe818.png" title="When user enter valid user id &quot;6431&quot; password &quot;test&quot;" width="1600"/>
+                <img src="fdf3461cae9ffffa2e9748a2fba8fe5a548f3f250753494649fdf67badea72da.png" title="Set user name: 6431" width="1600"/>
+                <img src="58ffac7dc90316ec3a0b41d804548e29cda1784e5d36a9cf2da1c4d69f1595f4.png" title="Set password: test" width="1600"/>
+                <img src="ef7529f34e60ee77d8a2c28c97a9f84c8ebf1e42c2427afab0be78db0b9fe818.png" title="Click login" width="1600"/>
+                <img src="c9179b0fd13bbd9528384e72aa864a61c0220d0aae975ffa3f64f0366f3dd826.png" title="And user click on the Order icon" width="1600"/>
+                <img src="08b1cda35a938fe85c50783e867c3d34cacda723a3a2ba02d95101dc33fdbf4e.png" title="Clickon order button" width="1600"/>
+                <img src="decfbea842654561e1032dea41cb8979c7e1230e17a858c9d083c205e84ac524.png" title="Then Verify orders details are successfully displays" width="1600"/>
+                <img src="53a3936a7675fef93e9ca0a9ee1196b26b4b5103ed7f90df3926c9f183eed999.png" title="When click on the new button" width="1600"/>
+                <img src="53a3936a7675fef93e9ca0a9ee1196b26b4b5103ed7f90df3926c9f183eed999.png" title="Then order entry screen successfully populated on screen" width="1600"/>
+                <img src="59110f9a01ecaaa6129f105ca1c24a0d8df34a7df9daa46f90da0189980f0b3f.png" title="When click on the par lists, choose a par list and click apply" width="1600"/>
+                <img src="54903df6da477f640385ee27e99691fcfdb1e8e4420777eb8679a75ea97977d7.png" title="Then order entry screen successfully populated with par list" width="1600"/>
+                <img src="df4860a4d328be45a96519688373c732ed566a001eb66f087a62f22c3fb1098b.png" title="When add items and quanties to the order" width="1600"/>
+                <img src="3102bf8bc60cc11f55eb04937d8d261dc56057f48da78aaf35cb66ab1c0a1e70.png" title="Then items and quanties successfully added in Par List" width="1600"/>
+                <img src="08f987da2a4c88f8c21b5050a2bb9eb2dabf2572477203ba70df366ae21b6738.png" title="When search within the order by using the search bar for &quot;SODA&quot;" width="1600"/>
+                <img src="a96fb7e664af76ad643b73305f77f45eec2b98ce69efaee47f3afa913dbfc651.png" title="Then user successfully able to search" width="1600"/>
+                <img src="fe2ff2e7738ee920e870181c361db3a35718a25b60e3b89116c08d6d5568aba2.png" title="When clear search by claring the field and clicking on the go button" width="1600"/>
+                <img src="5b9cde1a4dc19d773a4cae102f22feee25edecd841d6b049771f42a08650b148.png" title="Then screen reverts back to par list" width="1600"/>
+                <img src="f3b6eac824db7de56b8d2d9a4382466014bbd560f6a204d4cc40caf4945474dd.png" title="When click on the proccess order" width="1600"/>
+                <img src="ffc779a38a3c336b3d08992337fb0d82271dac263f01e2c252bbe393f6a526db.png" title="Then order details screen successfully populated" width="1600"/>
+                <img src="5fe90a4c7788d4c7a998fe67fc33b3ca795bc359e33faeb906f1c919b6c25a95.png" title="When click on submit order buttons" width="1600"/>
+                <img src="2453b0b354fcdbf0fbba52e27f7a440525fc94341c59fc8890369dbca8e6d5c7.png" title="Then user are able to successfully submitted the order: <span class='success-color'>SUCCESS</span>" width="1600"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

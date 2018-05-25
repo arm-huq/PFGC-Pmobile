@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Verify user able to view Access dash board","The user is able to view and search orders when clicking on the order icon from dashboard","ERROR","2018-05-24T17:24:13.959-04:00[America/New_York]","0.0","35.83"
+"Verify user able to view Access dash board","The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon","SUCCESS","2018-05-24T17:24:49.794-04:00[America/New_York]","0.0","37.66"
+"Verify user able to view Access dash board","Validate that the user is able to view and search orders","SUCCESS","2018-05-24T17:25:27.458-04:00[America/New_York]","0.0","42.23"

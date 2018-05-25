@@ -1,0 +1,263 @@
+package com.pmobile.steps;
+
+import com.pmobile.confirmation.pages.DashBoardConfirmationPage;
+import com.pmobile.pages.DashBoardActionPage;
+import com.pmobile.pages.InvoicesActionPages;
+import com.pmobile.pages.LoginActionPage;
+import com.pmobile.pages.NewOrderActionPage;
+
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import net.thucydides.core.annotations.Steps;
+
+public class InvoicesPagesSteps {
+	@Steps
+	LoginActionPage loginAction;
+	InvoicesActionPages invoices;
+	DashBoardConfirmationPage orderDetail;
+	NewOrderActionPage newOrderAct;
+	
+	@When("^user click on the invoices icon$")
+	public void user_click_on_the_invoices_icon() throws Exception {
+		loginAction.clickOnInvoicesButton();
+		//newOrderAct.clickOnNewbutton();
+	}
+
+	@Then("^invoice screen successfully displayed$")
+	public void invoice_screen_successfully_displayed() throws Exception {
+		loginAction.verifyInvoicesLandedPage();
+	}
+
+	@When("^click in the search field and conduct a search \"([^\"]*)\"$")
+	public void click_in_the_search_field_and_conduct_a_search(String arg1) throws Exception {
+		loginAction.clickOnSearchAndSetInvNumber(arg1);
+	}
+
+	@Then("^search reasult will be successfull \"([^\"]*)\"$")
+	public void search_reasult_will_be_successfull(String arg1) throws Exception {
+		loginAction.verifySearchResult(arg1);
+	}
+	@When("^user click on the Messages icon from the left tool$")
+	public void user_click_on_the_Messages_icon_from_the_left_tool() throws Exception {
+		loginAction.clickOnMessageFLeft();
+	}
+
+	@When("^user click on the Orders icon from the left tool$")
+	public void user_click_on_the_Orders_icon_from_the_left_tool() throws Exception {
+		loginAction.clickOnOrderFLeft();
+	}
+	@Then("^user able to see the Messages page displayed successful from the left tool$")
+	public void user_able_to_see_the_Messages_page_displayed_successful_from_the_left_tool() throws Exception {
+		loginAction.verifyOnMessageFLeft();
+	}
+
+	@Then("^user able to see the Orders page displayed successful from the left tool$")
+	public void user_able_to_see_the_Orders_page_displayed_successful_from_the_left_tool() throws Exception {
+		loginAction.verifyOrederFromLeft();
+	}
+
+	@Then("^user able to see the Invoices page displayed successful from the left tool$")
+	public void user_able_to_see_the_Invoices_page_displayed_successful_from_the_left_tool() throws Exception {
+		loginAction.verifyInvoiceFromLeft();
+	}
+
+	@Then("^user able to see the Products page displayed successful from the left tool$")
+	public void user_able_to_see_the_Products_page_displayed_successful_from_the_left_tool() throws Exception {
+		loginAction.verifyProductsFromLeft();
+	}
+
+	@Then("^user able to see the Customers page displayed successful from the left tool$")
+	public void user_able_to_see_the_Customers_page_displayed_successful_from_the_left_tool() throws Exception {
+		loginAction.verifyCustomerFromLeft();
+	}
+
+	@Then("^user able to see the Inventory page displayed successful from the left tool$")
+	public void user_able_to_see_the_Inventory_page_displayed_successful_from_the_left_tool() throws Exception {
+		loginAction.verifyInventoryFromLeft();
+	}
+
+	@Then("^user able to see the Settings page displayed successful from the left tool$")
+	public void user_able_to_see_the_Settings_page_displayed_successful_from_the_left_tool() throws Exception {
+		loginAction.verifySettingsFromLeft();
+	}
+
+	@When("^user click on the Invoices icon from the left tool$")
+	public void user_click_on_the_Invoices_icon_from_the_left_tool() throws Exception {
+		loginAction.clickOnInvoicesFLeft();
+	}
+
+	@When("^user click on the Products icon from the left tool$")
+	public void user_click_on_the_Products_icon_from_the_left_tool() throws Exception {
+		loginAction.clickOnProductsFLeft();
+	}
+
+	@When("^user click on the Customers icon from the left tool$")
+	public void user_click_on_the_Customers_icon_from_the_left_tool() throws Exception {
+		loginAction.clickOncustomerFLeft();
+	}
+
+	@When("^user click on the Inventory icon from the left tool$")
+	public void user_click_on_the_Inventory_icon_from_the_left_tool() throws Exception {
+		loginAction.clickOnInventoryFLeft();
+	}
+
+	@When("^user click on the Settings icon from the left tool$")
+	public void user_click_on_the_Settings_icon_from_the_left_tool() throws Exception {
+		loginAction.clickOnSettingsFLeft();
+	}
+
+	@When("^pul down the refresh arrow$")
+	public void pul_down_the_refresh_arrow() throws Exception {
+	    // TODO
+	}
+
+	@Then("^invoices are successfully refreshed$")
+	public void invoices_are_successfully_refreshed() throws Exception {
+		// TODO
+	}
+	
+	@When("^Click on the invoice date sort box$")
+	public void click_on_the_invoice_date_sort_box() throws Exception {
+		loginAction.clickOnInvoiceDateSortBox();
+	}
+	@Then("^user able to see the invoice successfully sorted by invoice date$")
+	public void user_able_to_see_the_invoice_successfully_sorted_by_invoice_date() throws Exception {
+		loginAction.verifyInvoiceSortBox();
+	}
+
+	@When("^user Click on the customer /# sort box$")
+	public void user_Click_on_the_Customer_sort_box() throws Exception {
+		loginAction.clickOnCustomerNoSortBox();
+	}
+
+	@Then("^user able to see the invoice successfully sorted by Customer /#$")
+	public void user_able_to_see_the_invoice_successfully_sorted_by_Customer() throws Exception {
+		loginAction.verifyCustomerNoSortBox();
+	}
+
+	@When("^user Click on the invoice /# sort box$")
+	public void user_Click_on_the_invoice_sort_box() throws Exception {
+		loginAction.clickOnInvoiceNoSortBox();
+	}
+
+	@Then("^user able to see the invoice successfully sorted by invoice /#$")
+	public void user_able_to_see_the_invoice_successfully_sorted_by_invoice() throws Exception {
+		loginAction.verifyInvoiceNoSortBox();
+	}
+	@When("^user Click on the customer name sort box in Invoices$")
+	public void user_Click_on_the_customer_name_sort_box_in_Invoices() throws Exception {
+		loginAction.clickOnCustomerNameSortBox();
+	}
+	@Then("^user able to see the invoice successfully sorted by customer name$")
+	public void user_able_to_see_the_invoice_successfully_sorted_by_customer_name() throws Exception {
+		loginAction.verifyCustomerNameSortBox();
+	}
+	@Then("^user able to see the all Previous sorts successfully cleared$")
+	public void user_able_to_see_the_all_Previous_sorts_successfully_cleared() throws Exception {
+		loginAction.verifyClearAllSortBox();
+	}
+	@When("^Click on the Customer filter by box$")
+	public void click_on_the_Customer_filter_by_box() throws Exception {
+		loginAction.clickOnCustomerFilter();
+	}
+
+	@Then("^user able to see the invoices are successfully displayed for only that customer$")
+	public void user_able_to_see_the_invoices_are_successfully_displayed_for_only_that_customer() throws Exception {
+		loginAction.verifyFilterByCustomer();
+	}
+
+	@When("^user Click on the clear all on customer filter$")
+	public void user_Click_on_the_clear_all_on_customer_filter() throws Exception {
+		loginAction.clickOnTheClearAll();
+	}
+
+	@Then("^user able to see the invoice successfully goes back to all invoices$")
+	public void user_able_to_see_the_invoice_successfully_goes_back_to_all_invoices() throws Exception {
+		loginAction.verifyInvoiceFilterCleared();
+	}
+
+	@When("^user Click on the invoice date filter box$")
+	public void user_Click_on_the_invoice_date_filter_box() throws Exception {
+		loginAction.clickOnFilterByInvoiceDate();
+	}
+
+	@When("^clear all on invoice date filter$")
+	public void clear_all_on_invoice_date_filter() throws Exception {
+		loginAction.clickOnTheClearAll();
+	}
+
+	@When("^choose a filter option\\(ex\\. last week\\) and click on the box then click on apply$")
+	public void choose_a_filter_option_ex_last_week_and_click_on_the_box_then_click_on_apply() throws Exception {
+		loginAction.selectFilterOptionandApply();
+	}
+
+	@Then("^Invoices for that time frame successfully populated$")
+	public void invoices_for_that_time_frame_successfully_populated() throws Exception {
+		// TODO
+	}
+	
+	@When("^user click on the invoice status filter$")
+	public void user_click_on_the_invoice_status_filter() throws Exception {
+		loginAction.clickOnTheCstatusfilter();
+	}
+	
+	@When("^Clear all on status filter$")
+	public void clear_all_on_status_filter() throws Exception {
+		loginAction.clickOnTheClearAll();
+	}
+
+	@When("^click on the specific invoice to view details$")
+	public void click_on_the_specific_invoice_to_view_details() throws Exception {
+		loginAction.clickOnSpcInvNumber();
+	}
+	
+	@When("^click on the paid specific invoice to view details$")
+	public void click_on_the_paid_specific_invoice_to_view_details() throws Exception {
+		loginAction.clickOnSpcPaidInvNumber();
+	}
+	@Then("^invoice details successfully displayed$")
+	public void invoice_details_successfully_displayed() throws Exception {
+		loginAction.verifySpcInvoiceResult();
+	}
+
+	@When("^click on the arrow to go to next invoice$")
+	public void click_on_the_arrow_to_go_to_next_invoice() throws Exception {
+		loginAction.clickOnRightArrow();
+	}
+
+	@Then("^next invoice detail displays successfully$")
+	public void next_invoice_detail_displays_successfully() throws Exception {
+		loginAction.verifyNextInvoiceDetail();
+	}
+
+	@When("^click on the arrow to go to previous invoice$")
+	public void click_on_the_arrow_to_go_to_previous_invoice() throws Exception {
+		loginAction.clickOnleftArrow();
+	}
+
+	@Then("^previous invoice detail displays successfully$")
+	public void previous_invoice_detail_displays_successfully() throws Exception {
+		loginAction.verifyPreviousInvoiceDetail();
+	}
+
+	@When("^click on an item within the invoice$")
+	public void click_on_an_item_within_the_invoice() throws Exception {
+		loginAction.clickOnItemWithinInvoice(sdfsdfsd);
+	}
+
+	@Then("^item detials successfully displayed$")
+	public void item_detials_successfully_displayed() throws Exception {
+	    // // TODO
+	}
+
+	@When("^Add a quentity to the item in the item quentity box$")
+	public void add_a_quentity_to_the_item_in_the_item_quentity_box() throws Exception {
+	    // // TODO
+	}
+
+	@Then("^item successfully added to pending order or new order$")
+	public void item_successfully_added_to_pending_order_or_new_order() throws Exception {
+	    // TODO
+	}
+
+}

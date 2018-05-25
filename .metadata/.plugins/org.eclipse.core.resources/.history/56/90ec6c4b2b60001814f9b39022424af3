@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="53ad327d0b5f54b4338d5e0f13be3be591a235848395c43258a4a00cd180dddf.html">The User Is Able To Create And Process Order</a></span>
+                > <span class="truncate-60"><a
+                    href="f49d3d963366bea9aa309177b059b00457b1cf8212eee48b24c5988643060e9a.html">The user is able to create and process orders from history from main order dashboard </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-05-2018 10:37</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Is Able To Create And Process Order</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span>
+                            <span class="test-case-title">
+                                <span class="error-color">The user is able to create and process orders from history from main order dashboard
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the Order icon<br>Then Verify orders details are successfully displays<br>When click on the new button<br>Then order entry screen successfully populated on screen<br>And your list by is set to history<br>When add items and quanties to the order<br>Then items and quanties successfully added<br>When search within the order by using the search bar for "&lt;product&gt;"<br>Then user successfully able to search<br>When clear search by claring the field and clicking on the go button<br>Then screen reverts back to history guide<br>When click on the proccess order<br>Then order details screen successfully populated<br>When click on submit order buttons<br>Then user are able to successfully submitted the order</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+                        <div class="panel-heading title="Timeout exception: Expected condition failed: waiting for OrderDetailElementPage.getOrderConfirmationText to be displayed (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'Driver info: driver.version: unknownBuild info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'Driver info: driver.version: unknown">
+                            Timeout exception: Expected condition failed: waiting for OrderDetailElementPage.getOrderConfirmationText to be displayed (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-0...
+                        </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#stacktraceModal-overall">
+                        View details
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal-overall" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                    org.openqa.selenium.TimeoutException
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>
+                                        <pre>Expected condition failed: waiting for OrderDetailElementPage.getOrderConfirmationText to be displayed (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'<br>System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'<br>Driver info: driver.version: unknown<br>Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'<br>System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'<br>Driver info: driver.version: unknown</pre>
+                                    </h5>
+                                    com.pmobile.pages.OrderDetailActionPage.verifySubmittedtheOrder(OrderDetailActionPage.java
+                                    :297) <br>
+                                    com.pmobile.steps.OrderPagesSteps.user_are_able_to_successfully_submitted_the_order(OrderPagesSteps.java
+                                    :316) <br>
+                                    cucumber.runner.Runner.runPickle(Runner.java
+                                    :80) <br>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource4657802852987196677.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="115a5172c2956bea9f327603255b73cefa84cd20ebc1582c662bcf07f140ed48.png" title="Given user on the application" width="1600"/>
+                <img src="fc9cb3c7c7e011b6442b921ca485f1b4866934ce0316611249def49a4995e28f.png" title="Open home page" width="1600"/>
+                <img src="903ad7b2f27e0f8eed9f9e6a1562704087706efa20ca26cd803cc742c78364f8.png" title="When user enter valid user id &quot;6431&quot; password &quot;test&quot;" width="1600"/>
+                <img src="fdf3461cae9ffffa2e9748a2fba8fe5a548f3f250753494649fdf67badea72da.png" title="Set user name: 6431" width="1600"/>
+                <img src="58ffac7dc90316ec3a0b41d804548e29cda1784e5d36a9cf2da1c4d69f1595f4.png" title="Set password: test" width="1600"/>
+                <img src="903ad7b2f27e0f8eed9f9e6a1562704087706efa20ca26cd803cc742c78364f8.png" title="Click login" width="1600"/>
+                <img src="d4ed0ca7fd7e319ff038ae47977992afefcfe9c64724ed718c32fe4e3f4c7522.png" title="And user click on the Order icon" width="1600"/>
+                <img src="506ef08afa71891aba9d0ec96e329663513fc2cb51a7a6a18f3f5c14f532f3f6.png" title="Clickon order button" width="1600"/>
+                <img src="947e8a6465d4646430060a697d00ff00206535ca795ed53eb9bab04c7dfc6be7.png" title="Then Verify orders details are successfully displays" width="1600"/>
+                <img src="3ca4ad7452cfba124ef3dcaf5f93768fe8d5a5cca75a624df49df5ff29e15662.png" title="When click on the new button" width="1600"/>
+                <img src="3ca4ad7452cfba124ef3dcaf5f93768fe8d5a5cca75a624df49df5ff29e15662.png" title="Then order entry screen successfully populated on screen" width="1600"/>
+                <img src="40489b7007cf5187d3a0bffaf1b23935b0f6963d555f3b2995a683915147ca86.png" title="And your list by is set to history" width="1600"/>
+                <img src="ec6526523d4fb8dddd45672a796434987383369651776f6379301365dcf5a344.png" title="When add items and quanties to the order" width="1600"/>
+                <img src="1dc807604892b4f32843f90e05a4a3749692feac01c42c18d4b83a7b19144191.png" title="Then items and quanties successfully added" width="1600"/>
+                <img src="1b96e784491bdf144bab6e56ec8cba010323fedc898fa602ae71f0d5546253e9.png" title="When search within the order by using the search bar for &quot;PAN&quot;" width="1600"/>
+                <img src="99c2cb7405a443557b492578614c45096f27ef5a0ecb6146c3fc37301eb31cdd.png" title="Then user successfully able to search" width="1600"/>
+                <img src="1e472d63d56ebae2f5fa9d7657ea01fe84ea16fa4cc3e09c05cde31289e2a0ea.png" title="When clear search by claring the field and clicking on the go button" width="1600"/>
+                <img src="bd8595f57ba7139413e1d294e055d574c6baaeaa503f539e87f21f58bdc36d68.png" title="Then screen reverts back to history guide" width="1600"/>
+                <img src="dcc0f443e9d05d12e46aa8a1a43b1c0fa2064bee1c03f011c9d604d7d963e6c1.png" title="When click on the proccess order" width="1600"/>
+                <img src="e74906292e0b2091c088d90cb6dd2779fd11a03b0482325218b92188b2f026d7.png" title="Then order details screen successfully populated" width="1600"/>
+                <img src="41e651716965e3e5b4b86749484e33b1bb5336c33de27ecd1aad486850c54a65.png" title="When click on submit order buttons" width="1600"/>
+                <img src="41e651716965e3e5b4b86749484e33b1bb5336c33de27ecd1aad486850c54a65.png" title="Verify submittedthe order: <span class='error-color'>ERROR</span>" width="1600"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

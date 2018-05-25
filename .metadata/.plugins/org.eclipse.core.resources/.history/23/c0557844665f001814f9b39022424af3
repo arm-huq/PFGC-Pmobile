@@ -1,0 +1,48 @@
+package com.pmobile.elements.pages;
+
+import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.annotations.findby.How;
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.WebElementFacade;
+
+public class InvoicesElementPage extends PageObject{
+	
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[4]/div[2]/div/form/div/div/input")	
+	public WebElementFacade searchForInvoices;
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[4]/div[2]/div/form/div/div/a/span")
+	public WebElementFacade searchForInvoicedButton;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id='invoices_wrapper']/div[1]/ul")
+	public WebElementFacade confInvoicesNumber;
+	
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[11]/div[2]/div/h2")
+	public WebElementFacade confInvoicesNumberInvDe;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id='tabbar_wrapper']/div/a[2]/span")
+	public WebElementFacade messageButtonFromLeft;
+	@FindBy(how = How.XPATH, using = "//*[@id='tabbar_wrapper']/div/a[4]/span")
+	public WebElementFacade orderButtonFromLeft;
+	@FindBy(how = How.XPATH, using = "//*[@id='tabbar_wrapper']/div/a[5]/span")
+	public WebElementFacade invoicesButtonFromLeft;
+	@FindBy(how = How.XPATH, using = "//*[@id='tabbar_wrapper']/div/a[3]/span")
+	public WebElementFacade productButtonFromLeft;
+	@FindBy(how = How.XPATH, using = "//*[@id='tabbar_wrapper']/div/a[6]/span")
+	public WebElementFacade customertButtonFromLeft;
+	@FindBy(how = How.XPATH, using = "//*[@id='tabbar_wrapper']/div/a[7]/span")
+	public WebElementFacade inverntoryButtonFromLeft;
+	@FindBy(how = How.XPATH, using = "//*[@id='tabbar_wrapper']/div/a[8]/span")
+	public WebElementFacade settingsButtonFromLeft;
+	
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[1]/div[1]/h1")
+	public WebElementFacade messageTextheader;
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[3]/div[1]/h1")
+	public WebElementFacade orderTextheader;
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[4]/div[1]/h1")
+	public WebElementFacade invoicesTextheader;
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[2]/div[1]/h1")
+	public WebElementFacade productTextheader;
+	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div/div[2]/div[2]/div[1]/h1")
+	public WebElementFacade customerTextheader;
+	
+	
+}

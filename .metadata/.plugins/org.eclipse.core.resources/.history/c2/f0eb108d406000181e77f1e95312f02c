@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="1" name="The user is able to view, navigate on the proiduct details" skipped="0" tests="5" time="277.07" timestamp="2018-05-25 01:16:28"><testcase name="The user is able to view, expand and minimize product details, product card and description when clicking on specific item"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.NewOrderActionPage.clickOnProductCard(NewOrderActionPage.java:150)&#13;
+com.pmobile.steps.ProductDetailPageSteps.click_on_the_product_card(ProductDetailPageSteps.java:35)&#13;
+✽.click on the product card(src/main/resources/Features/productDetail.feature:14)&#13;
+</system-err></testcase><testcase name="The user is able to navigate through product details when clicking on the arrow to go to next item"/><testcase name="The user is able to navigate back to order from product details when clicking on the back arrow"/><testcase name="The user is able see and use the quick add tool when clicking on an item quantity box"/><testcase name="validate The user is able to use search funtion in the submit order screens when using the search bar"><error message="Timed out after 5 seconds. Element not available&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotVisibleException">Timed out after 5 seconds. Element not available
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</error><system-err>Timed out after 5 seconds. Element not available
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.NewOrderActionPage.verifyOrderQuantityInDetail(NewOrderActionPage.java:194)&#13;
+com.pmobile.steps.ProductDetailPageSteps.item_and_quentities_successfully_added(ProductDetailPageSteps.java:90)&#13;
+✽.item and quentities successfully added(src/main/resources/Features/productDetail.feature:75)&#13;
+</system-err></testcase></testsuite>

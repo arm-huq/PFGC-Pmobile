@@ -1,0 +1,13 @@
+Feature: Valid user able to access, view, search, refresh,short order, filter, view invoice detail
+
+ Scenario Outline: The user is able to refresh invoices when pulling downthe refresh arrow
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the invoices icon
+  Then invoice screen successfully displayed
+  When pul down the refresh arrow
+  Then invoices are successfully refreshed
+  
+    Examples:
+   | UserId		| pwd	|
+   | 1008     	| test	|

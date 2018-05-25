@@ -1,0 +1,55 @@
+Feature: Valid user able to view, search, refresh,short order, filter, view invoice detail
+
+ Scenario Outline: The user is able to  view and search customers when clicking on the customer icon from dashboard
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the customer icon
+  Then customer screen successfully displayed
+  When click in the search field and conduct a search "<customerName>"
+  Then search reasult will be successfull
+
+ Examples:
+    | UserId	| pwd	| customerName|
+    | 1008     	| test	|             |
+    
+ Scenario Outline: The user is able to access the dashboard, messages, product search, orders, invoices, settings and sign off from the left tool bar within products when clicking on each icon
+  Given user on the application 
+  And user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the customer icon
+  Then customer screen successfully displayed
+  When user click on the Messages icon 
+  Then user able to see the Messages page displayed successful
+  When user click on the Orders icon 
+  Then user able to see the Orders page displayed successful
+  When user click on the Invoices icon 
+  Then user able to see the Invoices page displayed successful
+  When user click on the Products icon 
+  Then user able to see the Products page displayed successful
+  When user click on the Customers icon 
+  Then user able to see the Customers page displayed successful
+  When user click on the Inventory icon 
+  Then user able to see the Inventory page displayed successful
+  When user click on the Settings icon 
+  Then user able to see the Settings page displayed successful
+  
+  Examples:
+   | UserId		| pwd	| product	      |
+   | 1008     	| test	| CHEESE CREAM CUP|
+   
+ Scenario Outline: The user is able to sort and clear customers by sales rep Name,Customer /# and Customer Name when clicking on the sort buttons and clicking on clear all
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the customer icon
+  Then customer screen successfully displayed
+  When Click on the sales rep name sort box 
+  Then user able to see the customers successfully sorted by sales rep name
+  When user Click on the Customer /# sort box 
+  Then user able to see the customers successfully sorted by Customer /#
+  When user Click on the customer name sort box 
+  Then user able to see the invoice successfully sorted by customer name
+  When user Click on clear all 
+  Then user able to see the Previous sorts successfully cleared 
+  
+  Examples:
+   | UserId		| pwd	|
+   | 1008     	| test	|

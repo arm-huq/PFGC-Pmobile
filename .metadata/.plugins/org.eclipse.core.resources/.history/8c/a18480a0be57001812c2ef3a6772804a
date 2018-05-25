@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Verify user able to order, view order, sort order, filter, clear edit order" skipped="0" tests="1" time="67.6" timestamp="2018-05-14 02:32:23"><testcase name="The user is able to edit orders"/></testsuite>

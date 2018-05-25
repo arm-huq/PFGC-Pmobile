@@ -21,9 +21,16 @@
 <fullyQualifiedTypeName name="org.jruby.runtime.load.LoadService19"/>
 <fullyQualifiedTypeName name="com.pmobile.pages.LoginActionPage"/>
 <fullyQualifiedTypeName name="com.pmobile.confirmation.pages.OrderConfirmationPages"/>
-<fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
-<fullyQualifiedTypeName name="cucumber.api.java.en.When"/>
 <fullyQualifiedTypeName name="net.serenitybdd.core.annotations.findby.By"/>
 <fullyQualifiedTypeName name="com.pmobile.pages.OrderDetailActionPage"/>
 <fullyQualifiedTypeName name="com.pmobile.pages.NewOrderActionPage"/>
+<fullyQualifiedTypeName name="org.apache.tools.ant.filters.TokenFilter.Trim"/>
+<fullyQualifiedTypeName name="com.pmobile.pages.ProductDetailActionPages"/>
+<fullyQualifiedTypeName name="org.assertj.core.api.Assert"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.When"/>
+<fullyQualifiedTypeName name="com.pmobile.pages.InvoicesActionPages"/>
+<fullyQualifiedTypeName name="com.pmobile.elements.pages.InvoicesElementPage"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,17 @@
+Feature: The user is able to create and process order
+
+ Scenario Outline: The user is able to sort by price and item number within an order
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Order icon
+  Then Verify orders details are successfully displays
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  When click on sort by price
+  Then order entry screen successfully sorted by price
+  When click on clear all sortby 
+  Then sort by successfully cleared
+  
+  Examples:
+    | UserId	| pwd	| 
+    | 1008     	| test	|

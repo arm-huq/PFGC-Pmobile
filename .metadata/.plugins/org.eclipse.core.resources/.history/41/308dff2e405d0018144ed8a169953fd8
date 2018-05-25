@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ad65dd6ec53eeab9312357fcc455303df95ad2895a6106285ef0d2cf03af9a81.html">The User Is Able To Create And Process Order</a></span>
+                > <span class="truncate-60"><a
+                    href="79ca03d2492b92c09dd57142ecff42d69f8600f6845c926b0fdd2394c630804b.html">The user is able to create and process orders from par lists from main order </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-05-2018 17:28</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Is Able To Create And Process Order </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span>
+                            <span class="test-case-title">
+                                <span class="error-color">The user is able to create and process orders from par lists from main order
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the Order icon<br>Then Verify orders details are successfully displays<br>When click on the new button<br>Then order entry screen successfully populated on screen<br>When click on the par lists, choose a par list and click apply<br>Then order entry screen successfully populated with par list<br>When add items and quanties to the order<br>Then items and quanties successfully added in Par List<br>When search within the order by using the search bar for "&lt;product&gt;"<br>Then user successfully able to search<br>When clear search by claring the field and clicking on the go button<br>Then screen reverts back to par list<br>When click on the proccess order<br>Then order details screen successfully populated<br>When click on submit order button<br>Then user are able to successfully submitted the order</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+                        <div class="panel-heading title="Timeout exception: Expected condition failed: waiting for ProductDetailElementPage.searchResult to be displayed (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'Driver info: driver.version: unknownBuild info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'Driver info: driver.version: unknown">
+                            Timeout exception: Expected condition failed: waiting for ProductDetailElementPage.searchResult to be displayed (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26...
+                        </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#stacktraceModal-overall">
+                        View details
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal-overall" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                    org.openqa.selenium.TimeoutException
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>
+                                        <pre>Expected condition failed: waiting for ProductDetailElementPage.searchResult to be displayed (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'<br>System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'<br>Driver info: driver.version: unknown<br>Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'<br>System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'<br>Driver info: driver.version: unknown</pre>
+                                    </h5>
+                                    com.pmobile.pages.NewOrderActionPage.verifySearchResult(NewOrderActionPage.java
+                                    :238) <br>
+                                    com.pmobile.steps.NewOrderPageSteps.user_successfully_able_to_search(NewOrderPageSteps.java
+                                    :73) <br>
+                                    cucumber.runner.Runner.runPickle(Runner.java
+                                    :80) <br>
+                                    org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java
+                                    :86) <br>
+                                    org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java
+                                    :38) <br>
+                                    org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java
+                                    :459) <br>
+                                    org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java
+                                    :678) <br>
+                                    org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java
+                                    :382) <br>
+                                    org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java
+                                    :192) <br>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource9183988955120956551.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b8b058ca264c40905eeacd1088eaa32637e87e5c44a2cafe15db04d962a2c005.png" title="Given user on the application" width="1600"/>
+                <img src="9364faa89eb0bf3996e30eae13d29f1fa44a12e7613ec4d053b5ca056eb0fb96.png" title="Open home page" width="1600"/>
+                <img src="a1a2713c2c9fade9f584f35e6120fe0c3bc8ee593b4a4686dd2a1471cecb7db1.png" title="When user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1600"/>
+                <img src="b784199a609c6314368f9dafe4d943686363db2657ea52e0d762651628f6df9f.png" title="Set user name: 1008" width="1600"/>
+                <img src="6705cdfea739c24f1ca40043499452e9f874dfd02f40218fb13a314961bc3216.png" title="Set password: test" width="1600"/>
+                <img src="a1a2713c2c9fade9f584f35e6120fe0c3bc8ee593b4a4686dd2a1471cecb7db1.png" title="Click login" width="1600"/>
+                <img src="323fb61eb8eb59a05b6976ed26c7cc2b82c2f7cdb154d0fb52373760abd19dd8.png" title="And user click on the Order icon" width="1600"/>
+                <img src="0fdef9069171c62042547d545a4af7fe6203d96e31f8d899ff93f79d447e239a.png" title="Clickon order button" width="1600"/>
+                <img src="07b60c0af7d5155853b479b9af06bb517bdc029e5d90b604afe2f879560c6a9e.png" title="Then Verify orders details are successfully displays" width="1600"/>
+                <img src="58ee4574824d9a3c9c53d3bd6e9f409771b2442b79076ee344caffe5b562212f.png" title="When click on the new button" width="1600"/>
+                <img src="58ee4574824d9a3c9c53d3bd6e9f409771b2442b79076ee344caffe5b562212f.png" title="Then order entry screen successfully populated on screen" width="1600"/>
+                <img src="ef95d22674e6c477f626eff01b2c9e9d778b53b579e6de67c805440527f6bf8c.png" title="When click on the par lists, choose a par list and click apply" width="1600"/>
+                <img src="f6cac9e210fbbd0c751f21b90c7cfe2393de2704fe2222b33bdcaa055d4aa86b.png" title="Then order entry screen successfully populated with par list" width="1600"/>
+                <img src="a2d328aea07339176e8ca59663eb1df0bfa2d4076f70f5ddb7eebbd07c924697.png" title="When add items and quanties to the order" width="1600"/>
+                <img src="5319096c941f37be8ebdaaa974c84ccf0454edf02a2fc50c37b4a0f36d4569ec.png" title="Then items and quanties successfully added in Par List" width="1600"/>
+                <img src="918ac9b9727f82f22e83bf85567a3c7037f3b87410361bbbb52f9ca8610e5be7.png" title="When search within the order by using the search bar for &quot;EGG HRD FC DRY PACK&quot;" width="1600"/>
+                <img src="860d2607ca5e78b744fa3116be39334ec5914066ea48ab7bd302a1c897db6cf2.png" title="Verify search result: <span class='error-color'>ERROR</span>" width="1600"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

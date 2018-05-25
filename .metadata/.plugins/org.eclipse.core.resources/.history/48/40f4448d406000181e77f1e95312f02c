@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="2d7d1537a2167c23e8563c2ef5a478c5ecfaab2aa1d4148d362c6d959767b577.html">The User Is Able To View, Navigate On The Proiduct Details</a></span>
+                > <span class="truncate-60"><a
+                    href="a548edf6b9d11b49e7ea156cb99897264bb98d9239f30ac5080baadaee00442c.html">The user is able see and use the quick add tool when clicking on an item quantity box </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-05-2018 13:19</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Is Able To View, Navigate On The Proiduct Details</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">The user is able see and use the quick add tool when clicking on an item quantity box
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the order icon<br>Then Verify orders details are successfully displays<br>When click on the new button<br>Then order entry screen successfully populated on screen<br>When click on the order quantity box<br>Then quick add tool successfully populated on the screen<br>When click on the any number<br>Then verify clicked Order quantity successfully added to item</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="5ff08e476bb321dce08cfe88650a1a956ef9706460d3d542791d42fcf250a29b.png" title="The user is able see and use the quick add tool when clicking on an item quantity box #1: {UserId=1008, pwd=test}" width="1600"/>
+                <img src="ec5ff0253c186314bfa241e64421ec3c29d579ab2b7d01a21fe2181813de9ac9.png" title="Given user on the application" width="1600"/>
+                <img src="fa6b1422985601b376550c8aba8a0a5387cfa795cea3f87cda687690a1ec2dff.png" title="Open home page" width="1600"/>
+                <img src="ba7328782bdacfd4ffff3f6fae8c4db4d4fec8ed7d56869906c122424769ac18.png" title="When user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1600"/>
+                <img src="ce62c70ab8b98656c45c3bbc37d10c460b1de1052ba683fe55f11a4797ac1f75.png" title="Set user name: 1008" width="1600"/>
+                <img src="6705cdfea739c24f1ca40043499452e9f874dfd02f40218fb13a314961bc3216.png" title="Set password: test" width="1600"/>
+                <img src="ba7328782bdacfd4ffff3f6fae8c4db4d4fec8ed7d56869906c122424769ac18.png" title="Click login" width="1600"/>
+                <img src="8eb1074a57ffe8aee86946e978e8625c95d3a83d14f7ebba1825b7f722023276.png" title="And user click on the order icon" width="1600"/>
+                <img src="97b0aa9022445de8e198ff314d3e6b03204ff8c70fd4fbf0ad4385e8425c189b.png" title="Click on order" width="1600"/>
+                <img src="8d67a4341648490e58b9e6fd80528dd8401d1c77fc4d8eb57fff7ec4a224c5b4.png" title="Then Verify orders details are successfully displays" width="1600"/>
+                <img src="4ba4875dbdf7e09026fa82c6e384dd5f6aa65af6dfe674146863b9403cf8fd9f.png" title="When click on the new button" width="1600"/>
+                <img src="4ba4875dbdf7e09026fa82c6e384dd5f6aa65af6dfe674146863b9403cf8fd9f.png" title="Then order entry screen successfully populated on screen" width="1600"/>
+                <img src="7c8a08de7dd6183664be9827e56d8d8ac473e148fd811aea3632c8f30eda5b1e.png" title="When click on the order quantity box" width="1600"/>
+                <img src="a8c06859ccf31602312bc1defcd9663f1bd56d9478953149d59a620f3b277a1b.png" title="Then quick add tool successfully populated on the screen" width="1600"/>
+                <img src="58594113d7da203e52afa08a6eada74e47a94fc60fcec21f2a7321a98383b066.png" title="When click on the any number" width="1600"/>
+                <img src="5ff08e476bb321dce08cfe88650a1a956ef9706460d3d542791d42fcf250a29b.png" title="Then verify clicked Order quantity successfully added to item: <span class='success-color'>SUCCESS</span>" width="1600"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="53ad327d0b5f54b4338d5e0f13be3be591a235848395c43258a4a00cd180dddf.html">The User Is Able To Create And Process Order</a></span>
+                > <span class="truncate-60"><a
+                    href="860ab947a0e255202daf7c3f74693c4cfd4a251c983a3cf6522481194edd27c9.html">The user is able to create and process orders from critical item list from main order </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-05-2018 10:42</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Is Able To Create And Process Order</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">The user is able to create and process orders from critical item list from main order
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the Order icon<br>Then Verify orders details are successfully displays<br>When click on the new button<br>Then order entry screen successfully populated on screen<br>When click on the critical item list<br>Then order entry screen successfully populated with the critical item list<br>When add items and quanties to the order<br>Then items and quanties successfully added in Par List<br>When search within the order by using the search bar for "&lt;product&gt;"<br>Then user successfully able to search<br>When clear search by claring the field and clicking on the go button<br>Then screen reverts back to critical item list<br>When click on the proccess order<br>Then order details screen successfully populated<br>When click on submit order button<br>Then user are able to successfully submitted the order</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0e420a1cd5536b33223bbe087ebe7263baecefdd6923bb2602c1de3acb1b1897.png" title="The user is able to create and process orders from critical item list from main order #1: {UserId=1008, pwd=test, product=SUGAR}" width="1600"/>
+                <img src="b19740cd57244ea959e4c03627ad4813e5fb3193bd17cedcff376ac301198d00.png" title="Given user on the application" width="1034"/>
+                <img src="68b7853764f84afeeccb9ec0346438a9447d79097d45419ae8acc0f4ca00782a.png" title="Open home page" width="1034"/>
+                <img src="ed1993d0ec7bd9ed7e2d04f4be95996919d4ee67164cb83a071d055078395649.png" title="When user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1600"/>
+                <img src="9b04623b548ffc4f1adafef0ccb5dd4602e850ae092af50fa1c11d539bae6071.png" title="Set user name: 1008" width="1600"/>
+                <img src="965636db52bfeee785ea1591c02d320d443b749ab3e955211f68664c1be24970.png" title="Set password: test" width="1600"/>
+                <img src="ed1993d0ec7bd9ed7e2d04f4be95996919d4ee67164cb83a071d055078395649.png" title="Click login" width="1600"/>
+                <img src="d79a0628d069ea9f0618245c3d2cffb22f077d7d57cecbf28ef986aa27831e25.png" title="And user click on the Order icon" width="1600"/>
+                <img src="6c49b32205248be26fe0990f89fbbeaa1a0f1b2f9113c3b817b60270771a3aef.png" title="Clickon order button" width="1600"/>
+                <img src="3031f4d375604da3dbb66cacc43ea437735da58a111eb50bc8712faec4516cab.png" title="Then Verify orders details are successfully displays" width="1600"/>
+                <img src="be90e7541a909af8a5b99c975e31c84a215a63c6daeb5b9cbf7355669964d2aa.png" title="When click on the new button" width="1600"/>
+                <img src="be90e7541a909af8a5b99c975e31c84a215a63c6daeb5b9cbf7355669964d2aa.png" title="Then order entry screen successfully populated on screen" width="1600"/>
+                <img src="5aea982fb0df40d5d6e263dd22bedb7876f54c19c9adcc8f335fd769ea07dfa4.png" title="When click on the critical item list" width="1600"/>
+                <img src="db3220239b7b9432ffc1329ff6e0376d6fbb3e54b2e36b419d3cfa9ab4f49957.png" title="Then order entry screen successfully populated with the critical item list" width="1600"/>
+                <img src="0ffbe2880b3b97ea03e31141b94857b49456ebbcb3d97728acd01b4fb07f1516.png" title="When add items and quanties to the order" width="1600"/>
+                <img src="f2fed299696e8232bf99a4229e58834cc1e3e28714fa1f6d90ed34423aa29531.png" title="Then items and quanties successfully added in Par List" width="1600"/>
+                <img src="60e372e147d91f9a514f5a36314ed45aa27ee95c7ecec2f8b36ab10abae59543.png" title="When search within the order by using the search bar for &quot;SUGAR&quot;" width="1600"/>
+                <img src="5dc173def1c5be557c2dfe963560d90cdc86d65b902b1873c3fccf91996b7214.png" title="Then user successfully able to search" width="1600"/>
+                <img src="5805ed31dc6fd19db7e6ed9d58e3bfd5ceeb8dac9c74591e8a1784253dbed416.png" title="When clear search by claring the field and clicking on the go button" width="1600"/>
+                <img src="9c5fa39285e94309369ca74e02addd29aa7184cacb0a6da9bb5c9fbd08dea8bf.png" title="Then screen reverts back to critical item list" width="1600"/>
+                <img src="437f077e13e3d2eaeae2b3ec65331a74361d5bef4cff7fe04ba38218cd448838.png" title="When click on the proccess order" width="1600"/>
+                <img src="b0d041a2d42b6bd34c4ac236f6360975d58dffb23de375195a531b08469c56f3.png" title="Then order details screen successfully populated" width="1600"/>
+                <img src="29782abae8d93176486c83fe83b52d4559d61b200e58d7df7f86bf381d55daf6.png" title="When click on submit order button" width="1600"/>
+                <img src="0e420a1cd5536b33223bbe087ebe7263baecefdd6923bb2602c1de3acb1b1897.png" title="Then user are able to successfully submitted the order: <span class='success-color'>SUCCESS</span>" width="1600"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

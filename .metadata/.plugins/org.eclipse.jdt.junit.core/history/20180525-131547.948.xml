@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FeatureRunner" project="PFG.PMobile" tests="5" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.pmobile.runner.FeatureRunner" incomplete="true">
+    <testsuite name="Feature: The user is able to view, navigate on the proiduct details" incomplete="true">
+      <testcase name="The user is able to view, expand and minimize product details, product card and description when clicking on specific item" classname="The user is able to view, navigate on the proiduct details" incomplete="true"/>
+      <testcase name="The user is able to navigate through product details when clicking on the arrow to go to next item" classname="The user is able to view, navigate on the proiduct details" incomplete="true"/>
+      <testcase name="The user is able to navigate back to order from product details when clicking on the back arrow" classname="The user is able to view, navigate on the proiduct details" incomplete="true"/>
+      <testcase name="The user is able see and use the quick add tool when clicking on an item quantity box" classname="The user is able to view, navigate on the proiduct details" incomplete="true"/>
+      <testcase name="validate The user is able to use search funtion in the submit order screens when using the search bar" classname="The user is able to view, navigate on the proiduct details" incomplete="true"/>
+    </testsuite>
+  </testsuite>
+</testrun>

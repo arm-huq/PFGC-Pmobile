@@ -1,0 +1,180 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    	<title>Power Mobile</title>
+    	
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- height=device-height causes the landscape size to be too large -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
+        <style type="text/css">
+            html, body {
+            	width:100%;height:100%;padding:0;margin:0;font-size:12px;
+            	background:#000; /* NEVER use a gradient background here - it causes serious performance issues */
+	        }
+            
+            div#splash {
+            	position:absolute;top:0;left:0;width:100%;height:100%;
+            	background:#9E0B0F;
+            }
+			div#splash div.table {display:table;width:60%;height:100%; margin:0 auto}
+			div#splash div.table-cell {display:table-cell;width:100%;height:100%;vertical-align:middle;text-align:center}
+			div#splash img#logo {width:100%;margin:0 auto 10px auto}
+			div#splash img#slogan {width:100%;margin:0 auto 10px auto}
+			div#splash div#loader {
+				margin:0 auto;width:48px;height:48px;background:none;
+				-webkit-animation-name:loader;-webkit-animation-duration:0.7s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;
+				-ms-animation-name:loader;-ms-animation-duration:0.7s;-ms-animation-iteration-count:infinite;-ms-animation-timing-function:linear;
+			}
+            div#splash div#loader svg {width:48px;height:48px;fill:#FFF}
+            
+            @-webkit-keyframes loader { from { -webkit-transform: rotate(0deg) } to { -webkit-transform: rotate(360deg) } }
+			@-ms-keyframes loader { from { -ms-transform: rotate(0deg) } to { -ms-transform: rotate(360deg) } }
+
+            @media all and (min-width:1024px) {
+                div#splash div.table {width:30%}
+            }
+        </style>
+        
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+            var skipPrompt = true;
+            var defaultHost = 'https://mobiletest.performancefoodservice.com/';
+            //var defaultLocale = 'en-US';
+            var url_scheme = 'powermobile'; // Must be identical to the one defined in the PhoneGap Config.xml
+            var native_version = {version:3.0, publish_date:20160426};
+            var isMobile = {
+	            Android: navigator.userAgent.match(/Android/i),
+	            BlackBerry: navigator.userAgent.match(/BlackBerry/i),
+	            iOS: navigator.userAgent.match(/iPhone|iPad|iPod/i),
+	            Windows: navigator.userAgent.match(/Trident|Edge/i)
+	        };
+        </script>
+        
+        <script type="text/javascript" src="resources/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="resources/js/jquery.form.min.js"></script>
+        
+        <script type="text/javascript">
+            // A function that attempts to include the css and js files from the application-host and then init the application.
+            function appLaunch(host) {
+                if (host) {
+                    host = host.replace(/\/$/, '') + '/';
+                    
+                    var gateway;
+                    var base;
+                    if (host &amp;&amp; (/(dev|demo).power-mobile.pnc.co.il/.test(host.toLowerCase()))) {
+                        gateway = host;
+                        base = host;
+                    } else {
+                        gateway = host+'power-mobile-gateway/';
+                        base = host+'power-mobile-client/';
+                    }
+                   
+                    // Run a timeout timer until application is started; if not started in time, prompt the user to either wait some more or force a reload.
+                    appLaunch_timer = setTimeout(appLaunch_timeout, 30000);
+                    
+                    // Include global.js and init the app if successful.
+                    $.getScript(base + 'include/javascript/global.js').done(function() {
+                        if (nextgen !== undefined) {
+                            // Clear the timeout timer until the application is started.
+                            clearTimeout(appLaunch_timer);
+                            
+                            window.localStorage.setItem('application-host', host);
+                            
+                            // Include global.css.
+                            $('head').append('&lt;link type="text/css" href="'+base+'include/css/global.css" rel="stylesheet"&gt;');
+                          
+                            // Include platform specific CSS if required.
+                            if (isMobile.Android) {
+                                $('head').append('&lt;link type="text/css" href="'+base+'include/css/android.css" rel="stylesheet"&gt;');
+                            } else if (isMobile.Windows) {
+                                $('head').append('&lt;link type="text/css" href="'+base+'include/css/windows.css" rel="stylesheet"&gt;');
+                            }
+                            
+                            // Start the application
+                            nextgen.init(gateway, base);
+                        }
+                    });
+                } else {
+                    appLaunch_promptHost();
+                }
+            }
+            
+            // Prompt to change the application-host.
+            function appLaunch_promptHost() {
+                var title = 'Gateway Server';
+                var placeHolder = window.localStorage.getItem('application-host') ? window.localStorage.getItem('application-host') : defaultHost;
+                
+                navigator.notification.prompt(
+                    title,
+                    function (results) {
+                        if (results.buttonIndex == 1) {
+                            appLaunch(results.input1);
+                        } else if (results.buttonIndex == 2) {
+                            appLaunch(placeHolder);
+                        }
+                    },
+                    null,
+                    ['OK', 'Cancel']
+                );
+            }
+            
+            // A recursive function that prompts the user to wait some more, refresh the page, or specify a new application host.
+            function appLaunch_timeout() {
+                navigator.notification.vibrate(500);
+                
+                // Here we need to Confirm with the user how to procced.
+                // We cannot rely on nextgen's implementation (i.e. nextgen.confirm) because we use this before "nextgen" is initiated in the remote application (global.js).
+                // We cannot use the native JS Confirm because it cannot have more than two buttons.
+                // Currently we use Cordova's Confirm (with three buttons); it does not work anywhere except in PhoneGAP, which is fine, because we only need it for loading the web-app.
+                navigator.notification.confirm(
+                    'Not connected to the Internet.',
+                    function (buttonIndex) {
+                        if (buttonIndex == 1) {
+                            appLaunch_timer = setTimeout(appLaunch_timeout, 30000);
+                        } else if (buttonIndex == 2) {
+                            location.reload();
+                        } else if (buttonIndex == 3) {
+                            appLaunch_promptHost();
+                        }
+                    },
+                    'Error',
+                    'Wait,Retry,Change Host'
+                );
+            }
+            
+            function handleOpenURL(url) {
+                setTimeout(function() {
+                    // This function is triggered by the LaunchMyApp Plugin
+                    if (!nextgen) {
+                        handleOpenURL(url);
+                    } else {
+                        nextgen.target_url = url;
+                        if (nextgen.current_page != 'login') {
+                            nextgen.handle_url();
+                        }
+                    }
+                    // This timeout of at least 3 seconds is necessary - otherwise the handleOpenURL() function does not work when an external link is clicked and the App is closed.
+                }, 3000);
+            }
+            
+            appLaunch(window.localStorage.getItem('application-host') ? window.localStorage.getItem('application-host') : defaultHost);
+            
+        </script>
+    <link type="text/css" href="https://mobiletest.performancefoodservice.com/power-mobile-client/include/css/global.css" rel="stylesheet" /><link type="text/css" href="https://mobiletest.performancefoodservice.com/power-mobile-client/resources/css/icomoon.css?v=1527101697760" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,100,100italic,300,300italic,700italic,900italic,900&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" /><meta name="format-detection" content="telephone=no" /><script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWescYAtTNkjxs0dm9etfbb8dNZQS5SmY&amp;callback=nextgen.google_maps.loaded_callback"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/1/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/1/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/1/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fmobiletest.performancefoodservice.com%2Fpower-mobile-client%2F&amp;4sAIzaSyCWescYAtTNkjxs0dm9etfbb8dNZQS5SmY&amp;callback=_xdc_._cq6bez&amp;token=8917"></script></head>
+    
+    <body>
+        <div id="splash" class="login page transition">
+            <div class="table">
+                <div class="table-cell">
+                    <img id="logo" src="resources/images/logo.png" />
+                    <img id="slogan" src="resources/images/slogan.png" />
+                    <div id="loader">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M16 8c-0.020-1.045-0.247-2.086-0.665-3.038-0.417-0.953-1.023-1.817-1.766-2.53s-1.624-1.278-2.578-1.651c-0.953-0.374-1.978-0.552-2.991-0.531-1.013 0.020-2.021 0.24-2.943 0.646-0.923 0.405-1.758 0.992-2.449 1.712s-1.237 1.574-1.597 2.497c-0.361 0.923-0.533 1.914-0.512 2.895 0.020 0.981 0.234 1.955 0.627 2.847 0.392 0.892 0.961 1.7 1.658 2.368s1.523 1.195 2.416 1.543c0.892 0.348 1.851 0.514 2.799 0.493 0.949-0.020 1.89-0.227 2.751-0.608 0.862-0.379 1.642-0.929 2.287-1.604s1.154-1.472 1.488-2.335c0.204-0.523 0.342-1.069 0.415-1.622 0.019 0.001 0.039 0.002 0.059 0.002 0.552 0 1-0.448 1-1 0-0.028-0.001-0.056-0.004-0.083h0.004zM14.411 10.655c-0.367 0.831-0.898 1.584-1.55 2.206s-1.422 1.112-2.254 1.434c-0.832 0.323-1.723 0.476-2.608 0.454-0.884-0.020-1.759-0.215-2.56-0.57-0.801-0.354-1.526-0.867-2.125-1.495s-1.071-1.371-1.38-2.173c-0.31-0.801-0.457-1.66-0.435-2.512s0.208-1.694 0.551-2.464c0.342-0.77 0.836-1.468 1.441-2.044s1.321-1.029 2.092-1.326c0.771-0.298 1.596-0.438 2.416-0.416s1.629 0.202 2.368 0.532c0.74 0.329 1.41 0.805 1.963 1.387s0.988 1.27 1.272 2.011c0.285 0.74 0.418 1.532 0.397 2.32h0.004c-0.002 0.027-0.004 0.055-0.004 0.083 0 0.516 0.39 0.94 0.892 0.994-0.097 0.544-0.258 1.075-0.481 1.578z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        			<div class="wizard transition">				<div class="container">											<div class="app-logo"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/logo.png" /></div>						<div class="app-slogan">Power Mobile</div>										<form name="login" method="POST" novalidate="" autocorrect="off" autocapitalize="off" spellcheck="false" onsubmit="$('form[name=login] input.submit').addClass('hover'); nextgen.toggle_button_loader($(this).find('input.submit'), 'inverted'); return nextgen.submit_form($('form[name=login]'), function(response) { nextgen.login_callback(response); })">						<input type="hidden" name="action" value="login" />						<input type="hidden" name="token" value="" />						<input type="hidden" name="locale" value="en-US" />													<div class="field-title">Username</div>												<div class="field round_corners inner_shadow"><div class="validation"><span class="okay">✔</span></div><input type="email" name="username" placeholder="Username" value="" required="" /></div>													<div class="field-title">Password</div>												<div class="field round_corners inner_shadow"><div class="validation"><span class="okay">✔</span></div><input type="password" name="password" placeholder="Password" required="" /></div>						<div class="button"><div class="loader"><span class="icon-spinner2 inverted"></span></div>							<input type="submit" class="submit round_corners gradient_3 hover" value="Login" />						</div>					</form>				</div>			</div>		</div>
+    
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');</script>					<div class="dashboard page">						<div class="data"> </div>					</div>										<div class="items page">												<!-- Deprecated - Native plugin required -->						<!--<div class="virtual_statusbar"></div>-->												<div class="page_container">							<div class="sidebar">								<div id="tabbar_wrapper" class="tabbar">									<div class="scroller"></div>								</div>								<div class="identity solid_1">									<div class="table">										<div class="table_cell">											<img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/logo.png" />																							<div class="slogan">Power Mobile</div>																					</div>									</div>								</div>								<div class="filters"> </div>							</div>							<div class="content shadow">								<div class="messages container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Messages</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<form name="search" method="POST" onsubmit="nextgen.search_content($('.items.page .messages input[name=query]').val()); return false;">												<div class="search field">													<div class="container round_corners inner_shadow">														<a class="submit round_corners_right gradient_3" onclick="nextgen.search_content($('.items.page .messages input[name=query]').val())"><span class="icon-magnifying-glass"></span></a>														<input type="text" name="query" placeholder="Search" />													</div>												</div>											</form>										</div>									</div>									<div class="data"> </div>								</div>																<div class="products container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Products</h1>										<h2>Daily Order Cycle</h2>										<div class="share_trigger button">											<div class="touch_zone count_spreadsheet_report" onclick="nextgen.toggle_button_loader($(this).parent().find('.container')); nextgen.reports.submit({element:null, method:'link', type:'pdf', filters:{type:'count_spreadsheet'}})"> </div>											<div class="touch_zone shelf_tag_printing" onclick="nextgen.shelf_tag_printing.init(this)"> </div>											<!--											<div class="touch_zone" onclick="nextgen.select($(this).next(), nextgen.strings.count_spreadsheet_report_description)">&nbsp;</div>											<select class="hide" onchange="nextgen.reports.submit({element:null, method:$(this).val(), type:'pdf', recipients:nextgen.current_user.email, filters:{type:'count_spreadsheet'}})">												<option value="">Count Spreadsheet Report</option>												<option value="link">Print PDF</option>												<option value="email">Email as PDF</option>																									--><!-- <option value="print">Print PDF</option> --><!--																							</select>											-->											<a class="container">																									<div class="icon text print"><span class="icon-print"></span></div>																							</a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<form name="search" method="POST" onsubmit="nextgen.search_content($('.items.page .products input[name=query]').val()); return false;">												<div class="search field">													<div class="container round_corners inner_shadow">														<a class="submit round_corners_right gradient_3" onclick="nextgen.search_content($('.items.page .products input[name=query]').val())"><span class="icon-magnifying-glass"></span></a>														<input class="autocomplete_search_field" type="text" name="query" placeholder="Search" onkeyup="nextgen.autocomplete.init({element:this, container:$(this).closest('.container'), quick_scan:false, minimum_chars:3, customer_id:nextgen.current_customer_id})" onfocus="nextgen.autocomplete.init({element:this, container:$(this).closest('.container'), quick_scan:false, minimum_chars:3, customer_id:nextgen.current_customer_id})" autocomplete="off" />													</div>												</div>												<div class="camera button">													<a class="container round_corners gradient_1" onclick="nextgen.scanner.scan(function(barcode) { $('.items.page .products input[name=query]').val(barcode); nextgen.search_content($('.items.page .products input[name=query]').val()); })">																													<div class="icon text"><span class="icon-barcode"></span></div>															<label>Scan</label>																											</a>												</div>											</form>											<div class="order_info">												<div class="total"><span class="round_corners">Total<span></span></span></div>												<div class="quantity"><span class="round_corners">Qty.<span></span></span></div>												<div class="volume"><span class="round_corners">Cu.Ft<span></span></span></div>												<div class="weight"><span class="round_corners">Lb<span></span></span></div>											</div>											<div class="receiving_info">												<div class="total_received_quantity"><span class="round_corners">Total Received Qty.<span></span></span></div>												<div class="total_invoiced_quantity"><span class="round_corners">Total Invoiced Qty.<span></span></span></div>											</div>										</div>									</div>									<div class="data"> </div>								</div>																<div class="orders container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Orders</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<form name="search" method="POST" onsubmit="nextgen.search_content($('.items.page .orders input[name=query]').val()); return false;">												<div class="search field">													<div class="container round_corners inner_shadow">														<a class="submit round_corners_right gradient_3" onclick="nextgen.search_content($('.items.page .orders input[name=query]').val())"><span class="icon-magnifying-glass"></span></a>														<input type="text" name="query" placeholder="Search" />													</div>												</div>											</form>										</div>									</div>									<div class="data"> </div>								</div>																<div class="invoices container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Invoices</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<form name="search" method="POST" onsubmit="nextgen.search_content($('.items.page .invoices input[name=query]').val()); return false;">												<div class="search field">													<div class="container round_corners inner_shadow">														<a class="submit round_corners_right gradient_3" onclick="nextgen.search_content($('.items.page .invoices input[name=query]').val())"><span class="icon-magnifying-glass"></span></a>														<input type="text" name="query" placeholder="Search" />													</div>												</div>											</form>										</div>									</div>									<div class="data"> </div>								</div>																<div class="customers container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Customers</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<form name="search" method="POST" onsubmit="nextgen.search_content($('.items.page .customers input[name=query]').val()); return false;">												<div class="search field">													<div class="container round_corners inner_shadow">														<a class="submit round_corners_right gradient_3" onclick="nextgen.search_content($('.items.page .customers input[name=query]').val())"><span class="icon-magnifying-glass"></span></a>														<input type="text" name="query" placeholder="Search" />													</div>												</div>											</form>										</div>									</div>									<div class="data"> </div>								</div>																<div class="inventory container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Inventories</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<form name="search" method="POST" onsubmit="nextgen.search_content($('.items.page .inventory input[name=query]').val()); return false;">												<div class="search field">													<div class="container round_corners inner_shadow">														<a class="submit round_corners_right gradient_3" onclick="nextgen.search_content($('.items.page .inventory input[name=query]').val())"><span class="icon-magnifying-glass"></span></a>														<input type="text" name="query" placeholder="Search" />													</div>												</div>											</form>										</div>									</div>									<div class="data"> </div>								</div>																<div class="receivings container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Receivings</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<form name="search" method="POST" onsubmit="nextgen.search_content($('.items.page .receivings input[name=query]').val()); return false;">												<div class="search field">													<div class="container round_corners inner_shadow">														<a class="submit round_corners_right gradient_3" onclick="nextgen.search_content($('.items.page .receivings input[name=query]').val())"><span class="icon-magnifying-glass"></span></a>														<input type="text" name="query" placeholder="Search" />													</div>												</div>											</form>										</div>									</div>									<div class="data"> </div>								</div>																<div class="recipes container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Recipes</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<form name="search" method="POST" onsubmit="nextgen.search_content($('.items.page .recipes input[name=query]').val()); return false;">												<div class="search field">													<div class="container round_corners inner_shadow">														<a class="submit round_corners_right gradient_3" onclick="nextgen.search_content($('.items.page .recipes input[name=query]').val())"><span class="icon-magnifying-glass"></span></a>														<input type="text" name="query" placeholder="Search" />													</div>												</div>											</form>											<!--<div class="new_recipe button">												<a class="container round_corners gradient_3" onclick="nextgen.new_recipe()"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_recipes.png"></a>											</div>-->										</div>									</div>									<div class="data"> </div>								</div>																<div class="reports container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Reports</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<div class="description"> </div>										</div>									</div>									<div class="data"> </div>								</div>																<div class="settings container">									<div class="header">										<div class="sidebar_trigger">											<div class="touch_zone" onclick="nextgen.toggle_sidebar()"> </div>											<a class="container">																									<div class="icon"><span class="icon-menu"></span></div>																							</a>										</div>										<h1>Settings</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.share()"> </div>											<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png" /></a>										</div>									</div>									<div class="menubar">										<div class="container shadow">											<!-- 2015-05-18 - Moved into the boxes 												<div class="save_settings mobile_short button">													<a class="container round_corners gradient_2 with_icon" onclick="nextgen.update_user_settings()"><div class="icon"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_save.png"></div> Save</a>												</div>											-->											<div class="description"> </div>										</div>									</div>									<div class="data"> </div>								</div>																<div class="details container">									<div class="header">										<div class="back_trigger">											<div class="touch_zone"> </div>											<a class="container">																								<span class="icon-chevron-thin-left"></span>																						</a>										</div>										<h1>Details</h1>										<div class="share_trigger">											<div class="touch_zone" onclick="nextgen.select($(this).next())"> </div>											<select class="hide" onchange="eval(this.value)">												<option value="" string="actions">Actions</option>												<option value="nextgen.share()" string="send_by_email">Send by Email</option>												<option value="nextgen.shelf_tag_printing.init(null, nextgen.current_details_item_id)" string="shelf_tag_print">Shelf Tag Print</option>											</select>											<!--												<div class="touch_zone" onclick="nextgen.share()">&nbsp;</div>												<a class="container"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/images/mobile/icon_share.png"></a>											-->																							<a class="container">													<span class="icon text">														<span class="icon-dots-three-vertical"></span>													</span>												</a>																					</div>									</div>									<div class="menubar">										<div class="container shadow">											<h2> </h2>												<div class="nav_trigger next">													<div onclick="nextgen.next()"><span class="icon-chevron-thin-right"></span></div>												</div>												<div class="nav_trigger prev">													<div onclick="nextgen.prev()"><span class="icon-chevron-thin-left"></span></div>												</div>										</div>									</div>									<div class="data"> </div>								</div>																<!-- <a class="current" onclick="nextgen.toggle_page('items', 'items', '', 'customers')">Please select a customer</a> -->								<div class="current">Please select a customer</div>																<!-- The quick add tool is hidden, unless toggle_page shows it if the container is "products" -->								<div class="quick_add_tool_trigger">									<div class="touch_zone" onclick="nextgen.quick_add_tool('open')"></div>									<span>Quick Add Tool</span>								</div>								<div class="quick_add_tool">									<div class="close" onmouseup="nextgen.quick_add_tool('close', this)"><span class="icon-cross"></span></div>									<div class="keypad">										<div class="nine"><a onclick="nextgen.quick_add_tool('add', this)">9</a></div>										<div class="eight"><a onclick="nextgen.quick_add_tool('add', this)">8</a></div>										<div class="seven"><a onclick="nextgen.quick_add_tool('add', this)">7</a></div>										<div class="six"><a onclick="nextgen.quick_add_tool('add', this)">6</a></div>										<div class="five"><a onclick="nextgen.quick_add_tool('add', this)">5</a></div>										<div class="four"><a onclick="nextgen.quick_add_tool('add', this)">4</a></div>										<div class="three"><a onclick="nextgen.quick_add_tool('add', this)">3</a></div>										<div class="two"><a onclick="nextgen.quick_add_tool('add', this)">2</a></div>										<div class="one"><a onclick="nextgen.quick_add_tool('add', this)">1</a></div>									</div>									<div class="navigation">										<div class="up"><a onclick="nextgen.quick_add_tool('up', this)"><span class="icon-chevron-thin-up"></span></a></div>										<div class="down"><a onclick="nextgen.quick_add_tool('down', this)"><span class="icon-chevron-thin-down"></span></a></div>										<div class="type"><a onclick="nextgen.quick_add_tool('change_type', this, null)">cases</a></div>										<div class="del"><a onclick="nextgen.quick_add_tool('del', this)">Del</a></div>										<div class="dot"><a onclick="nextgen.quick_add_tool('add', this)">.</a></div>										<div class="zero"><a onclick="nextgen.quick_add_tool('add', this)">0</a></div>										<div class="screen"><a class="quantity"> </a></div>									</div>								</div>								<div class="confirmation_widget">Processing</div>																<!--<div class="weather_widget_trigger transition tablet_only" onclick="$('.weather_widget_trigger').removeClass('transition'); setTimeout(function() { $('.weather_widget').addClass('transition') }, 400)">Weather</div>								<div class="weather_widget tablet_only" onclick="$('.weather_widget').removeClass('transition'); setTimeout(function() { $('.weather_widget_trigger').addClass('transition') }, 400)"><img src="https://mobiletest.performancefoodservice.com/power-mobile-client/files/images/weather.png"></div>-->								<!-- Network status indicator -->								<div class="offline_indicator hide">									<div class="touch_zone" onclick="nextgen.offline.info()"> </div>									<div class="led green on"></div>									<div class="led yellow off"></div>									<div class="led red off"></div>									<div class="label"></div>								</div>							</div>						</div>					</div>				</body></html>

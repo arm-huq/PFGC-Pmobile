@@ -1,0 +1,36 @@
+Feature: Valid user able to access, view, search, refresh,short order, filter, view invoice detail
+
+Scenario Outline: The user is able to filter invoices by invoices date,Customer and status when clicking on the filter buttons and clicking on clear all
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the invoices icon
+  Then invoice screen successfully displayed 
+  When Click on the Customer filter by box
+  Then user able to see customer list populates on righthand side
+  When Select a customer and click on the apply 
+  Then user able to see the invoices are successfully displayed for only that customer
+  When user Click on the clear all on customer filter
+  Then user able to see the invoice successfully goes back to all invoices
+   When user Click on the invoice date filter box 
+  Then user able to see the orders date filter options successfully populated on righthand side
+  When user choose a date range and click on apply 
+  Then user able to see order for date range successfully populated
+  When clear all on invoice date filter
+  Then user able to see the invoice successfully goes back to all invoices
+  When user Click on the invoice date filter box
+  Then user able to see the orders date filter options successfully populated on righthand side
+  When choose a filter option(ex. last week) and click on the box then click on apply
+  Then Invoices for that time frame successfully populated
+  When clear all on invoice date filter
+  Then user able to see the invoice successfully goes back to all invoices
+   When user click on the invoice status filter
+  Then user able to see all status option successfully on screen
+  When user choose a filter option box and click on apply 
+  Then user able to see status filter option successfully display on the screen
+  When Clear all on status filter 
+  Then user able to see the invoice successfully goes back to all invoices
+  
+  Examples:
+   | UserId		| pwd	|
+   | 1008     	| test	|
+ 

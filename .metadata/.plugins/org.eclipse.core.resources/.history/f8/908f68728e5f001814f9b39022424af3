@@ -1,0 +1,655 @@
+package com.pmobile.pages;
+
+
+import org.apache.tools.ant.filters.TokenFilter.Trim;
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+
+import com.pmobile.confirmation.pages.DashBoardConfirmationPage;
+import com.pmobile.elements.pages.DashBoardElementPage;
+import com.pmobile.elements.pages.InvoicesElementPage;
+import com.pmobile.elements.pages.LoginElementsPage;
+import com.pmobile.elements.pages.OrderDetailElementPage;
+import com.pmobile.elements.pages.ProductDetailElementPage;
+import com.pmobile.utilities.HomePage;
+
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.steps.ScenarioSteps;
+
+public class LoginActionPage  extends ScenarioSteps{
+	
+	HomePage home ;
+	LoginElementsPage loginElemnt;
+	DashBoardElementPage dashbrdelemnt;	
+	OrderDetailElementPage orderDetails;
+	
+	ProductDetailElementPage productDetail;
+	InvoicesElementPage invoicesDetail;
+	OrderDetailActionPage orderDetalAct;
+	String specificInvoice;
+	
+	String iconText;
+	String fInvoiceNumber;
+	String beforeClear;
+	@Step
+	public void openHomePage(){
+		home.open();
+	}
+	
+	@Step
+	public void setUserName(String userName){
+		loginElemnt.userid.sendKeys(userName);
+	}
+	
+	@Step
+	public void setPassword(String pwd){
+		loginElemnt.password.sendKeys(pwd);
+	}
+	
+	@Step
+	public void clickLogin() throws InterruptedException{
+		loginElemnt.clicklogin.click();
+		Thread.sleep(5000);		
+	}
+	
+	@Step
+	public void clickOnOrder() throws InterruptedException{
+		Thread.sleep(3000);
+		dashbrdelemnt.orderButton.click();
+	}
+	
+	@Step
+	public void setProdName(String prodName){		
+		productDetail.searchForOrder.sendKeys(prodName);		
+	}
+	
+	@Step
+	public void clickOnClearFilter(){		
+		orderDetails.clearFilter.click();	
+	}
+	
+	@Step
+	public void clickOnNewOrder(){		
+		orderDetails.addNewOrder.click();	
+	}
+
+	@Step
+	public void setSearchProducts(String prod) throws InterruptedException{		
+		Thread.sleep(3000);
+		orderDetails.clearFilter.waitUntilVisible();
+		orderDetails.clearFilter.click();
+		orderDetails.searchProducts.waitUntilPresent();
+		orderDetails.searchProducts.sendKeys(prod);
+		Thread.sleep(1000);
+		orderDetails.searchProductsButton.click();
+		Thread.sleep(2000);
+		orderDetails.confOrderNumber.click();
+		Thread.sleep(1000);
+	}
+	@Step
+	public void verifySearchProducts(String prod) throws InterruptedException{		
+		Thread.sleep(3000);
+		orderDetails.searchProdButtonclick.waitUntilVisible();
+		orderDetails.searchProdButtonclick.click();
+		orderDetails.confProductName.waitUntilClickable();
+		Thread.sleep(2000);
+		orderDetails.confProductName.click();
+		orderDetails.confOrderNumberOderDe.waitUntilVisible();
+		Thread.sleep(2000);
+		String prodName =  orderDetails.confOrderNumberOderDe.getText();
+		System.out.println("Test Print !!!" + prodName);
+		Thread.sleep(1000);
+		Assert.assertEquals(prod,prodName);		
+		if(prodName.contains(prod)){
+			System.out.println("Product search Passed");
+		}	      
+	}
+	
+	public void assertMessagesLandingPage() throws InterruptedException{
+		Thread.sleep(2000);
+		iconText = dashbrdelemnt.messageButtton.getText();
+		dashbrdelemnt.messageButtton.click();
+	}
+	
+	public void assertOrderLandingPage() throws InterruptedException{
+		Thread.sleep(2000);
+		iconText = null;
+		dashbrdelemnt.orderButton.waitUntilClickable();
+		iconText = dashbrdelemnt.orderButton.getText();
+		dashbrdelemnt.orderButton.click();
+	}
+	
+	public void assertInvoicesLandingPage() throws InterruptedException{
+		Thread.sleep(2000);
+		dashbrdelemnt.invoicestextButton.waitUntilVisible();
+		iconText = dashbrdelemnt.invoicestextButton.getText();
+		dashbrdelemnt.invoicesButton.click();
+	}
+	
+	public void assertProductsLandingPage() throws InterruptedException{
+		Thread.sleep(2000);
+		dashbrdelemnt.productsTextButton.waitUntilVisible();
+		iconText = dashbrdelemnt.productsTextButton.getText();
+		dashbrdelemnt.productsButton.click();
+		
+	}
+	
+	public void assertCusctomerLandingPage() throws InterruptedException{
+		Thread.sleep(2000);
+		dashbrdelemnt.customersTextButton.waitUntilVisible();
+		iconText = dashbrdelemnt.customersTextButton.getText();
+		dashbrdelemnt.customersButton.click();
+		
+	}
+	
+	public void assertInventoryLandingPage() throws InterruptedException{
+		Thread.sleep(2000);
+		dashbrdelemnt.inventoryTextButton.waitUntilVisible();
+		iconText = dashbrdelemnt.inventoryTextButton.getText();
+		dashbrdelemnt.inventoryButton.click();
+		
+	}
+	
+	public void assertSettingsLandingPage() throws InterruptedException{
+		Thread.sleep(2000);
+		dashbrdelemnt.settingTextButton.waitUntilVisible();
+		iconText = dashbrdelemnt.settingTextButton.getText();
+		dashbrdelemnt.settingButton.click();
+		
+	}
+
+	public void verifySearchOrder(String orderNo) throws InterruptedException {
+		Thread.sleep(2000);
+		orderDetails.confOrderNumber.waitUntilVisible();
+		orderDetails.confOrderNumber.click();
+		orderDetails.confOrderNumberOderDe.waitUntilEnabled();
+		String orderNUmber =  orderDetails.confOrderNumberOderDe.getText();		
+		System.out.println("orderNumber  :"+ orderNUmber);
+		
+		orderDetails.confOrderNumberOderDe.waitUntilVisible();
+		Thread.sleep(1000);
+		String array1[]= orderNUmber.split("#");
+		String prod1= orderNo.trim();
+		Assert.assertEquals(array1[1],prod1); 
+		if(prod1.equalsIgnoreCase(array1[1])){
+			System.out.println("Passed");
+		}      
+	}
+
+	public void verifyMessageLandingPage() {
+		String text = orderDetails.messageTextheader.getText();
+		Assert.assertEquals(iconText, text);
+		
+		if(iconText.equalsIgnoreCase(text)){
+			System.out.println(" Messages dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" Messages dashboard " + "Failed " + " -- ");
+		}
+		dashbrdelemnt.homeButton.waitUntilClickable();
+		dashbrdelemnt.homeButton.click();
+	}
+
+	public void verifyOrderLandingPage() {
+		String text = orderDetails.ordertextheader.getText();
+		Assert.assertEquals("Orders", text);
+		if(text.equalsIgnoreCase("Orders")){
+			System.out.println(" order dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" order dashboard " + "Failed " + " -- ");
+		}
+		dashbrdelemnt.homeButton.waitUntilClickable();
+		dashbrdelemnt.homeButton.click();
+	}
+
+	public void verifyInvoicesLandingPage() {
+		String text = orderDetails.invoicesTtextheader.getText();
+		Assert.assertEquals(iconText, text);
+		if(iconText.equalsIgnoreCase(text)){
+			System.out.println(" Invoices dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" Invoices dashboard " + "Failed " + " -- ");
+		}
+		dashbrdelemnt.homeButton.waitUntilClickable();
+		dashbrdelemnt.homeButton.click();
+	}
+
+	public void verifyProductsLandingPage() {
+		String text = orderDetails.ProductsTextheader.getText();
+		Assert.assertEquals(iconText, text);
+		if(iconText.equalsIgnoreCase(text)){
+			System.out.println(" Products dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" Products dashboard " + "Failed " + " -- ");
+		}
+		dashbrdelemnt.homeButton.waitUntilClickable();
+		dashbrdelemnt.homeButton.click();
+	}
+
+	public void verifyCustomersLandingPage() {
+		String text = orderDetails.customersTextheader.getText();
+		Assert.assertEquals(iconText, text);
+		if(iconText.equalsIgnoreCase(text)){
+			System.out.println(" Customer dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" Customer dashboard " + "Failed " + " -- ");
+		}
+		dashbrdelemnt.homeButton.waitUntilClickable();
+		dashbrdelemnt.homeButton.click();
+	}
+
+	public void verifyInventoryLandingPage() {
+		String text = orderDetails.inventoriesTextheader.getText();
+		Assert.assertEquals("Inventories", text);
+		if(text.equalsIgnoreCase("Inventories")){
+			System.out.println(" Inventory dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" Inventory dashboard " + "Failed " + " -- ");
+		}
+		dashbrdelemnt.homeButton.waitUntilClickable();
+		dashbrdelemnt.homeButton.click();
+	}
+
+	public void verifySettingsLandingPage() {
+		String text = orderDetails.settingsTextheader.getText();
+		Assert.assertEquals(iconText, text);
+		if(iconText.equalsIgnoreCase(text)){
+			System.out.println(" Settings  dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" settings dashboard " + "Failed " + " -- ");
+		}
+		orderDetails.logOUt.waitUntilEnabled();
+		orderDetails.logOUt.click();
+	}
+
+	public void verifyUserLandedOnHomePage() throws InterruptedException {
+		Thread.sleep(3000);
+		iconText = dashbrdelemnt.messageButtton.getText();
+		Assert.assertTrue("Home Page does not displayed ", dashbrdelemnt.messageButtton.isDisplayed());
+	}
+
+	public void verifyOrderLandedPage() {
+		String text = orderDetails.ordertextheader.getText();
+		Assert.assertTrue("Order page does not displayed ", orderDetails.ordertextheader.isDisplayed());
+		Assert.assertEquals("Orders", text);
+	}
+	//************************************** INVOICES********************************************
+	@Step
+	public void clickOnInvoicesButton() throws InterruptedException {
+		Thread.sleep(4000);
+		dashbrdelemnt.invoicestextButton.waitUntilVisible();
+		iconText = dashbrdelemnt.invoicestextButton.getText();
+		dashbrdelemnt.invoicesButton.click();
+	}
+	@Step
+	public void verifyInvoicesLandedPage() {
+		String text = orderDetails.invoicesTtextheader.getText();
+		Assert.assertEquals(iconText, text);
+		if(iconText.equalsIgnoreCase(text)){
+			System.out.println(" Invoices dashboard " + "Passed" + " -- ");
+		}else{
+			System.out.println(" Invoices dashboard " + "Failed " + " -- ");
+		}
+	}
+
+	public void clickOnSearchAndSetInvNumber(String invNo) throws InterruptedException {
+		Thread.sleep(2000);
+		orderDetails.clearFilter.click();
+		invoicesDetail.searchForInvoices.sendKeys(invNo);
+		Thread.sleep(1000);
+		invoicesDetail.searchForInvoicedButton.click();
+	}
+
+	public void verifySearchResult(String invoiceNo) throws InterruptedException {
+		Thread.sleep(2000);
+		invoicesDetail.confInvoicesNumber.waitUntilVisible();
+		invoicesDetail.confInvoicesNumber.click();
+		Thread.sleep(2000);
+		invoicesDetail.confInvoicesNumberInvDe.waitUntilEnabled();
+		String orderNUmber =  invoicesDetail.confInvoicesNumberInvDe.getText();		
+		System.out.println("Invoice Number  :"+ orderNUmber);
+		Thread.sleep(1000);
+		String array1[]= orderNUmber.split("#");
+		String prod1= invoiceNo.trim();
+		Assert.assertEquals(array1[1],prod1); 
+		
+		if(prod1.equalsIgnoreCase(array1[1])){
+			System.out.println("Passed");
+		}      
+	}
+
+	public void clickOnMessageFLeft() throws InterruptedException {
+		Thread.sleep(2000);
+		invoicesDetail.messageButtonFromLeft.click();
+	}
+	
+	public void verifyOnMessageFLeft() {
+		String text = invoicesDetail.messageTextheader.getText();
+		Assert.assertEquals("Messages", text);
+		if("Messages".equalsIgnoreCase(text)){
+			System.out.println(" Settings  dashboard: " + "Passed :" + "Messages");
+		}else{
+			System.out.println(" settings dashboard: " + "Failed : " + "Messages");
+		}
+	}
+
+	public void clickOnOrderFLeft() throws InterruptedException {
+		Thread.sleep(2000);
+		invoicesDetail.orderButtonFromLeft.click();
+	}
+	public void verifyOrederFromLeft() {
+		String text = invoicesDetail.orderTextheader.getText();
+		Assert.assertEquals("Orders", text);
+		if("Orders".equalsIgnoreCase(text)){
+			System.out.println("Dashboard: " + "Passed : " + "Orders");
+		}else{
+			System.out.println("Dashboard: " + "Failed : " + "Orders");
+		}
+	}
+
+	public void clickOnInvoicesFLeft() throws InterruptedException {
+		Thread.sleep(2000);
+		invoicesDetail.invoicesButtonFromLeft.click();
+	}
+	public void verifyInvoiceFromLeft() {
+		String text = invoicesDetail.invoicesTextheader.getText();
+		Assert.assertEquals("Invoices", text);
+		if("Invoices".equalsIgnoreCase(text)){
+			System.out.println("Dashboard: " + "Passed : " + "Invoices");
+		}else{
+			System.out.println("Dashboard: " + "Failed : " +"Invoices");
+		}
+	}
+	public void clickOnProductsFLeft() throws InterruptedException {
+		Thread.sleep(2000);
+		invoicesDetail.productButtonFromLeft.click();
+	}
+	public void verifyProductsFromLeft() {
+		String text = invoicesDetail.productTextheader.getText();
+		Assert.assertEquals("Products", text);
+		if("Products".equalsIgnoreCase(text)){
+			System.out.println("Dashboard: " + "Passed : " + "Products");
+		}else{
+			System.out.println("Dashboard: " + "Failed : " + "Products");
+		}
+	}
+	public void clickOncustomerFLeft() throws InterruptedException {
+		Thread.sleep(2000);
+		invoicesDetail.customertButtonFromLeft.click();
+	}
+	public void verifyCustomerFromLeft() {
+		String text = invoicesDetail.customerTextheader.getText();
+		Assert.assertEquals("Customers", text);
+		if("Customers".equalsIgnoreCase(text)){
+			System.out.println("Dashboard: " + "Passed : " + "Customers");
+		}else{
+			System.out.println("Dashboard: " + "Failed : " +"Customers");
+		}
+	}
+	public void clickOnInventoryFLeft() throws InterruptedException {
+		Thread.sleep(2000);
+		invoicesDetail.inverntoryButtonFromLeft.click();		
+	}
+	public void verifyInventoryFromLeft() {
+		String text = invoicesDetail.inverntoryTextheader.getText();
+		Assert.assertEquals("Inventories", text);
+		if("Inventories".equalsIgnoreCase(text)){
+			System.out.println("Dashboard: " + "Passed : " + "Inventories");
+		}else{
+			System.out.println("Dashboard: " + "Failed : " +"Inventories");
+		}
+	}
+	public void clickOnSettingsFLeft() throws InterruptedException {
+		Thread.sleep(2000);
+		invoicesDetail.settingsButtonFromLeft.click();	
+	}
+	public void verifySettingsFromLeft() {
+		String text = invoicesDetail.settingsTextheader.getText();
+		Assert.assertEquals("Settings", text);
+		if("Settings".equalsIgnoreCase(text)){
+			System.out.println("Dashboard: " + "Passed : " + "Settings");
+		}else{
+			System.out.println("Dashboard: " + "Failed : " +"Settings");
+		}
+	}
+
+	public void clickOnInvoiceDateSortBox() throws InterruptedException {
+		invoicesDetail.sortClearAll.click();
+		Thread.sleep(1000);
+		System.out.println("____________________________________________");
+		System.out.println("Sort by invoices Date :");
+		fInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("First invoices numbeer :" + fInvoiceNumber);
+		Thread.sleep(2000);
+		invoicesDetail.invoiceDate.click();
+		Thread.sleep(1000);
+		invoicesDetail.invoiceDateArrow.click();
+		Thread.sleep(1000);
+	}
+
+	public void verifyInvoiceSortBox() throws InterruptedException {
+		String sInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Second invoices :" + sInvoiceNumber);
+		Assert.assertNotEquals(fInvoiceNumber, sInvoiceNumber);
+		
+		if (fInvoiceNumber.equalsIgnoreCase(sInvoiceNumber)){
+			System.out.println("Invoices Number not changed - Order Number :" + sInvoiceNumber);
+		}else{
+			System.out.println("Invoices Number changed from - Order Number :" + fInvoiceNumber +" To " + sInvoiceNumber);
+		}
+		Thread.sleep(1000);
+		invoicesDetail.invoiceDateArrow.click();
+		Thread.sleep(2000);
+		String cOrderNumberS = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Invoices Number Disc  :" + cOrderNumberS);
+		Assert.assertNotEquals(sInvoiceNumber, cOrderNumberS);
+		
+		if (cOrderNumberS.equalsIgnoreCase(sInvoiceNumber)){
+			System.out.println("Order Number not changed - Order Number :" + cOrderNumberS);
+		}else{
+			System.out.println("Order Number changed from - Order Number :" + sInvoiceNumber +" To " + cOrderNumberS);
+		}
+	}
+
+	public void clickOnInvoiceNoSortBox() throws InterruptedException {
+		invoicesDetail.sortClearAll.click();
+		Thread.sleep(1000);
+		System.out.println("____________________________________________");
+		System.out.println("Sort by invoices No :");
+		fInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("First invoices number :" + fInvoiceNumber);
+		Thread.sleep(2000);
+		invoicesDetail.invoiceNo.click();
+		Thread.sleep(3000);
+		invoicesDetail.invoiceNoArrow.click();
+		Thread.sleep(2000);
+	}
+
+	public void verifyInvoiceNoSortBox() throws InterruptedException {
+		String sInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Second invoices :" + sInvoiceNumber);
+		Assert.assertNotEquals(fInvoiceNumber, sInvoiceNumber);
+		
+		if (fInvoiceNumber.equalsIgnoreCase(sInvoiceNumber)){
+			System.out.println("Invoices Number not changed - Invoivce Number :" + sInvoiceNumber);
+		}else{
+			System.out.println("Invoices Number changed from - Invoivce Number :" + fInvoiceNumber +" To " + sInvoiceNumber);
+		}
+		Thread.sleep(1000);
+		invoicesDetail.invoiceNoArrow.click();
+		Thread.sleep(2000);
+		String cOrderNumberS = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Invoices Number Disc  :" + cOrderNumberS);
+		Assert.assertNotEquals(sInvoiceNumber, cOrderNumberS);
+		
+		if (cOrderNumberS.equalsIgnoreCase(sInvoiceNumber)){
+			System.out.println("Order Number not changed - Invoivce Number :" + cOrderNumberS);
+		}else{
+			System.out.println("Order Number changed from - Invoivce Number :" + sInvoiceNumber +" To " + cOrderNumberS);
+		}
+	}
+
+	public void clickOnCustomerNoSortBox() throws InterruptedException {
+		invoicesDetail.sortClearAll.click();
+		Thread.sleep(1000);
+		System.out.println("____________________________________________");
+		System.out.println("Sort by customer No :");
+		fInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("First invoices number :" + fInvoiceNumber);
+		Thread.sleep(2000);
+		invoicesDetail.customerNo.click();
+		Thread.sleep(1000);
+		invoicesDetail.customerNoArrow.click();
+		Thread.sleep(1000);
+	}
+
+	public void verifyCustomerNoSortBox() throws InterruptedException {
+		String sInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Second invoices :" + sInvoiceNumber);
+		Assert.assertNotEquals(fInvoiceNumber, sInvoiceNumber);
+		
+		if (fInvoiceNumber.equalsIgnoreCase(sInvoiceNumber)){
+			System.out.println("Invoices Number not changed - Invoivce Number :" + sInvoiceNumber);
+		}else{
+			System.out.println("Invoices Number changed from - Invoivce Number :" + fInvoiceNumber +" To " + sInvoiceNumber);
+		}
+		Thread.sleep(1000);
+		invoicesDetail.customerNoArrow.click();
+		Thread.sleep(2000);
+		String cOrderNumberS = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Invoices Number Disc  :" + cOrderNumberS);
+		Assert.assertNotEquals(sInvoiceNumber, cOrderNumberS);
+		
+		if (cOrderNumberS.equalsIgnoreCase(sInvoiceNumber)){
+			System.out.println("Order Number not changed - Invoivce Number :" + cOrderNumberS);
+		}else{
+			System.out.println("Order Number changed from - Invoivce Number :" + sInvoiceNumber +" To " + cOrderNumberS);
+		}
+	}
+	public void clickOnCustomerNameSortBox() throws InterruptedException {
+		invoicesDetail.sortClearAll.click();
+		Thread.sleep(1000);
+		System.out.println("____________________________________________");
+		System.out.println("Sort by customer Name :");
+		fInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("First invoices number :" + fInvoiceNumber);
+		Thread.sleep(2000);
+		invoicesDetail.customerName.click();
+		Thread.sleep(3000);
+		//invoicesDetail.customerNameArrow.click();
+		Thread.sleep(3000);
+	}
+
+	public void verifyCustomerNameSortBox() throws InterruptedException {
+		String sInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Second invoices :" + sInvoiceNumber);
+		Assert.assertNotEquals(fInvoiceNumber, sInvoiceNumber);
+		
+		if (fInvoiceNumber.equalsIgnoreCase(sInvoiceNumber)){
+			System.out.println("Invoices Number not changed - Invoivce Number :" + sInvoiceNumber);
+		}else{
+			System.out.println("Invoices Number changed from - Invoivce Number :" + fInvoiceNumber +" To " + sInvoiceNumber);
+		}
+		Thread.sleep(2000);
+		invoicesDetail.customerNameArrow.click();
+		Thread.sleep(2000);
+		String cOrderNumberS = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Invoices Number Disc  :" + cOrderNumberS);
+		Assert.assertNotEquals(sInvoiceNumber, cOrderNumberS);
+		
+		if (cOrderNumberS.equalsIgnoreCase(sInvoiceNumber)){
+			System.out.println("Order Number not changed - Invoivce Number :" + cOrderNumberS);
+		}else{
+			System.out.println("Order Number changed from - Invoivce Number :" + sInvoiceNumber +" To " + cOrderNumberS);
+		}
+	}
+
+	public void verifyClearAllSortBox() {
+		String sInvoiceNumber = invoicesDetail.invoiceNumber.getText();
+		System.out.println("Second invoices :" + sInvoiceNumber);
+		Assert.assertEquals(fInvoiceNumber, sInvoiceNumber);
+	}
+
+	public void clickOnCustomerFilter() throws InterruptedException {
+		invoicesDetail.clearAllFilter.click();
+		Thread.sleep(3000);
+		invoicesDetail.customerFilter.click();
+	}
+
+	public void verifyFilterByCustomer() throws InterruptedException {
+		Thread.sleep(3000);
+		String cnamess =invoicesDetail.customerFilterCat.getText();
+		System.out.println("Filter display name :: " + cnamess);
+		Assert.assertTrue("Page Not Loaded", invoicesDetail.customerFilterCat.isDisplayed());
+	}
+
+	public void clickOnTheClearAll() {
+		beforeClear = invoicesDetail.searchresult.getText();
+		invoicesDetail.clearAllFilter.click();
+	}
+
+	public void verifyInvoiceFilterCleared() throws InterruptedException {
+		Thread.sleep(3000);
+		String afterClear = invoicesDetail.searchresult.getText();
+		System.out.println("Filter display name :: " + beforeClear);
+		Assert.assertNotSame("Filter Not cleared" , beforeClear, afterClear);
+	}
+
+	public void clickOnFilterByInvoiceDate() {
+		invoicesDetail.invoiceDateFilter.click();
+	}
+
+	public void selectFilterOptionandApply() {
+		invoicesDetail.selectOptionCurrYear.click();
+		invoicesDetail.clickOnApply.click();
+	}
+
+	public void clickOnTheCstatusfilter() {
+		invoicesDetail.clickOnStatusF.click();
+	}
+
+	public void clickOnTheInvoice() {
+		invoicesDetail.confInvoicesNumber.waitUntilVisible();
+		specificInvoice = invoicesDetail.confInvoicesNumber.getText();
+		invoicesDetail.confInvoicesNumber.click();
+	}
+
+	public void verifyInvoiceDetail() throws InterruptedException {
+		invoicesDetail.confInvoicesNumberInvDe.waitUntilEnabled();
+		String InvNumber =  invoicesDetail.confInvoicesNumberInvDe.getText();		
+		System.out.println("Invoice Number  :"+ InvNumber);
+		Thread.sleep(1000);
+		//String array1[]= orderNUmber.split("#");
+		String prod1= specificInvoice.trim();
+		Assert.assertEquals(InvNumber,prod1); 
+		
+		if(prod1.equalsIgnoreCase(InvNumber)){
+			System.out.println("Passed");
+		}      
+	}
+
+	public void clickOnRightArrow() {
+		invoicesDetail.rightArrow.click();	
+	}
+
+	public void verifyNextInvoiceDetail() throws InterruptedException {
+		Thread.sleep(1000);
+		invoicesDetail.confInvoicesNumberInvDe.waitUntilEnabled();
+		String InvNumber =  invoicesDetail.confInvoicesNumberInvDe.getText();		
+		System.out.println("Invoice Number  :"+ InvNumber);
+		String prod1= specificInvoice.trim();
+		Assert.assertNotSame("Next invoice not displayed", prod1, InvNumber);
+	}
+
+	public void clickOnleftArrow() {
+		invoicesDetail.leftArrow.click();
+	}
+
+	public void verifyPreviousInvoiceDetail() throws InterruptedException {
+		Thread.sleep(1000);
+		invoicesDetail.confInvoicesNumberInvDe.waitUntilEnabled();
+		String InvNumber =  invoicesDetail.confInvoicesNumberInvDe.getText();		
+		System.out.println("Invoice Number  :"+ InvNumber);
+		String prod1= specificInvoice.trim();
+		Assert.assertNotSame("Next invoice not displayed", prod1, InvNumber);
+	}
+}

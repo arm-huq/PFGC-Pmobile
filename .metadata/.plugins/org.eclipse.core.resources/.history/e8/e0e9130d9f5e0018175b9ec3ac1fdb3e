@@ -1,0 +1,38 @@
+Feature: The user is able to create and process order
+
+Scenario Outline: The user is able to filter by Brands, Catagory, New Items, Previous Orders and Classes within an order
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the Orders icon
+  Then Verify orders details are successfully displays
+  When click on the new button
+  Then order entry screen successfully populated on screen
+  When click on the filter by brands
+  Then filter by brands options screen populated on right hand side
+  When select a brand to filter by and click apply
+  Then order successfully filtered by specific brand 
+  When click on clear all brands filter
+  Then filter successfully cleared
+  When click on the filter by catagory
+  Then filter by catagory options screen populated on right hand side
+  When select a catagory to filter by and click apply
+  Then order successfully filtered by specific catagory
+  When click on clear all catagory filter
+  Then filter successfully cleared
+  When click on the filter by new items 
+  Then order successfully filter by new items
+  When click on filter by previous order
+  Then filter by previous options screen populated on right hand side
+  When select a previous order and click apply
+  Then previous order details successfully displayed 
+  When click on clear all previous order filter
+  Then filter successfully cleared
+  When click on filter by classes
+  Then filter by classes options screen populated on right hand side
+  When select a class to filter by and click apply
+  Then order successfully filtered by specific class
+  When click on clear all class filter
+  Then filter successfully cleared
+  Examples:
+    | UserId	| pwd	| 
+    | 1008     	| test	| 

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="53ad327d0b5f54b4338d5e0f13be3be591a235848395c43258a4a00cd180dddf.html">The User Is Able To Create And Process Order</a></span>
+                > <span class="truncate-60"><a
+                    href="29c5e2a24e185a56026a1eb4b2bffbd535dc09eefc67b46e747d64441f9b7232.html">The user is able to sort by price and item number within an order </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-05-2018 10:44</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Is Able To Create And Process Order</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">The user is able to sort by price and item number within an order
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the Order icon<br>Then Verify orders details are successfully displays<br>When click on the new button<br>Then order entry screen successfully populated on screen<br>When click on sort by price<br>Then order entry screen successfully sorted by price<br>When click on clear all sortby<br>Then sort by successfully cleared</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="eded79c8cc065f36a525bc569b63be5b5184598f86826c4148101cbe73243fd0.png" title="The user is able to sort by price and item number within an order #1: {UserId=1008, pwd=test}" width="1600"/>
+                <img src="19769883cf9e56e5e10a30c458f7a2bf8310b6943e9956699300c719ef45f832.png" title="Given user on the application" width="1034"/>
+                <img src="70e0bbe64bddd0ac5c950eaf06269627d5e414bb30cb023dc22a8992be57086d.png" title="Open home page" width="1034"/>
+                <img src="ed1993d0ec7bd9ed7e2d04f4be95996919d4ee67164cb83a071d055078395649.png" title="When user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1600"/>
+                <img src="bc3bc70bddaee0cc74a3bb909e32e8bba047fd0b340bde139724207b7461e436.png" title="Set user name: 1008" width="1600"/>
+                <img src="d3751b48ca528f009b18a5fe41ebf0bc19b555ded60b6161f2b630807161c2bc.png" title="Set password: test" width="1600"/>
+                <img src="ed1993d0ec7bd9ed7e2d04f4be95996919d4ee67164cb83a071d055078395649.png" title="Click login" width="1600"/>
+                <img src="8c9137ebf2f298a8d05911ad75a70565d8e8d9124df91c231f51c9f775eafb70.png" title="And user click on the Order icon" width="1600"/>
+                <img src="43249f59f4352603adae64e73b30814d4a64aa67e975bec516fbbf6040f56f82.png" title="Clickon order button" width="1600"/>
+                <img src="97057420cdd1096d94e73ccb5109f0114e9b34e6ac4dd06ede960ce4a379a30a.png" title="Then Verify orders details are successfully displays" width="1600"/>
+                <img src="8f200919424f10c92caa78a46b2d6f75947338e5dc763f0eb0ef6da11dbc572d.png" title="When click on the new button" width="1600"/>
+                <img src="8f200919424f10c92caa78a46b2d6f75947338e5dc763f0eb0ef6da11dbc572d.png" title="Then order entry screen successfully populated on screen" width="1600"/>
+                <img src="54db4256d796949728c97c90a7100385eecf1aa841978203fd565ae9dbd8e552.png" title="When click on sort by price" width="1600"/>
+                <img src="74139ca2e3ea764db536c40957bdd8204db2f9d43a36670cacd2dd7a1af876b9.png" title="Then order entry screen successfully sorted by price" width="1600"/>
+                <img src="b26af219c215c206ca50ae346d3a8f431028e31fd931350a12723119796cecc4.png" title="When click on clear all sortby" width="1600"/>
+                <img src="eded79c8cc065f36a525bc569b63be5b5184598f86826c4148101cbe73243fd0.png" title="Then sort by successfully cleared: <span class='success-color'>SUCCESS</span>" width="1600"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="53ad327d0b5f54b4338d5e0f13be3be591a235848395c43258a4a00cd180dddf.html">The User Is Able To Create And Process Order</a></span>
+                > <span class="truncate-60"><a
+                    href="d8f4c1f76114b3083e29746e25e4e41fca60c1d8a83e545ff8a4f5975f017667.html">The user is able to create and process orders from bid gudes from main order dashboard </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-05-2018 10:39</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Is Able To Create And Process Order</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">The user is able to create and process orders from bid gudes from main order dashboard
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the Order icon<br>Then Verify orders details are successfully displays<br>When click on the new button<br>Then order entry screen successfully populated on screen<br>When click on the bid guide, choose a guide and click apply<br>Then order entry screen successfully populated with bid guide<br>When add items and quanties to the order<br>Then items and quanties successfully added<br>When search within the order by using the search bar for "&lt;product&gt;"<br>Then user successfully able to search<br>When clear search by claring the field and clicking on the go button<br>Then screen reverts back to bid guide<br>When click on the proccess order<br>Then order details screen successfully populated<br>When click on submit order button<br>Then user are able to successfully submitted the order</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="d3d70749a23c33cbfa866218776c84df38ae5d09bb7552c93cb6ec103ac16976.png" title="The user is able to create and process orders from bid gudes from main order dashboard #1: {UserId=1008, pwd=test, product=Milk}" width="1600"/>
+                <img src="e32a75854d09594eaee8ee986ca0c88b6f713e350434347d8c0256af374336d0.png" title="Given user on the application" width="1034"/>
+                <img src="8f46d74e0b5ee8e6cbbe7fb5150e940cfbac8c7c9e0986aa30c3d127b1cdee7a.png" title="Open home page" width="1034"/>
+                <img src="ed1993d0ec7bd9ed7e2d04f4be95996919d4ee67164cb83a071d055078395649.png" title="When user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1600"/>
+                <img src="b784199a609c6314368f9dafe4d943686363db2657ea52e0d762651628f6df9f.png" title="Set user name: 1008" width="1600"/>
+                <img src="6705cdfea739c24f1ca40043499452e9f874dfd02f40218fb13a314961bc3216.png" title="Set password: test" width="1600"/>
+                <img src="ed1993d0ec7bd9ed7e2d04f4be95996919d4ee67164cb83a071d055078395649.png" title="Click login" width="1600"/>
+                <img src="6cd9f655c4dd5db58ee37cf32a1fefbb2ff67381c195f65bb45f7d3f3af6d267.png" title="And user click on the Order icon" width="1600"/>
+                <img src="a8756040e8360ce5376ffe49012f91a206e516f5997a27884ae2e42fdbb4cac6.png" title="Clickon order button" width="1600"/>
+                <img src="0bf0fedb68ea3053d0bf90d2f655a2b22a03c23a756785ab84476175e4aef646.png" title="Then Verify orders details are successfully displays" width="1600"/>
+                <img src="5e253f0b39573382208fffe58780a968123fbb9e79021fc3ee52d6a34d33c9ec.png" title="When click on the new button" width="1600"/>
+                <img src="5e253f0b39573382208fffe58780a968123fbb9e79021fc3ee52d6a34d33c9ec.png" title="Then order entry screen successfully populated on screen" width="1600"/>
+                <img src="5774e9210766303ae1f3d4c05effc86c30840ce41bb645a964e767af73a032f3.png" title="When click on the bid guide, choose a guide and click apply" width="1600"/>
+                <img src="d800f4d61cc90f9a76e641e7370dfd4481d4dcce7322b61ba2958ba407e9bc25.png" title="Then order entry screen successfully populated with bid guide" width="1600"/>
+                <img src="8e31dbe40d5309161de1ed4dba37c41b5fff5e12976c218e0945f5696c27c6f0.png" title="When add items and quanties to the order" width="1600"/>
+                <img src="feecdc4f3aad0904b7c551026bee9fdf94abfa11a67bbfa1f129206985ab8955.png" title="Then items and quanties successfully added" width="1600"/>
+                <img src="77dedd7475e5d7d48383ca9df169a5024e719fa9135f9addd8714294d3831fd7.png" title="When search within the order by using the search bar for &quot;Milk&quot;" width="1600"/>
+                <img src="6ea122d46e4c394c48cd56543af93ef921b765b262306a5c2b9a6a38e6254bfb.png" title="Then user successfully able to search" width="1600"/>
+                <img src="196ed76ff1f172c69d3de7dce039b4b5d1dde912948eb6ede946251735724be3.png" title="When clear search by claring the field and clicking on the go button" width="1600"/>
+                <img src="76d5495d4925529efb89691e5f3396f23b3592a345f99760a2e84eb5f897b94d.png" title="Then screen reverts back to bid guide" width="1600"/>
+                <img src="10c99c12c26349ccdcea8a33a6a94892c079e1ef75b75cd412d6349f2a69ea7f.png" title="When click on the proccess order" width="1600"/>
+                <img src="856d77ba4ba81d9409e190f9fa9018b5905833fd363eb9a1d2dcb4cef5beafb9.png" title="Then order details screen successfully populated" width="1600"/>
+                <img src="fedb8a347c749f0b4744c1c23739e5b465a2e23d00f4a37a09b6a0c12abbddb7.png" title="When click on submit order button" width="1600"/>
+                <img src="d3d70749a23c33cbfa866218776c84df38ae5d09bb7552c93cb6ec103ac16976.png" title="Then user are able to successfully submitted the order: <span class='success-color'>SUCCESS</span>" width="1600"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

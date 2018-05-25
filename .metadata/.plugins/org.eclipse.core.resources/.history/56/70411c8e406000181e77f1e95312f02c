@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"The user is able to create and process order","The user is able to sort by price and item number within an order","ERROR","2018-05-25T11:13:36.822-04:00[America/New_York]","0.0","38.73"
+"The user is able to view, navigate on the proiduct details","The user is able to view, expand and minimize product details, product card and description when clicking on specific item","FAILURE","2018-05-25T13:16:28.691-04:00[America/New_York]","0.0","68.75"
+"The user is able to view, navigate on the proiduct details","validate The user is able to use search funtion in the submit order screens when using the search bar","ERROR","2018-05-25T13:20:13.575-04:00[America/New_York]","0.0","52.2"

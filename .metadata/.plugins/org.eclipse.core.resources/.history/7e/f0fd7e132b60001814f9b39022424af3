@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Stock Demo</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="53ad327d0b5f54b4338d5e0f13be3be591a235848395c43258a4a00cd180dddf.html">The User Is Able To Create And Process Order</a></span>
+                > <span class="truncate-60"><a
+                    href="58430ed47834df14c3bb4b70fcaa9ea22d7e49de4a698e8ba60cbb139aced7c2.html">The user is able to filter by Brands, Catagory, New Items, Previous Orders and Classes within an order </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-05-2018 10:44</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">The User Is Able To Create And Process Order</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">The user is able to filter by Brands, Catagory, New Items, Previous Orders and Classes within an order
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user on the application<br>When user enter valid user id "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the Order icon<br>Then Verify orders details are successfully displays<br>When click on the new button<br>Then order entry screen successfully populated on screen<br>And your list by is set to history<br>When click on the filter by brands<br>Then filter by brands options screen populated on right hand side<br>When select a brand to filter by and click apply<br>Then order successfully filtered by specific brand<br>When click on clear all brands filter<br>Then filter successfully cleared<br>When click on the filter by catagory<br>Then filter by catagory options screen populated on right hand side<br>When select a catagory to filter by and click apply<br>Then order successfully filtered by specific catagory<br>When click on clear all catagory filter<br>Then filter successfully cleared<br>When click on the filter by new items<br>Then order successfully filter by new items<br>When click on filter by previous order<br>Then filter by previous options screen populated on right hand side<br>When select a previous order and click apply<br>Then previous order details successfully displayed<br>When click on clear all previous order filter<br>Then filter successfully cleared<br>When click on filter by classes<br>Then filter by classes options screen populated on right hand side<br>When select a class to filter by and click apply<br>Then order successfully filtered by specific class<br>When click on clear all class filter<br>Then filter successfully cleared</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+                        <div class="panel-heading title="Assertion error: expected:([1855brnd]) but was:([Category])">
+                            Assertion error: expected:([1855brnd]) but was:([Category])
+                        </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#stacktraceModal-overall">
+                        View details
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal-overall" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                    java.lang.AssertionError
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>
+                                        <pre>expected:&lt;[1855brnd]&gt; but was:&lt;[Category]&gt;</pre>
+                                    </h5>
+                                    com.pmobile.pages.NewOrderActionPage.verifyFilteredByBrand(NewOrderActionPage.java
+                                    :439) <br>
+                                    com.pmobile.steps.NewOrderPageSteps.order_successfully_filtered_by_specific_brand(NewOrderPageSteps.java
+                                    :182) <br>
+                                    cucumber.runner.Runner.runPickle(Runner.java
+                                    :80) <br>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource8042025309933421667.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b9bef54ca7f472aa949286b2297e74ac0b12751e480d85d5a21029dcebeab552.png" title="Given user on the application" width="1600"/>
+                <img src="18c0827f1fd386d47da5b9f2411803c065e1a4fe6c3973e3e3d95c045b0a1db8.png" title="Open home page" width="1600"/>
+                <img src="2d2b043df78c29585c99c265948de7d365a817c61019a92fca1071fcad3e16ae.png" title="When user enter valid user id &quot;1008&quot; password &quot;test&quot;" width="1600"/>
+                <img src="b784199a609c6314368f9dafe4d943686363db2657ea52e0d762651628f6df9f.png" title="Set user name: 1008" width="1600"/>
+                <img src="6705cdfea739c24f1ca40043499452e9f874dfd02f40218fb13a314961bc3216.png" title="Set password: test" width="1600"/>
+                <img src="2d2b043df78c29585c99c265948de7d365a817c61019a92fca1071fcad3e16ae.png" title="Click login" width="1600"/>
+                <img src="998c62446507589beeeb3ca50683ac71046fce702b2221a3d3e33c51e373f824.png" title="And user click on the Order icon" width="1600"/>
+                <img src="bdab019077850f7bcb7eebda37de29f011b358ba31ddbe0856c7599a0463d384.png" title="Clickon order button" width="1600"/>
+                <img src="6e83c398a93c7f7c54a51ead2a2219c11b749514bd4475710cb39895e1e9741b.png" title="Then Verify orders details are successfully displays" width="1600"/>
+                <img src="5ccf4b52529e6e01279c7571b37aa81ec852cd2df5c6b0cb8394bae3ff92e479.png" title="When click on the new button" width="1600"/>
+                <img src="5ccf4b52529e6e01279c7571b37aa81ec852cd2df5c6b0cb8394bae3ff92e479.png" title="Then order entry screen successfully populated on screen" width="1600"/>
+                <img src="e502373792b07348f0bc265d71d5e4b493d6486427e77dab3129684b4c363758.png" title="And your list by is set to history" width="1600"/>
+                <img src="d827566d159316758fc1d0807d35e912e56e3d1b60e39d27701bc663bd4d4b13.png" title="When click on the filter by brands" width="1600"/>
+                <img src="0793e13876da92d1e940ce9202e02a3b6fddf731f4760fd86ae054a4a606e312.png" title="Then filter by brands options screen populated on right hand side" width="1600"/>
+                <img src="2364247e10f82847227bdb3168932087b446d0bc87d542f4a39da1ae414f9e65.png" title="When select a brand to filter by and click apply" width="1600"/>
+                <img src="29124bc9eefbf2d65400d38b8a447af6c5a26c613d069284a202a5c096bd1761.png" title="Verify filtered by brand: <span class='failing-color'>FAILURE</span>" width="1600"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

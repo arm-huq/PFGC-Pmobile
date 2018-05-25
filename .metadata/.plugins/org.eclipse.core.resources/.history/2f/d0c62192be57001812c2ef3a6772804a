@@ -1,257 +1,0 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Screenshots</title>
-
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<!--[if IE 7]>
-<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
-<![endif]--><!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
-<link rel="stylesheet" href="css/link.css"/>
-<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
-<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
-<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-
-        function getUrlVars() {
-            var vars = {};
-            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-                vars[key] = value;
-            });
-            return vars;
-        }
-
-        var screenshotIndex = getUrlVars()["screenshot"];
-
-        $(window).load(function () {
-            $('#slider').nivoSlider({
-                startSlide: screenshotIndex,
-                effect: 'fade',
-                animSpeed: 200,
-                manualAdvance: true
-            });
-        });
-
-        $(window).keydown(function(e) {
-            switch(e.which) {
-                case 37:
-                    $('a.nivo-prevNav').click();
-                    break;
-                case 39:
-                    $('a.nivo-nextNav').click();
-                    break;
-            }
-        });
-    </script>
-
-</head>
-
-<body>
-<div id="topheader">
-    <div id="topbanner">
-        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
-        <div id="projectname-banner" style="float:right">
-            <span class="projectname">Stock Demo</span>
-        </div>
-    </div>
-</div>
-
-<div class="middlecontent">
-    <div id="contenttop">
-        <div class="middlebg">
-            <span class="breadcrumbs">
-                <a href="index.html">Home</a>
-                > <span class="truncate-40"><a
-                    href="7c2c38522e5093fadc549eb35496ad3400ee0f0800c260b2293b2a0530458ce2.html">Verify User Able To Order, View Order, Sort Order, Filter, Clear Edit Order</a></span>
-                > <span class="truncate-60"><a
-                    href="0a3b1cd8ad685b0ca34972ab6674d3c2ba9d00f745648049f5e267048e016f63.html">The user is able to filter and clear filter </a></span>
-                > Screenshots
-            </span>
-        </div>
-        <div class="rightbg"></div>
-    </div>
-
-    <div class="clr"></div>
-
-    <!--/* starts second table*/-->
-<div>
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
-        </li>
-        <li >
-            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
-        </li>
-        <li >
-            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
-        </li>
-    </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 14-05-2018 16:04</span>
-    <br style="clear:left"/>
-</div>
-
-    <div class="clr"></div>
-
-
-    <div id="contentbody">
-        <div class="titlebar">
-            <div class="story-title">
-                <table class="outcome-header">
-                    <tr>
-                        <td>
-                            <div>
-                                <h3 class="discreet-story-header">
-                                    <i class="fa fa-2x fa-comments-o"></i>
-                                    <span class="story-header-title">Verify User Able To Order, View Order, Sort Order, Filter, Clear Edit Order</span>
-                                    <span class="badge tag-badge" style="">Feature</span>
-                                </h3>
-
-                                <div class="discreet-requirement-narrative-title">
-                                
-                                </div>
-                            </div>
-
-                        </td>
-                        <td valign="top" align="right">
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="story-title">
-                <table class="outcome-header">
-                    <tr>
-                        <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
-                            <span class="test-case-title">
-                                <span class="success-color">The user is able to filter and clear filter
-                                    <span class="related-issue-title"></span>
-                                </span>
-                            </span>
-
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <div class="clr"></div>
-
-    <div class="story-title">
-        <h3>Scenario:</h3>
-        <div class="scenario">Given user on the application<br>And user enter valid userid "&lt;UserId&gt;" password "&lt;pwd&gt;"<br>And user click on the order icon<br>Then user able to see the Orders page displayed successful<br>When Click on the customrer filter box<br>Then user able to see customer list populates on righthand side<br>When Select a customer and click on the apply<br>Then user able to see the Orders are successfully displayed for only that customer<br>When user Click on the order date filter box<br>Then user able to see the orders date filter options successfully populated on righthand side<br>When user choose a date range and click on apply<br>Then user able to see order for date range successfully populated<br>When user clear all on order date filter<br>Then user able to see page navigatte to all order<br>When user click on the ship date filter box<br>Then user able to see the ship date filter box displayed successful<br>When user choose a date range and click on apply<br>Then user able to see all of the order for date range<br>When Clear all on ship date filter<br>Then user able to see page navigatte to all order<br>When user click on the ship date filter box<br>Then user able to see the ship date filter box displayed successful<br>When user choose a filter option (ex last week) and click on the box click on apply<br>Then user able to see order for that time frame successfully display<br>When Clear all on ship date filter<br>Then user able to see all order<br>When user click opn the status filter<br>Then user able to see all status option successfully on screen<br>When user choose a filter option box and click on apply<br>Then user able to see status filter option successfully display on the screen<br>When Clear all on ship date filter<br>Then user able to see all order</div>
-    </div>
-
-    <div id="beforetable"></div>
-    <div id="contenttilttle">
-        <div class="slider-wrapper theme-default">
-            <div id="slider">
-                <img src="263d4944cf117bb000837f1e1609a048b1cfa3c8596b02c4474355926f2d85a6.png" title="The user is able to filter and clear filter #1: {UserId=1008, pwd=test}" width="1034"/>
-                <img src="9258f94aac2cc48dd2b6740f7811231e6546fc64f9c96de0b44745691b270d9a.png" title="Given user on the application" width="1034"/>
-                <img src="2f0fd894071c07702e262a1a344da73aa1948770c5bc8651e80f032132fac135.png" title="Open home page" width="1034"/>
-                <img src="a8b4ab9670c142a1a676366bf36dc6ff38e4f1b1968a32489151b05270aa547b.png" title="And user enter valid userid &quot;1008&quot; password &quot;test&quot;" width="1034"/>
-                <img src="6fb3a00e11be551eb52438db533fa0e27c35056719ffbdeebf0060c595ac885d.png" title="Set user name: 1008" width="1034"/>
-                <img src="3d563d33740b9cd1555ffc1df8f4a027d9cfcf8bb15b12ed57af6ad90d9f7568.png" title="Set password: test" width="1034"/>
-                <img src="a8b4ab9670c142a1a676366bf36dc6ff38e4f1b1968a32489151b05270aa547b.png" title="Click login" width="1034"/>
-                <img src="11f250acae97b152254db86de6677c3389925d696dbbdc77622b2587823006e7.png" title="And user click on the order icon" width="1034"/>
-                <img src="11f250acae97b152254db86de6677c3389925d696dbbdc77622b2587823006e7.png" title="Click on order" width="1034"/>
-                <img src="11f250acae97b152254db86de6677c3389925d696dbbdc77622b2587823006e7.png" title="Then user able to see the Orders page displayed successful" width="1034"/>
-                <img src="ae13bc4577bb3e62d27e1f4053c45d472926b9ff7edc1d076cc5a93a699cdd8b.png" title="When Click on the customrer filter box" width="1034"/>
-                <img src="263d4944cf117bb000837f1e1609a048b1cfa3c8596b02c4474355926f2d85a6.png" title="Clickon filter clear" width="1034"/>
-                <img src="9d0a16d44ede10f944f138dbfc8bd01299843d8b6a713ac006ff37d3d1b0efdc.png" title="Clickon customer filter" width="1034"/>
-                <img src="ae13bc4577bb3e62d27e1f4053c45d472926b9ff7edc1d076cc5a93a699cdd8b.png" title="Then user able to see customer list populates on righthand side" width="1034"/>
-                <img src="34d173f3f329d7276a09afafc7d58ff0698e58af74eda9a07aa2920844fb5b81.png" title="When Select a customer and click on the apply" width="1034"/>
-                <img src="906aa6c1b94686280dbb545b47757f79247fe94b1196c762d14f8fd139707fb7.png" title="Clickon select customer" width="1034"/>
-                <img src="34d173f3f329d7276a09afafc7d58ff0698e58af74eda9a07aa2920844fb5b81.png" title="Clickon apply" width="1034"/>
-                <img src="34d173f3f329d7276a09afafc7d58ff0698e58af74eda9a07aa2920844fb5b81.png" title="Then user able to see the Orders are successfully displayed for only that customer" width="1034"/>
-                <img src="d0141ae11d6381eb9321f1a6ebe198d1bd6042320e87a60be63078767c53cdb7.png" title="When user Click on the order date filter box" width="1034"/>
-                <img src="a61fbe8ad5e46565795aa7ff8dcf35ac09accf417837d8edb3913741a1dff70d.png" title="Clickon filter clear" width="1034"/>
-                <img src="c57bde84151218439a81fdd11ad7a0a2a7fc518a08581d896a70ebc3c421bef6.png" title="Clickon order date filter" width="1034"/>
-                <img src="d0141ae11d6381eb9321f1a6ebe198d1bd6042320e87a60be63078767c53cdb7.png" title="Then user able to see the orders date filter options successfully populated on righthand side" width="1034"/>
-                <img src="420026c8d65183ddf71a1ff8f913aea1f1153666d480ad5b4bdd7039be558881.png" title="When user choose a date range and click on apply" width="1034"/>
-                <img src="6b0c85fd463b7d1041a0c355c1aad50c402e3831e44322e136a40dc41d005cea.png" title="Set orderdate from" width="1034"/>
-                <img src="4d91e3262be1a94d4ae64582bb88d46e8c29e21b6d25576a3c03616a669c8a60.png" title="Set orderdate to" width="1034"/>
-                <img src="420026c8d65183ddf71a1ff8f913aea1f1153666d480ad5b4bdd7039be558881.png" title="Clickon apply" width="1034"/>
-                <img src="420026c8d65183ddf71a1ff8f913aea1f1153666d480ad5b4bdd7039be558881.png" title="Then user able to see order for date range successfully populated" width="1034"/>
-                <img src="760be7a5e61b24763a4c92fb44ab53cac0a606869e55757f8bcec26b13b8384d.png" title="When user clear all on order date filter" width="1034"/>
-                <img src="2f2bdfba01807482999f94ed4eb164ee64869dda8ee297c16facffba7e3c1854.png" title="Clickon filter clear" width="1034"/>
-                <img src="05afefcf96c964f4386e93b937d1ab104e6d5be21a7d01621e4a1431137d56ce.png" title="Then user able to see page navigatte to all order" width="1034"/>
-                <img src="d777b5f19bf80e1f6e160b45a897832e067ae3bd488596568cff1b9bf88704da.png" title="When user click on the ship date filter box" width="1034"/>
-                <img src="b45a1e27088f92f903e9298d73ac62cef9eaf753a69195b35420cb833d6597dc.png" title="Clickon filter clear" width="1034"/>
-                <img src="8cfee2102a0c2642d4818121e64a326ee8bf0655b47e9e576ce404f18bb00ba1.png" title="Clickon ship date" width="1034"/>
-                <img src="d777b5f19bf80e1f6e160b45a897832e067ae3bd488596568cff1b9bf88704da.png" title="Then user able to see the ship date filter box displayed successful" width="1034"/>
-                <img src="b45555a91c796931cedceeb3333050e2ccd106438da433651c8e9f99c8dbddc9.png" title="When user choose a date range and click on apply" width="1034"/>
-                <img src="160e7ad960ed95fe270bd5527630ff1db64355fd7c478c0a98d969cfc76ae5f0.png" title="Set orderdate from" width="1034"/>
-                <img src="8d42b38c95475b4a705ad38aab0eb59ae894934bd3411c97267a9e281c1c29ec.png" title="Set orderdate to" width="1034"/>
-                <img src="b45555a91c796931cedceeb3333050e2ccd106438da433651c8e9f99c8dbddc9.png" title="Clickon apply" width="1034"/>
-                <img src="b45555a91c796931cedceeb3333050e2ccd106438da433651c8e9f99c8dbddc9.png" title="Then user able to see all of the order for date range" width="1034"/>
-                <img src="de89b1ef3882768e4f889f4f7aca998c584e63ca679f7f8e0507d7882c78a54a.png" title="Clickon filter clear" width="1034"/>
-                <img src="9d0a16d44ede10f944f138dbfc8bd01299843d8b6a713ac006ff37d3d1b0efdc.png" title="Clickon ship date" width="1034"/>
-                <img src="160e7ad960ed95fe270bd5527630ff1db64355fd7c478c0a98d969cfc76ae5f0.png" title="Set orderdate from" width="1034"/>
-                <img src="8d42b38c95475b4a705ad38aab0eb59ae894934bd3411c97267a9e281c1c29ec.png" title="Set orderdate to" width="1034"/>
-                <img src="b45555a91c796931cedceeb3333050e2ccd106438da433651c8e9f99c8dbddc9.png" title="Clickon apply" width="1034"/>
-                <img src="9b56e62396ab59def00050448ed54518893cfd4029ce9e2b129c83f783d38c4b.png" title="When Clear all on ship date filter" width="1034"/>
-                <img src="556e205afaf23efef13cad48de466b32c9453ed6ce42ddc312bdbca04d320592.png" title="Clickon filter clear" width="1034"/>
-                <img src="550a925f0c1e014c5a55ad84ffa12f223f47e8fb3e98db8f316ef03949496e07.png" title="Then user able to see page navigatte to all order" width="1034"/>
-                <img src="d777b5f19bf80e1f6e160b45a897832e067ae3bd488596568cff1b9bf88704da.png" title="When user click on the ship date filter box" width="1034"/>
-                <img src="263d4944cf117bb000837f1e1609a048b1cfa3c8596b02c4474355926f2d85a6.png" title="Clickon filter clear" width="1034"/>
-                <img src="352d50a916ff8b7af6d4f553d5945d5f17141c206d46c410b22b254bcdf517c3.png" title="Clickon ship date" width="1034"/>
-                <img src="d777b5f19bf80e1f6e160b45a897832e067ae3bd488596568cff1b9bf88704da.png" title="Then user able to see the ship date filter box displayed successful" width="1034"/>
-                <img src="b3bb1b69a2eb6d69ce5269b9473b0c027f72b489cfd2f25e4d349cb30ad19ab3.png" title="When user choose a filter option (ex last week) and click on the box click on apply" width="1034"/>
-                <img src="afeffffae303d22014c57486830b92828ecf58a9f08b764c37dcf534b04d4850.png" title="Clickon filter clear" width="1034"/>
-                <img src="9d0a16d44ede10f944f138dbfc8bd01299843d8b6a713ac006ff37d3d1b0efdc.png" title="Clickon ship date" width="1034"/>
-                <img src="b3bb1b69a2eb6d69ce5269b9473b0c027f72b489cfd2f25e4d349cb30ad19ab3.png" title="Clickon apply" width="1034"/>
-                <img src="b3bb1b69a2eb6d69ce5269b9473b0c027f72b489cfd2f25e4d349cb30ad19ab3.png" title="Then user able to see order for that time frame successfully display" width="1034"/>
-                <img src="fdaff2484a6da51c980f4249b647c3878fedfbc5f2d5443e05e033ca036821c1.png" title="When Clear all on ship date filter" width="1034"/>
-                <img src="3317f52bfa569584780b9e9db8c01ad3f9ae16714f9907a4df32d32368fd12c5.png" title="Clickon filter clear" width="1034"/>
-                <img src="263d4944cf117bb000837f1e1609a048b1cfa3c8596b02c4474355926f2d85a6.png" title="Then user able to see all order" width="1034"/>
-                <img src="2121bed4f65872cd6eabf3f2841a35b6b64dd687816d7c1811e6d4cee41d7d1b.png" title="Clickon filter clear" width="1034"/>
-                <img src="794ebfdebee2bd8f84c3a0b19ab81c2796497ab8d64308e10e7baef6854d4b8c.png" title="When user click opn the status filter" width="1034"/>
-                <img src="d0a339bcfca2036732519d1b189b38d9f9c498110146d6f1a0114d8b707fc689.png" title="Clickon filter clear" width="1034"/>
-                <img src="adc2b8057049db9684bc4f532876158e0c304d882a89ae602f83afe0b544659a.png" title="Clickon statuds filter" width="1034"/>
-                <img src="794ebfdebee2bd8f84c3a0b19ab81c2796497ab8d64308e10e7baef6854d4b8c.png" title="Then user able to see all status option successfully on screen" width="1034"/>
-                <img src="d0e5afba765c8920dc6263497ac2c1492a7a9e6272d65c278ffc413f99fb8ee8.png" title="When user choose a filter option box and click on apply" width="1034"/>
-                <img src="08aae28103cae5ff180a039aea5f5143488c8ea48e83336dba4638d6a80349d8.png" title="Clickon status value" width="1034"/>
-                <img src="d0e5afba765c8920dc6263497ac2c1492a7a9e6272d65c278ffc413f99fb8ee8.png" title="Clickon apply" width="1034"/>
-                <img src="d0e5afba765c8920dc6263497ac2c1492a7a9e6272d65c278ffc413f99fb8ee8.png" title="Then user able to see status filter option successfully display on the screen" width="1034"/>
-                <img src="51807ea06483c12244773afd187190ea0cf8e0ddbeca3492610f2d6cb70c84f4.png" title="When Clear all on ship date filter" width="1034"/>
-                <img src="f793518a63e11803229c31ef284786c5b725058d5c4acdc2bd7baed7a4a13677.png" title="Clickon filter clear" width="1034"/>
-                <img src="0a4fbe3250027294bb1d62d0a5779835d923da7eedd53a0acf4fbd1749f11166.png" title="Then user able to see all order" width="1034"/>
-                <img src="2778b7237409f1c3496e70af834515f7e325c0a3f059a94be663269826ced3a7.png" title="Clickon filter clear: <span class='success-color'>SUCCESS</span>" width="1034"/>
-            </div>
-        </div>
-
-
-    </div>
-</div>
-<div id="beforefooter"></div>
-<div id="bottomfooter">
-    <span class="version">Serenity BDD version 1.9.9</span>
-</div>
-</body>
-</html>

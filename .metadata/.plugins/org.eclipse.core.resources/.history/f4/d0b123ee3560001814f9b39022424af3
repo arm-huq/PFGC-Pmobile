@@ -1,0 +1,17 @@
+Feature: Valid user able to access, view, search, refresh,short order, filter, view invoice detail
+
+Scenario Outline: The user is able to create a new order from the invoice detail when selection and addind a quentity
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the invoices icon
+  Then invoice screen successfully displayed
+  When click on the specific invoice to view details
+  Then invoice details successfully displayed
+  When click on an item within the invoice
+  Then item detials successfully displayed
+  When Add a quentity to the item in the item quentity box 
+  Then item successfully added to pending order or new order
+ 
+  Examples:
+   | UserId	| pwd |
+   | 1008   | test|

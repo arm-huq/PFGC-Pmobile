@@ -1,0 +1,103 @@
+Feature: Valid user able to access, view, search, refresh,short order, filter, view invoice detail
+
+Scenario Outline: The user is able to  view and search invoices when clicking on the invoices from dashboard
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the invoices icon
+  Then invoice screen successfully displayed
+  When click in the search field and conduct a search "<invoiceNo>"
+  Then search reasult will be successfull "<invoiceNo>"
+
+ Examples:
+    | UserId	| pwd	|invoiceNo |
+    | 1008     	| test	| 4879645 |
+
+Scenario Outline: The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon
+  Given user on the application 
+  And user enter valid user id "<UserId>" password "<pwd>"
+  And  user click on the invoices icon
+  Then invoice screen successfully displayed
+  When user click on the Messages icon from the left tool
+  Then user able to see the Messages page displayed successful from the left tool
+  When user click on the Orders icon from the left tool
+  Then user able to see the Orders page displayed successful from the left tool
+  When user click on the Invoices icon from the left tool
+  Then user able to see the Invoices page displayed successful from the left tool
+  When user click on the Products icon from the left tool
+  Then user able to see the Products page displayed successful from the left tool
+  When user click on the Customers icon from the left tool
+  Then user able to see the Customers page displayed successful from the left tool
+  When user click on the Inventory icon from the left tool
+  Then user able to see the Inventory page displayed successful from the left tool
+  When user click on the Settings icon from the left tool
+  Then user able to see the Settings page displayed successful from the left tool
+  
+  Examples:
+   | UserId	| pwd	| 
+   | 1008     	| test	| 
+
+Scenario Outline: The user is able to refresh invoices when pulling downthe refresh arrow
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the invoices icon
+  Then invoice screen successfully displayed
+  When pul down the refresh arrow
+  Then invoices are successfully refreshed
+  
+    Examples:
+   | UserId		| pwd	|
+   | 1008     	| test	|
+
+ Scenario Outline: The user is able to sort and clear invoices by invoices date,Customer /#, Invoice /#, Customer Name when clicking on the sort buttons and clicking on clear all
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the invoices icon
+  Then invoice screen successfully displayed
+  When Click on the invoice date sort box 
+  Then user able to see the invoice successfully sorted by invoice date
+  When user Click on the customer /# sort box
+  Then user able to see the invoice successfully sorted by Customer /#
+  When user Click on the invoice /# sort box 
+  Then user able to see the invoice successfully sorted by invoice /#
+  When user Click on the customer name sort box in Invoices
+  Then user able to see the invoice successfully sorted by customer name
+  When user Click on clear all 
+  Then user able to see the all Previous sorts successfully cleared 
+  
+  Examples:
+   | UserId		| pwd	|
+   | 1008     	| test	|
+
+Scenario Outline: The user is able to filter invoices by invoices date,Customer and status when clicking on the filter buttons and clicking on clear all
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the invoices icon
+  Then invoice screen successfully displayed 
+  When Click on the Customer filter by box
+  Then user able to see customer list populates on righthand side
+  When Select a customer and click on the apply 
+  Then user able to see the invoices are successfully displayed for only that customer
+  When user Click on the clear all on customer filter
+  Then user able to see the invoice successfully goes back to all invoices
+   When user Click on the invoice date filter box 
+  Then user able to see the orders date filter options successfully populated on righthand side
+  When user choose a date range and click on apply 
+  Then user able to see order for date range successfully populated
+  When clear all on invoice date filter
+  Then user able to see the invoice successfully goes back to all invoices
+  When user Click on the invoice date filter box
+  Then user able to see the orders date filter options successfully populated on righthand side
+  When choose a filter option(ex. last week) and click on the box then click on apply
+  Then Invoices for that time frame successfully populated
+  When clear all on invoice date filter
+  Then user able to see the invoice successfully goes back to all invoices
+   When user click on the invoice status filter
+  Then user able to see all status option successfully on screen
+  When user choose a filter option box and click on apply 
+  Then user able to see status filter option successfully display on the screen
+  When Clear all on status filter 
+  Then user able to see the invoice successfully goes back to all invoices
+  
+  Examples:
+   | UserId		| pwd	|
+   | 1008     	| test	|

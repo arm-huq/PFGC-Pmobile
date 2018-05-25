@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="4" failures="1" name="Verify user able to view Access dash board" skipped="0" tests="5" time="149.42" timestamp="2018-05-21 05:35:48"><testcase name="The user is able to view and search orders when clicking on the order icon from dashboard"><error message="Timed out after 5 seconds. Element not available&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotVisibleException">Timed out after 5 seconds. Element not available
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</error><system-err>Timed out after 5 seconds. Element not available
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.LoginActionPage.setSearchProducts(LoginActionPage.java:80)&#13;
+com.pmobile.steps.DashBoardPageSteps.click_in_the_search_field_and_conduct_a_search_order_no(DashBoardPageSteps.java:52)&#13;
+✽.Click in the search field and conduct a search order no "1000450"(src/main/resources/Features/dashBoard.feature:7)&#13;
+</system-err></testcase><testcase name="The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon"><error message="Timed out after 5 seconds. Element not available&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown&#10;Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'&#10;System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotVisibleException">Timed out after 5 seconds. Element not available
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown</error><system-err>Timed out after 5 seconds. Element not available
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'WCSP-3M1CM32TL', ip: '10.32.4.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&#13;
+com.pmobile.pages.LoginActionPage.assertOrderLandingPage(LoginActionPage.java:126)&#13;
+com.pmobile.steps.DashBoardPageSteps.user_click_on_the_Orders_icon(DashBoardPageSteps.java:93)&#13;
+✽.user click on the Orders icon(src/main/resources/Features/dashBoard.feature:19)&#13;
+</system-err></testcase><testcase name="Validate that the user is able to view and search orders"><failure message="expected:&lt;[BUTTER SOLIDS UNSLTD AA TFF]&gt; but was:&lt;[ ]&gt;" type="java.lang.AssertionError">expected:&lt;[BUTTER SOLIDS UNSLTD AA TFF]&gt; but was:&lt;[ ]&gt;</failure><system-err>expected:&lt;[BUTTER SOLIDS UNSLTD AA TFF]&gt; but was:&lt;[ ]&gt;&#13;
+com.pmobile.pages.LoginActionPage.verifySearchProducts(LoginActionPage.java:102)&#13;
+com.pmobile.steps.DashBoardPageSteps.user_Click_in_the_search_field_and_conduct_a_search(DashBoardPageSteps.java:74)&#13;
+✽.user Click in the search field and conduct a search "BUTTER SOLIDS UNSLTD AA TFF"(src/main/resources/Features/dashBoard.feature:43)&#13;
+</system-err></testcase></testsuite>

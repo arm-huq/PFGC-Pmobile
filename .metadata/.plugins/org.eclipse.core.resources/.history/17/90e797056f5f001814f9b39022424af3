@@ -1,0 +1,21 @@
+Feature: Valid user able to access, view, search, refresh,short order, filter, view invoice detail
+
+ Scenario Outline: The user is able to sort and clear invoices by invoices date,Customer /#, Invoice /#, Customer Name when clicking on the sort buttons and clicking on clear all
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the invoices icon
+  Then invoice screen successfully displayed
+  When Click on the invoice date sort box 
+  Then user able to see the invoice successfully sorted by invoice date
+  When user Click on the Customer /# sort box 
+  Then user able to see the invoice successfully sorted by Customer /#
+  When user Click on the invoice /# sort box 
+  Then user able to see the invoice successfully sorted by invoice /#
+  When user Click on the customer name sort box 
+  Then user able to see the invoice successfully sorted by customer name
+  When user Click on clear all 
+  Then user able to see the Previous sorts successfully cleared 
+  
+  Examples:
+   | UserId		| pwd	|
+   | 1008     	| test	|

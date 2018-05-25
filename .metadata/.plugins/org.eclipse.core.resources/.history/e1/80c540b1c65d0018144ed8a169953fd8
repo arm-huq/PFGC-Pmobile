@@ -1,0 +1,13 @@
+Feature: Valid user able to view, search, refresh,short order, filter, view invoice detail
+
+ Scenario Outline: The user is able to  view and search customers when clicking on the customer icon from dashboard
+  Given user on the application 
+  When user enter valid user id "<UserId>" password "<pwd>"
+  And user click on the customer icon
+  Then customer screen successfully displayed
+  When click in the search field and conduct a search "<customerName>"
+  Then search reasult will be successfull
+
+ Examples:
+    | UserId	| pwd	| customerName|
+    | 1008     	| test	|             |

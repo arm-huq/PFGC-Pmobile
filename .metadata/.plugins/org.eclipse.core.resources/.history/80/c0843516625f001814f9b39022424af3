@@ -1,0 +1,23 @@
+Feature: Valid user able to access, view, search, refresh,short order, filter, view invoice detail
+
+ Scenario Outline: The user is able to  access the dashboard, messages, product search, invoices, customers, settings and sign off from the left tool bar within products when clicking on each icon
+  Given user on the application 
+  And user enter valid user id "<UserId>" password "<pwd>"
+  When user click on the Messages icon from the left tool
+  Then user able to see the Messages page displayed successful from the left tool
+  When user click on the Orders icon from the left tool
+  Then user able to see the Orders page displayed successful from the left tool
+  When user click on the Invoices icon from the left tool
+  Then user able to see the Invoices page displayed successful from the left tool
+  When user click on the Products icon from the left tool
+  Then user able to see the Products page displayed successful from the left tool
+  When user click on the Customers icon from the left tool
+  Then user able to see the Customers page displayed successful from the left tool
+  When user click on the Inventory icon from the left tool
+  Then user able to see the Inventory page displayed successful from the left tool
+  When user click on the Settings icon from the left tool
+  Then user able to see the Settings page displayed successful from the left tool
+  
+  Examples:
+   | UserId		| pwd	| product	      |
+   | 1008     	| test	| CHEESE CREAM CUP|
